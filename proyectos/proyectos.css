@@ -365,20 +365,20 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    color: var(--color-btn);
     transition: transform 0.3s ease;
   }
   
   .footer .icono-red {
     width: 22px;
     height: 22px;
-    color: var(--color-btn); /* ✅ se mantiene el color desde CSS */
+    fill: var(--color-btn); /* Asegura el color correcto */
     transition: fill 0.3s ease, transform 0.3s ease, filter 0.3s ease;
   }
   
-  /* Glow más suave y elegante */
   .footer .icono-link:hover .icono-red {
-    fill: var(--color-btn-hover);
-    filter: drop-shadow(0 0 12px var(--color-btn-hover)) brightness(1.1);
+    fill: var(--color-btn-hover); /* Color al hacer hover */
+    filter: drop-shadow(0 0 10px var(--color-btn-hover)); /* Glow */
     transform: scale(1.2);
   }
   
