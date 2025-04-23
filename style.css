@@ -864,3 +864,217 @@ body:not(.dark) .icono-link {
   opacity: 1;
   transform: translateY(0);
 }
+
+/* SOBRE MI */
+
+#sobre-mi {
+  background: var(--fondo-inicio);
+  padding: 100px 20px;
+  color: var(--texto);
+}
+
+.sobre-mi-titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  font-size: 2.8rem;
+  margin-bottom: 40px;
+  font-family: 'DM Serif Display', serif;
+  color: var(--color-titulo);
+}
+
+.icono-sobre-mi {
+  stroke: var(--violeta);
+  width: 32px;
+  height: 32px;
+}
+
+.sobre-mi-container {
+  display: flex;
+  gap: 60px;
+  max-width: 1100px;
+  margin: 0 auto;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.texto-sobre-mi {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.7;
+  text-align: left;
+  min-width: 300px;
+}
+
+.texto-sobre-mi p {
+  margin-bottom: 20px;
+}
+
+.texto-sobre-mi strong {
+  color: var(--violeta);
+  font-weight: 600;
+}
+
+.foto-sobre-mi {
+  flex-shrink: 0;
+  width: 280px;
+  height: 280px;
+  border-radius: 50%;
+  overflow: hidden;
+  box-shadow: 0 0 24px rgba(166, 108, 255, 0.3);
+}
+
+.foto-sobre-mi img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/*contacto*/
+
+#contacto {
+  background: var(--fondo-inicio);
+  padding: 100px 20px;
+  color: var(--texto);
+  text-align: center;
+}
+
+#contacto h2 {
+  font-size: 2.6rem;
+  color: var(--color-titulo);
+  margin-bottom: 40px;
+  font-family: 'DM Serif Display', serif;
+}
+
+#contacto form {
+  max-width: 600px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+#contacto input,
+#contacto textarea {
+  padding: 14px 16px;
+  border: none;
+  border-radius: 12px;
+  background-color: var(--gris-suave);
+  color: var(--texto);
+  font-size: 1rem;
+  resize: none;
+  transition: box-shadow 0.3s ease;
+}
+
+#contacto input::placeholder,
+#contacto textarea::placeholder {
+  color: #aaa;
+}
+
+#contacto input:focus,
+#contacto textarea:focus {
+  outline: none;
+  box-shadow: 0 0 8px var(--violeta);
+}
+
+#contacto button {
+  padding: 12px;
+  background: var(--color-btn);
+  color: var(--color-btn-hover);
+  font-weight: bold;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+#contacto button:hover {
+  background: var(--violeta-hover);
+  color: var(--fondo);
+}
+
+.formulario-contacto {
+  max-width: 600px;
+  margin: 0 auto 40px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.formulario-contacto input,
+.formulario-contacto textarea {
+  padding: 12px 18px;
+  border: 2px solid var(--violeta);
+  border-radius: 12px;
+  background: transparent;
+  color: var(--texto);
+  font-size: 1rem;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formulario-contacto input::placeholder,
+.formulario-contacto textarea::placeholder {
+  color: var(--violeta-hover);
+  opacity: 0.8;
+}
+
+.formulario-contacto input:focus,
+.formulario-contacto textarea:focus {
+  outline: none;
+  border-color: var(--violeta-hover);
+  box-shadow: 0 0 12px var(--violeta-hover);
+}
+
+.formulario-contacto textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+
+.formulario-contacto button {
+  background: var(--violeta);
+  color: var(--color-btn-hover);
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background 0.3s, box-shadow 0.3s;
+}
+
+.formulario-contacto button:hover {
+  background: var(--violeta-hover);
+  box-shadow: 0 0 12px var(--violeta-hover);
+}
+
+.redes-contacto {
+  margin-top: 30px;
+}
+
+.redes-contacto p {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: var(--color-titulo);
+}
+
+.redes-enlaces {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.redes-enlaces a {
+  color: var(--violeta);
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s;
+}
+
+.redes-enlaces a:hover {
+  color: var(--violeta-hover);
+  text-shadow: 0 0 8px var(--violeta-hover);
+}
