@@ -637,3 +637,56 @@ body:not(.dark) .icono-link {
 .btn-proyectos-cta:hover .icon-cta {
   transform: translateX(2px);
 }
+
+
+/* Footer realizado */
+.footer {
+  background-color: var(--fondo);
+  padding: 20px 10px;
+  border-top: 1px solid var(--violeta);
+}
+
+.footer-content {
+  max-width: 1350px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  color: var(--texto);
+}
+
+.footer-content p {
+  margin: 0;
+  font-weight: 500;
+}
+
+.footer-redes {
+  display: flex;
+  gap: 20px;
+}
+
+.footer .icono-link {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+.footer .icono-red {
+  width: 22px;
+  height: 22px;
+  color: var(--color-btn); /* ✅ se mantiene el color desde CSS */
+  transition: fill 0.3s ease, transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Glow más suave y elegante */
+.footer .icono-link:hover .icono-red {
+  fill: var(--color-btn-hover);
+  filter: drop-shadow(0 0 1px var(--color-btn-hover));
+  transform: scale(1.1);
+}
+
