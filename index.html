@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio | LukyDev</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="logo">
+      <a href="#inicio"><code>&lt;LukyDev/&gt;</code></a>
+    </div>    
+    
+    <div class="nav-wrapper">
+      <nav class="nav">
+        <a href="#inicio">Inicio</a>
+        <a href="#proyectos">Proyectos</a>
+        <a href="#experiencia">Experiencia</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+      <button class="modo-btn" id="modoBtn" aria-label="Cambiar tema">
+        <svg id="iconoTema" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M21 12.79A9 9 0 0 1 11.21 3a7 7 0 1 0 9.79 9.79Z"/>
+        </svg>
+      </button>
+         
+    </div>
+  </header>
+  
+  
+  <!-- INICIO -->
+  <section id="inicio">
+    <div class="container-inicio">
+      <div class="info-izquierda">
+        <h2>Lucas<br>Fernández</h2>
+        <p id="frase-animada">
+          <span id="texto"></span><span class="cursor">|</span>
+        </p>
+        <a href="#proyectos" class="btn-proyectos">
+          <svg class="icono-proyectos" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6h16M4 12h16M4 18h16" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span>Ver proyectos</span>
+        </a>
+        <div class="redes-inicio">
+          <!-- LinkedIn -->
+          <a href="https://linkedin.com/in/Lukychill" target="_blank" class="icono-link" aria-label="LinkedIn">
+            <svg class="icono-red" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.98 3.5C4.98 4.88 3.88 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0 8h5v16H0V8zm7.5 0h4.7v2.2h.1c.7-1.3 2.4-2.2 4.2-2.2 4.5 0 5.5 3 5.5 6.9V24h-5v-7.7c0-1.9 0-4.4-2.7-4.4-2.7 0-3.1 2.1-3.1 4.2V24h-5V8z"/>
+            </svg>
+          </a>
+        
+          <!-- GitHub -->
+          <a href="https://github.com/LukychillGithub" target="_blank" class="icono-link" aria-label="GitHub">
+            <svg class="icono-red" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.38 7.86 10.9.58.11.79-.25.79-.56v-2.02c-3.2.7-3.87-1.37-3.87-1.37-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.94.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.46-2.3 1.21-3.11-.12-.3-.53-1.51.12-3.14 0 0 .99-.32 3.25 1.19a11.25 11.25 0 0 1 5.92 0c2.26-1.5 3.25-1.19 3.25-1.19.65 1.63.24 2.84.12 3.14.76.81 1.21 1.85 1.21 3.11 0 4.42-2.7 5.41-5.27 5.7.41.35.78 1.04.78 2.11v3.12c0 .31.21.68.8.56A10.98 10.98 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/>
+            </svg>
+          </a>
+        
+          <!-- Mail -->
+          <a href="mailto:lukychillcontacto@gmail.com" class="icono-link" aria-label="Mail">
+            <svg class="icono-red" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2Zm0 4.99-8 5-8-5V6l8 5 8-5v2.99Z"/>
+            </svg>
+          </a>
+        </div>
+        
+        
+      </div>
+      <div class="foto-derecha">
+        <img src="assets/img/Lukychill.png" alt="Foto de perfil" />
+      </div>
+    </div>
+  </section>
+
+
+  <!-- SECCIÓN PROYECTOS -->
+  <section id="proyectos">
+    <div class="container-inicio">
+      <h2 class="titulo-seccion">Mis Proyectos</h2>
+  
+      <!-- Card 1 -->
+      <div class="proyecto-card-horizontal">
+        <div class="info-proyecto">
+          <h3 class="titulo-proyecto">Fizzbuzz Minijuego</h3>
+          <p class="descripcion-proyecto">
+            Mini web interactiva con scroll animado, modo oscuro y diseño adaptable.
+          </p>
+          <div class="etiquetas">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="botones-proyecto">
+            <a href="https://github.com/LukychillGitHub/FizzbuzzGame" target="_blank" class="btn-codigo">
+              <svg class="icon-github" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0.5C5.65 0.5 0.5 5.65 0.5 12c0 5.08 3.29 9.38 7.86 10.9.58.11.79-.25.79-.56v-2.02c-3.2.7-3.87-1.37-3.87-1.37-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.94.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.46-2.3 1.21-3.11-.12-.3-.53-1.51.12-3.14 0 0 .99-.32 3.25 1.19a11.25 11.25 0 0 1 5.92 0c2.26-1.5 3.25-1.19 3.25-1.19.65 1.63.24 2.84.12 3.14.76.81 1.21 1.85 1.21 3.11 0 4.42-2.7 5.41-5.27 5.7.41.35.78 1.04.78 2.11v3.12c0 .31.21.68.8.56A10.98 10.98 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/>
+              </svg>
+              Código
+            </a>
+            <a href="https://lukychillgithub.github.io/FizzbuzzGame/" target="_blank" class="btn-demo">
+              Demo
+              <svg class="icon-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 3h7v7" />
+                <path d="M21 3L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="imagen-proyecto">
+          <img src="assets/img/FizzbuzzMinigame.png" alt="Fizzbuzz Minijuego" />
+        </div>
+      </div>
+  
+      <!-- Card 2 -->
+      <div class="proyecto-card-horizontal">
+        <div class="info-proyecto">
+          <h3 class="titulo-proyecto">SillyUI - Aprils Fools Interface</h3>
+          <p class="descripcion-proyecto">
+            Interfaz interactiva con animaciones absurdas y componentes únicos. Ideal para experimentar con diseño UX no convencional.
+          </p>
+          <div class="etiquetas">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span>
+          </div>
+          <div class="botones-proyecto">
+            <a href="#" target="_blank" class="btn-codigo">
+              <svg class="icon-github" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0.5C5.65 0.5 0.5 5.65 0.5 12c0 5.08 3.29 9.38 7.86 10.9.58.11.79-.25.79-.56v-2.02c-3.2.7-3.87-1.37-3.87-1.37-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.94.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.46-2.3 1.21-3.11-.12-.3-.53-1.51.12-3.14 0 0 .99-.32 3.25 1.19a11.25 11.25 0 0 1 5.92 0c2.26-1.5 3.25-1.19 3.25-1.19.65 1.63.24 2.84.12 3.14.76.81 1.21 1.85 1.21 3.11 0 4.42-2.7 5.41-5.27 5.7.41.35.78 1.04.78 2.11v3.12c0 .31.21.68.8.56A10.98 10.98 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/>
+              </svg>
+              Código
+            </a>
+            <a href="#" target="_blank" class="btn-demo">
+              Demo
+              <svg class="icon-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 3h7v7" />
+                <path d="M21 3L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="imagen-proyecto">
+          <img src="assets/img/SillyUI.png" alt="Netflix Clon" />
+        </div>
+      </div>
+  
+      <!-- Card 3 -->
+      <div class="proyecto-card-horizontal">
+        <div class="info-proyecto">
+          <h3 class="titulo-proyecto">Pagina web para profesora de Matemática</h3>
+          <p class="descripcion-proyecto">
+            Sitio institucional para profesora de matemática. Incluye agendador de clases, testimonios moderables, dark mode y bot de WhatsApp inteligente conectado a base de datos.
+          </p>
+          <div class="etiquetas">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><br>
+            <span>Node.js</span><span>MySQL</span><span>Twilio API</span>
+          </div>
+          <div class="botones-proyecto">
+            <a href="#" target="_blank" class="btn-codigo">
+              <svg class="icon-github" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12 0.5C5.65 0.5 0.5 5.65 0.5 12c0 5.08 3.29 9.38 7.86 10.9.58.11.79-.25.79-.56v-2.02c-3.2.7-3.87-1.37-3.87-1.37-.52-1.32-1.27-1.67-1.27-1.67-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.75 2.68 1.24 3.33.94.1-.74.4-1.25.73-1.54-2.56-.29-5.26-1.28-5.26-5.7 0-1.26.46-2.3 1.21-3.11-.12-.3-.53-1.51.12-3.14 0 0 .99-.32 3.25 1.19a11.25 11.25 0 0 1 5.92 0c2.26-1.5 3.25-1.19 3.25-1.19.65 1.63.24 2.84.12 3.14.76.81 1.21 1.85 1.21 3.11 0 4.42-2.7 5.41-5.27 5.7.41.35.78 1.04.78 2.11v3.12c0 .31.21.68.8.56A10.98 10.98 0 0 0 23.5 12c0-6.35-5.15-11.5-11.5-11.5Z"/>
+              </svg>
+              Código
+            </a>
+            <a href="#" target="_blank" class="btn-demo">
+              Demo
+              <svg class="icon-link" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" xmlns="http://www.w3.org/2000/svg">
+                <path d="M14 3h7v7" />
+                <path d="M21 3L10 14" />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="imagen-proyecto">
+          <img src="assets/img/math.png" alt="ChatBot de Matemática" />
+        </div>
+      </div>
+    </div>
+
+    <div class="cta-proyectos">
+      <a href="proyectos.html" class="btn-proyectos-cta">
+        Ver todos los proyectos
+        <svg class="icon-cta" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <path d="M14 3h7v7M21 3l-9 9" />
+        </svg>
+      </a>
+    </div>
+    
+  </section>
+  
+  
+    
+  
+  
+      <!-- Repetir para otros proyectos... -->
+  
+  
+
+   <!-- SECCIÓN SOBRE MÍ -->
+   <section id="sobre-mi">
+    <h2>Sobre mí</h2>
+    <p>
+        Me llamo Lucas Román, aunque todos me conocen como Luky. Mi primer acercamiento a la tecnología
+         fue al comenzar la secundaria, cuando vi por primera vez un robot de LEGO con sensores realizando tareas por sí solo.
+          Desde ese momento, mi curiosidad se encendió...
+    </p>
+    <p>
+        Actualmente me estoy formando en la Universidad del Salvador, 
+    siguiendo el camino de la Ingeniería en Informática con el objetivo de transformar mi conocimiento en soluciones reales que aporten valor.
+    </p>
+    <p>
+        Disfruto del proceso: pensar, probar, equivocarme y volver a intentarlo. 
+        Me interesa no solo que las cosas funcionen, sino que tengan sentido. Porque al final, cada línea de código que escribo no es solo una instrucción: 
+        es una parte de lo que soy, de lo que aprendo y de lo que quiero construir.
+    </p>
+  </section>
+
+  <!-- SECCIÓN CONTACTO -->
+  <section id="contacto">
+    <h2>Contactame</h2>
+    <form>
+      <input type="text" placeholder="Tu nombre" required />
+      <input type="email" placeholder="Tu email" required />
+      <textarea placeholder="Tu mensaje" required></textarea>
+      <button type="submit">Enviar mensaje</button>
+    </form>
+
+    <div class="redes">
+      <p>Conectemos:</p>
+      <a href="https://github.com/Lukychill" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/Lukychill" target="_blank">LinkedIn</a>
+      <a href="mailto:lukychillcontacto@gmail.com">Email</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 LukyDev</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
