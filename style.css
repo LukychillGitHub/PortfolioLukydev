@@ -1078,3 +1078,138 @@ body:not(.dark) .icono-link {
   color: var(--violeta-hover);
   text-shadow: 0 0 8px var(--violeta-hover);
 }
+
+/* RESPONSIVE */
+
+/* Responsive: Tablets (max-width: 992px) */
+@media (max-width: 768px) {
+  .header {
+    padding: 15px 20px;
+    flex-direction: row;  /* ✅ vuelve a fila */
+    justify-content: space-between; /* ✅ logo izq, botón der */
+    align-items: center;
+  }
+
+  .nav-wrapper {
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
+  .nav {
+    display: none; /* menu oculto (si usás hamburguesa lo activás con JS) */
+  }
+
+  #inicio {
+    min-height: 120dvh; /* 100% del viewport visible, más compatible que 100vh */
+    padding-top: 100px; /* ✅ compensa el header fijo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  
+
+  .container-inicio {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .info-izquierda h2 {
+    font-size: 2.5rem;
+  }
+
+  #frase-animada {
+    font-size: 1.2rem;
+    height: auto;
+    white-space: normal;
+  }
+
+  .botones-inicio {
+    flex-direction: column;
+    align-items: center;
+    gap: 14px;
+  }
+
+  .redes-inicio {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  .foto-derecha img {
+    max-width: 80%;
+    height: auto;
+    margin-top: 30px;
+  }
+
+  /* PROYECTOS */
+  .proyecto-card-horizontal {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .info-proyecto {
+    padding: 20px;
+    align-items: center;
+  }
+
+  .imagen-proyecto {
+    padding: 20px 0;
+  }
+
+  .botones-proyecto {
+    flex-direction: row;  /* ✅ mantiene GITHUB y DEMO uno al lado del otro */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+  }
+
+  .etiquetas {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  /* EXPERIENCIA */
+  .exp-contenido {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .exp-col-izq,
+  .exp-col-der {
+    max-width: 100%;
+  }
+
+  /* SOBRE MÍ */
+  .sobre-mi-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .texto-sobre-mi {
+    text-align: center;
+  }
+
+  .foto-sobre-mi {
+    width: 200px;
+    height: 200px;
+  }
+
+  /* CONTACTO */
+  .redes-enlaces {
+    justify-content: center;
+  }
+
+  /* FOOTER */
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 16px;
+  }
+}
+
