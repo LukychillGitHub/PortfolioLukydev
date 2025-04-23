@@ -187,10 +187,11 @@ body:not(.dark) .logo code {
 
 /* INICIO */
 #inicio {
-  height: 100vh;
+  margin-top: -20px;
+  min-height: 100vh; /* en lugar de height: 100vh */
   padding: 80px 5vw 0;
   background: var(--fondo-inicio);
-  background-attachment: fixed; /* 🟣 clave para el parallax */
+  background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
