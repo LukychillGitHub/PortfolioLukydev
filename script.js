@@ -133,3 +133,4 @@ const observer = new IntersectionObserver((entries) => {
 document.querySelectorAll('.exp-item').forEach(item => {
   observer.observe(item);
 });
+
