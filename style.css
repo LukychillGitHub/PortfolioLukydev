@@ -415,6 +415,24 @@ body:not(.dark) .icono-link {
   transform: translateX(4px);
 }
 
+.btn-proyectos svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  vertical-align: middle;
+}
+
+.btn-proyectos svg {
+  transform: translateY(1px); /* ajuste fino */
+}
+
+.botones-inicio {
+  display: flex;
+  gap: 16px; /* separá a gusto */
+  flex-wrap: wrap; /* por si en mobile se ajusta */
+  margin-bottom: 20px;
+}
+
 /* SECCIÓN PROYECTOS */
 #proyectos {
   padding: 120px 0;
