@@ -105,3 +105,31 @@ icono.classList.add(esDark ?  "rotate-moon" : "rotate-sun");
     }
   });
 });
+
+
+document.querySelectorAll('.btn-exp').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.btn-exp').forEach(b => b.classList.remove('activo'));
+    btn.classList.add('activo');
+    const tab = btn.dataset.tab;
+
+    document.querySelectorAll('.exp-item').forEach(item => {
+      item.classList.toggle('oculto', item.dataset.tab !== tab);
+    });
+  });
+});
+
+// Animacion de Entry/out experiencia
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    } else {
+      entry.target.classList.remove('visible');
+    }
+  });
+}, { threshold: 0.15 });
+
+document.querySelectorAll('.exp-item').forEach(item => {
+  observer.observe(item);
+});
