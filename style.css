@@ -492,12 +492,25 @@ body:not(.dark) .icono-link {
   margin-top: 10px;
 }
 
-.btn-codigo,
+.btn-codigo{
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+
 .btn-demo {
   display: inline-flex;
   align-items: center;
   gap: 8px;
   padding: 10px 20px;
+  padding-right: 6px;
   font-size: 0.95rem;
   font-weight: bold;
   border-radius: 25px;
@@ -542,11 +555,11 @@ body:not(.dark) .icono-link {
   vertical-align: middle;
   transition: transform 0.3s ease, opacity 0.3s ease;
   opacity: 0.85;
-  transform: translate(0, 0);
+  transform: translate(-10px, 4px);
 }
 
 .btn-demo:hover .icon-link {
-  transform: translate(4px, -4px) scale(1.15);
+  transform: translate(-5px, -1px) scale(1.15);
   opacity: 1;
 }
 
@@ -575,7 +588,8 @@ body:not(.dark) .icono-link {
   display: inline-flex;
   align-items: center;
   gap: 10px;
-  padding: 14px 32px;
+  padding: 14px 20px;
+  padding-right: 16px;
   background-color: var(--color-btn);
   color: var(--color-btn-hover);
   font-weight: bold;
@@ -586,7 +600,7 @@ body:not(.dark) .icono-link {
 }
 
 .btn-proyectos-cta:hover {
-  transform: scale(1.07);
+  transform: scale(1.05);
   background-color: var(--color-btn-hover);
   color: var(--color-btn);
 }
@@ -597,8 +611,11 @@ body:not(.dark) .icono-link {
   stroke: currentColor;
   transition: transform 0.3s ease;
   stroke-width: 2.4;
+  transform: translateY(4px) translateX(-4px); /* 🧩 ¡Este es el truco! */
+
 }
 
+
 .btn-proyectos-cta:hover .icon-cta {
-  transform: translateX(5px);
+  transform: translateX(2px);
 }
