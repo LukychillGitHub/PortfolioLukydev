@@ -169,9 +169,12 @@ body:not(.dark) .logo code {
   width: 24px;
   height: 24px;
   display: block;
+  margin: 0 auto;
 }
 
-
+.modo-btn svg path {
+  transform: translateX(-2px) translateY(2px);
+}
 
 .modo-btn:hover {
   background-color: var(--violeta);
