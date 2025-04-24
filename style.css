@@ -187,7 +187,6 @@ body:not(.dark) .logo code {
 
 /* INICIO */
 #inicio {
-  margin-top: -20px;
   min-height: 100vh; /* en lugar de height: 100vh */
   padding: 80px 5vw 0;
   background: var(--fondo-inicio);
