@@ -196,8 +196,11 @@
   function caseBody(c) {
     let h = `<div class="case"><div class="eyebrow">${esc(c.tag)}</div><h2 class="h2">${esc(c.title)}</h2><p class="case-lead">${esc(c.lead)}</p>`;
     if (c.timeline) h += `<div class="mig">${c.timeline.map((t) => `<div class="${t.next ? "next" : ""}"><b>${esc(t.name)}</b><span><i></i>${esc(t.state)}</span></div>`).join("")}</div>`;
+    if (c.flow) h += `<div class="case-sec"><div class="eyebrow">${esc(c.flowTitle)}</div><ol class="flow">${c.flow.map((f, i) => `<li class="flow-node${f[2] ? " hit" : ""}"><span class="flow-n">${i + 1}</span><b>${esc(f[0])}</b><small>${esc(f[1])}</small>${f[2] ? `<span class="flow-marks">${f[2].map((m) => `<i title="${L.incidents} ${m}">${m}</i>`).join("")}</span>` : ""}</li>`).join("")}</ol></div>`;
+    if (c.gallery && c.gallery.length) h += `<div class="case-sec"><div class="gallery">${c.gallery.map((g) => `<figure><img src="${g[0]}" alt="${esc(g[1])}" loading="lazy"><figcaption>${esc(g[1])}</figcaption></figure>`).join("")}</div></div>`;
+    if (c.tx) h += `<div class="case-sec"><div class="eyebrow">${esc(c.txTitle)}</div><div class="tx-wrap"><table class="tx"><tbody>${c.tx.map((t) => `<tr><th scope="row">${esc(t[0])}</th><td><code>${esc(t[1])}</code></td><td>${esc(t[2])}</td></tr>`).join("")}</tbody></table></div></div>`;
     if (c.objects) h += `<div class="case-sec"><div class="eyebrow">${L.objects}</div><div class="chips" style="margin-top:8px">${c.objects.map((o) => `<span class="chip acc">${esc(o)}</span>`).join("")}</div></div>`;
-    if (c.incidents) h += `<div class="case-sec"><div class="eyebrow">${L.incidents}</div><div class="incidents">${c.incidents.map((x) => `<details class="incident"><summary>${esc(x.title)}${CHEV}</summary>
+    if (c.incidents) h += `<div class="case-sec"><div class="eyebrow">${L.incidents}</div><div class="incidents">${c.incidents.map((x, i) => `<details class="incident"><summary><span><i class="inc-n">${i + 1}</i>${esc(x.title)}</span>${CHEV}</summary>
       <dl><dt>${L.dl[0]}</dt><dd>${esc(x.problem)}</dd><dt>${L.dl[1]}</dt><dd>${esc(x.cause)}</dd><dt>${L.dl[2]}</dt><dd>${esc(x.fix)}</dd></dl></details>`).join("")}</div></div>`;
     if (c.incidents && c.steps) h += `<div class="eyebrow" style="margin-top:22px">${L.howIncident}</div>`;
     if (c.archive) h += `<div class="archive">${c.archive.map((a) => `<a href="${a[2]}" target="_blank" rel="noopener"><b>${esc(a[0])} ↗</b><span>${esc(a[1])}</span></a>`).join("")}</div>`;

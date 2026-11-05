@@ -23,6 +23,8 @@ window.LUKY = {
         { name: "Complejo Alimenticio San Salvador", state: "Migrada" },
         { name: "Grupo Ayudín", state: "Próxima", next: true }
       ],
+      flowTitle: "Cómo es una migración",
+      flow: [["Datos de origen", "Extracción de la empresa adquirida"], ["Plantillas", "Armado en LTMOM"], ["Limpieza", "Formatos, decimales, duplicados"], ["Calidad", "Cargas de prueba y errores"], ["Validación", "Con el área dueña del dato"], ["Producción", "Carga definitiva"], ["Auditoría", "Evidencia en SharePoint"]],
       objects: ["Clientes", "Proveedores", "Materiales", "Producto terminado", "Materia prima", "Insumos", "Stocks", "Lotes", "Versiones de fabricación"],
       steps: [
         ["Problema", "Cada empresa trae datos con otra estructura y otros criterios de carga, y cada migración es más exigente: Etchart fue la primera, con la herramienta por aprender, y Complejo Alimenticio San Salvador implicó un volumen de datos mucho mayor."],
@@ -36,6 +38,10 @@ window.LUKY = {
       id: "comex", side: "Incidentes Comex", tag: "Molinos · Comercio Exterior",
       title: "Encontrar la falla de lógica que frena un proceso de Comex",
       lead: "Dedico el resto de mi tiempo a Comercio Exterior, desde la orden de compra hasta la facturación. Algunos incidentes se resuelven en el momento; otros requieren entrar al código ABAP para encontrar dónde se rompe la lógica del proceso. Además lidero la reunión semanal de incidentes con la consultora externa que da soporte al sistema de Comex.",
+      flowTitle: "Dónde aparecieron los incidentes",
+      flow: [["Orden de compra", "ME23N"], ["Despacho y legajo", "Autorizaciones"], ["Factura de importación", "Creada también por API", [1, 3]], ["Contabilización", "FB03 · cuentas de mayor", [2]], ["Portal de proveedores", "Estado de facturación", [4]]],
+      txTitle: "Transacciones según el problema",
+      tx: [["Compras", "ME23N", "Revisar la orden de compra"], ["Contabilidad", "FB03", "Ver el documento contable y sus cuentas"], ["Materiales y lotes", "MM03 · BMBC", "Consultar el material y corregir lotes"], ["Personal", "PA30", "Corregir datos bancarios"], ["Datos", "SE16N", "Consultar tablas directamente"], ["Logs", "SLG1", "Leer el log de la aplicación"], ["Código", "SE38 · SE37 · SE24", "Debuggear programas, funciones y clases"]],
       incidents: [
         { title: "Notas de crédito con receptor alternativo de pago", problem: "Las notas de crédito de importación fallaban cuando tenían un receptor alternativo de pago.", cause: "Debuggeando el objeto de facturas de importación encontré que, en ese caso, el flujo tomaba un camino incorrecto.", fix: "Corrección del flujo para las notas de crédito con receptor alternativo." },
         { title: "Impuestos compuestos en una sola cuenta", problem: "Con impuestos compuestos, como IVA más Ingresos Brutos, todo el importe se contabilizaba en la cuenta de IVA.", cause: "El split del impuesto no se estaba realizando al contabilizar.", fix: "Con una función estándar de SAP logré subdividir el impuesto para que cada parte impacte en su cuenta de mayor." },
@@ -44,16 +50,18 @@ window.LUKY = {
       ],
       steps: [
         ["Relevar", "Entender qué paso del proceso de negocio no se cumple y en qué documento aparece el problema."],
-        ["Diagnosticar", "Revisar documentos y tablas (ME23N, FB03, SE16N), logs (SLG1) y, cuando hace falta, debuggear programas, funciones y clases (SE38, SE37, SE24)."],
+        ["Diagnosticar", "Elegir la transacción según el problema (ver la tabla) y, cuando la falla está en la lógica, debuggear el código ABAP hasta encontrar dónde se rompe."],
         ["Corregir", "Ajustar o coordinar la corrección con especificación funcional y orden de transporte, probarla en calidad y validarla con el usuario."],
         ["Seguimiento", "En la reunión semanal el equipo me reporta los incidentes y llevo el control de cada uno hasta su cierre."]
       ],
-      chips: ["Debugging ABAP", "SE38 · SE37 · SE24", "ME23N · FB03 · SE16N · SLG1", "Service Manager", "Cuentas de mayor", "Órdenes de transporte"]
+      chips: ["Debugging ABAP", "Service Manager", "Cuentas de mayor", "Órdenes de transporte", "Especificaciones funcionales"]
     },
     {
       id: "bot", side: "Bot de videos", tag: "Proyecto propio · en producción",
       title: "Publicar un video en tres redes con un solo link",
       lead: "Republicar cada video a mano en cada plataforma es repetitivo. Armé un bot de Telegram en Python: le paso el link de un TikTok y lo guarda en Google Drive, lo sube como YouTube Short y como Reel de prueba de Instagram.",
+      flowTitle: "Arquitectura",
+      flow: [["Link de TikTok", "Enviado por Telegram"], ["Bot en el VPS", "Python · systemd · usuario autorizado"], ["Descarga en HD", "Servicio externo, sin marca de agua"], ["Publicación", "Google Drive · YouTube Short · Reel de Instagram"], ["Resultado", "Respuesta en Telegram por plataforma"]],
       steps: [
         ["Problema", "El bot funcionaba en mi PC, pero en el servidor TikTok devolvía la página sin los datos del video."],
         ["Diagnóstico", "Descarté versión, cookies e impersonation de navegador. Inspeccionando el HTML vi que TikTok omite el bloque del video para IPs de datacenter."],
@@ -66,6 +74,8 @@ window.LUKY = {
       id: "passport", side: "PassportPlanner", tag: "App publicada",
       title: "Una app estable en uso real",
       lead: "App móvil para planificar y registrar actividades compartidas: pasaportes por invitación, sellos con fotos, rankings colaborativos y una ruleta que elige el próximo plan.",
+      flowTitle: "Arquitectura",
+      flow: [["App", "React Native · Expo · iOS, Android y web"], ["Supabase", "Auth · PostgreSQL · Storage"], ["Edge Function", "Borrado de cuenta"], ["GitHub Actions", "Deploy web y tarea programada"], ["passport.lukychill.com", "Versión instalable (PWA)"]],
       steps: [
         ["Problema", "En uso diario los pasaportes \"desaparecían\", las fotos tardaban en subir y la base gratuita se pausaba sola tras 7 días sin actividad."],
         ["Diagnóstico", "Las sesiones vencían al volver a la app, la subida de fotos no estaba optimizada y Supabase pausa los proyectos inactivos."],
@@ -113,7 +123,7 @@ window.LUKY = {
         "Especificaciones funcionales, órdenes de transporte, relevamiento de cambios y altas de Business Partners.",
         "Coordinación con Comex, datos maestros, IT Logística (EWM) y desarrollo."
       ],
-      tools: ["SAP S/4HANA", "Módulo FI", "Migration Cockpit", "LTMC / LTMOM", "Debugging ABAP", "SE16N", "ME23N", "FB03", "SLG1", "Service Manager", "Órdenes de transporte"],
+      tools: ["SAP S/4HANA", "Módulo FI", "Migration Cockpit", "LTMC / LTMOM", "Debugging ABAP", "SE16N", "ME23N", "FB03", "MM03", "BMBC", "PA30", "SLG1", "Service Manager", "Órdenes de transporte"],
       actions: [{ label: "Ver caso de migraciones", open: "cases", arg: "migraciones" }, { label: "Ver incidentes de Comex", open: "cases", arg: "comex" }]
     },
     {
@@ -154,7 +164,7 @@ window.LUKY = {
 
   skills: [
     ["SAP y negocio", ["SAP S/4HANA", "Módulo FI", "Migration Cockpit", "LTMC / LTMOM", "Datos maestros", "Debugging ABAP", "Comercio Exterior", "Análisis funcional", "Órdenes de transporte"]],
-    ["Transacciones SAP", ["SE16N", "SE38", "SE37", "SE24", "ME23N", "FB03", "SLG1"]],
+    ["Transacciones SAP", ["SE16N", "SE38", "SE37", "SE24", "ME23N", "FB03", "MM03", "BMBC", "PA30", "SLG1"]],
     ["Desarrollo", ["Python", "TypeScript", "JavaScript", "React Native", "Next.js", "Node.js", "Supabase", "PostgreSQL", "MySQL", "APIs REST", "OAuth 2.0"]],
     ["Infraestructura", ["Linux", "systemd", "nginx", "HTTPS", "GitHub Actions", "Git"]],
     ["Personas", ["Liderazgo de reuniones", "Documentación", "Docencia", "Comunicación con negocio"]]

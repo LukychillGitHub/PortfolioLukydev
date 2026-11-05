@@ -13,6 +13,8 @@ window.LUKY_EN = {
         { name: "Complejo Alimenticio San Salvador", state: "Migrated" },
         { name: "Grupo Ayudín", state: "Next", next: true }
       ],
+      flowTitle: "How a migration works",
+      flow: [["Source data", "Extracted from the acquired company"], ["Templates", "Built in LTMOM"], ["Cleansing", "Formats, decimals, duplicates"], ["QA", "Test loads and errors"], ["Validation", "With the data owner"], ["Production", "Final load"], ["Audit", "Evidence in SharePoint"]],
       objects: ["Customers", "Vendors", "Materials", "Finished goods", "Raw materials", "Supplies", "Stock", "Batches", "Production versions"],
       steps: [
         ["Problem", "Each company brings data with a different structure and different loading criteria, and each migration is more demanding: Etchart was the first, while I was still learning the tool, and Complejo Alimenticio San Salvador meant a much larger data volume."],
@@ -26,6 +28,10 @@ window.LUKY_EN = {
       id: "comex", side: "Foreign Trade incidents", tag: "Molinos · Foreign Trade",
       title: "Finding the logic failure that blocks a Foreign Trade process",
       lead: "I spend the rest of my time on Foreign Trade, from the purchase order to invoicing. Some incidents are fixed on the spot; others require going into the ABAP code to find where the process logic breaks. I also lead the weekly incident meeting with the external consulting firm that supports the Foreign Trade system.",
+      flowTitle: "Where the incidents appeared",
+      flow: [["Purchase order", "ME23N"], ["Customs file", "Authorizations"], ["Import invoice", "Also created via API", [1, 3]], ["Posting", "FB03 · G/L accounts", [2]], ["Supplier portal", "Invoicing status", [4]]],
+      txTitle: "Transactions by type of problem",
+      tx: [["Purchasing", "ME23N", "Review the purchase order"], ["Accounting", "FB03", "Check the accounting document and its accounts"], ["Materials & batches", "MM03 · BMBC", "Look up the material and fix batches"], ["HR", "PA30", "Fix bank details"], ["Data", "SE16N", "Query tables directly"], ["Logs", "SLG1", "Read the application log"], ["Code", "SE38 · SE37 · SE24", "Debug programs, function modules and classes"]],
       incidents: [
         { title: "Credit memos with an alternative payee", problem: "Import credit memos failed when they had an alternative payee.", cause: "Debugging the import invoice object, I found that the flow took the wrong path in that case.", fix: "Fixed the flow for credit memos with an alternative payee." },
         { title: "Compound taxes posted to a single account", problem: "With compound taxes, such as VAT plus gross income tax, the full amount was posted to the VAT account.", cause: "The tax split was not being applied at posting time.", fix: "Using a standard SAP function, I split the tax so each part posts to its own G/L account." },
@@ -34,16 +40,18 @@ window.LUKY_EN = {
       ],
       steps: [
         ["Scope", "Understand which step of the business process is not being met and in which document the problem appears."],
-        ["Diagnose", "Review documents and tables (ME23N, FB03, SE16N), logs (SLG1) and, when needed, debug programs, function modules and classes (SE38, SE37, SE24)."],
+        ["Diagnose", "Pick the transaction based on the problem (see the table) and, when the failure is in the logic, debug the ABAP code until I find where it breaks."],
         ["Fix", "Apply or coordinate the fix with a functional specification and a transport request, test it in QA and validate it with the user."],
         ["Follow up", "In the weekly meeting the team reports incidents to me and I track each one until it is closed."]
       ],
-      chips: ["ABAP debugging", "SE38 · SE37 · SE24", "ME23N · FB03 · SE16N · SLG1", "Service Manager", "G/L accounts", "Transport requests"]
+      chips: ["ABAP debugging", "Service Manager", "G/L accounts", "Transport requests", "Functional specifications"]
     },
     {
       id: "bot", side: "Video bot", tag: "Personal project · in production",
       title: "Publishing a video on three networks with a single link",
       lead: "Republishing every video by hand on each platform is repetitive. I built a Telegram bot in Python: I send it a TikTok link and it stores the video in Google Drive, uploads it as a YouTube Short and as an Instagram trial Reel.",
+      flowTitle: "Architecture",
+      flow: [["TikTok link", "Sent via Telegram"], ["Bot on the VPS", "Python · systemd · authorized user"], ["HD download", "External service, no watermark"], ["Publishing", "Google Drive · YouTube Short · Instagram Reel"], ["Result", "Telegram reply per platform"]],
       steps: [
         ["Problem", "The bot worked on my PC, but on the server TikTok returned the page without the video data."],
         ["Diagnosis", "I ruled out version, cookies and browser impersonation. Inspecting the HTML, I saw that TikTok omits the video block for datacenter IPs."],
@@ -56,6 +64,8 @@ window.LUKY_EN = {
       id: "passport", side: "PassportPlanner", tag: "Published app",
       title: "A stable app in real use",
       lead: "Mobile app to plan and log shared activities: invite-based passports, photo stamps, collaborative rankings and a wheel that picks the next plan.",
+      flowTitle: "Architecture",
+      flow: [["App", "React Native · Expo · iOS, Android and web"], ["Supabase", "Auth · PostgreSQL · Storage"], ["Edge Function", "Account deletion"], ["GitHub Actions", "Web deploy and scheduled job"], ["passport.lukychill.com", "Installable version (PWA)"]],
       steps: [
         ["Problem", "In daily use, passports \"disappeared\", photos took long to upload and the free database paused itself after 7 days without activity."],
         ["Diagnosis", "Sessions expired when returning to the app, photo uploads were not optimized and Supabase pauses inactive projects."],
@@ -103,7 +113,7 @@ window.LUKY_EN = {
         "Functional specifications, transport requests, change requirements gathering and Business Partner creation.",
         "Coordination with Foreign Trade, master data, IT Logistics (EWM) and development."
       ],
-      tools: ["SAP S/4HANA", "FI module", "Migration Cockpit", "LTMC / LTMOM", "ABAP debugging", "SE16N", "ME23N", "FB03", "SLG1", "Service Manager", "Transport requests"],
+      tools: ["SAP S/4HANA", "FI module", "Migration Cockpit", "LTMC / LTMOM", "ABAP debugging", "SE16N", "ME23N", "FB03", "MM03", "BMBC", "PA30", "SLG1", "Service Manager", "Transport requests"],
       actions: [{ label: "Migration case", open: "cases", arg: "migraciones" }, { label: "Foreign Trade incidents", open: "cases", arg: "comex" }]
     },
     {
@@ -144,7 +154,7 @@ window.LUKY_EN = {
 
   skills: [
     ["SAP & business", ["SAP S/4HANA", "FI module", "Migration Cockpit", "LTMC / LTMOM", "Master data", "ABAP debugging", "Foreign Trade", "Functional analysis", "Transport requests"]],
-    ["SAP transactions", ["SE16N", "SE38", "SE37", "SE24", "ME23N", "FB03", "SLG1"]],
+    ["SAP transactions", ["SE16N", "SE38", "SE37", "SE24", "ME23N", "FB03", "MM03", "BMBC", "PA30", "SLG1"]],
     ["Development", ["Python", "TypeScript", "JavaScript", "React Native", "Next.js", "Node.js", "Supabase", "PostgreSQL", "MySQL", "REST APIs", "OAuth 2.0"]],
     ["Infrastructure", ["Linux", "systemd", "nginx", "HTTPS", "GitHub Actions", "Git"]],
     ["People", ["Meeting leadership", "Documentation", "Teaching", "Business communication"]]
