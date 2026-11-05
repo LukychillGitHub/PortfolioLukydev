@@ -1,0 +1,69 @@
+# Actualiza data/stats.json con las métricas de TikTok, YouTube, Instagram y Twitch (Kick se carga a mano).
+# Corre cada hora y solo hace commit si algún número o estado en vivo cambió.
+# Las credenciales se cargan en Settings → Secrets and variables → Actions (ver README).
+name: Actualizar métricas
+
+on:
+  schedule:
+    - cron: "7 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: stats
+  cancel-in-progress: false
+
+jobs:
+  stats:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Consultar las APIs
+        run: node scripts/fetch-stats.mjs
+        env:
+          YT_API_KEY: ${{ secrets.YT_API_KEY }}
+          YT_CHANNEL_ID: ${{ secrets.YT_CHANNEL_ID }}
+          TWITCH_CLIENT_ID: ${{ secrets.TWITCH_CLIENT_ID }}
+          TWITCH_CLIENT_SECRET: ${{ secrets.TWITCH_CLIENT_SECRET }}
+          IG_ACCESS_TOKEN: ${{ secrets.IG_ACCESS_TOKEN }}
+          TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
+          TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
+          TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
+
+      # Instagram y TikTok entregan tokens nuevos al renovarse. Con un token personal
+      # (secret GH_PAT, permiso "Secrets: read and write" sobre este repo) se guardan solos.
+      - name: Guardar tokens renovados
+        if: ${{ hashFiles('.secrets-out/*') != '' }}
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::warning::Hay tokens renovados pero falta el secret GH_PAT para guardarlos. Ver README."
+            exit 0
+          fi
+          for f in .secrets-out/*; do
+            gh secret set "$(basename "$f")" --repo "$GITHUB_REPOSITORY" < "$f"
+            echo "Actualizado $(basename "$f")"
+          done
+          rm -rf .secrets-out
+
+      - name: Commit si hubo cambios
+        run: |
+          rm -rf .secrets-out
+          if git diff --quiet -- data/stats.json; then
+            echo "Sin cambios en las métricas."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/stats.json
+          git commit -m "Actualizar métricas de redes"
+          git push
