@@ -1,0 +1,18 @@
+{
+  "updated": "2026-11-05T12:33:08.631Z",
+  "platforms": {
+    "youtube": null,
+    "twitch": null,
+    "instagram": null,
+    "tiktok": {
+      "followers": 391000,
+      "likes": 10000000,
+      "source": "manual"
+    },
+    "kick": {
+      "followers": null,
+      "source": "manual"
+    }
+  },
+  "live": {}
+}

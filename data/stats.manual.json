@@ -1,0 +1,7 @@
+{
+  "_comment": "Valores de respaldo. Se usan cuando una plataforma no tiene API configurada o falla. Kick no publica seguidores por API: actualizalo a mano.",
+  "platforms": {
+    "tiktok": { "followers": 391000, "likes": 10000000 },
+    "kick": { "followers": null }
+  }
+}
