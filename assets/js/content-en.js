@@ -65,15 +65,15 @@ window.LUKY_EN = {
       title: "A stable app in real use",
       lead: "Mobile app to plan and log shared activities: invite-based passports, photo stamps, collaborative rankings and a wheel that picks the next plan.",
       flowTitle: "Architecture",
-      flow: [["App", "React Native · Expo · iOS, Android and web"], ["Supabase", "Auth · PostgreSQL · Storage"], ["Edge Function", "Account deletion"], ["GitHub Actions", "Web deploy and scheduled job"], ["passport.lukychill.com", "Installable version (PWA)"]],
+      flow: [["App", "React Native · Expo · iOS, Android and web"], ["Supabase", "Auth · PostgreSQL · Storage"], ["Edge Function", "Account deletion"], ["GitHub Actions", "Web deploy and scheduled job"], ["Web version", "Installable on iPhone (PWA)"]],
       steps: [
         ["Problem", "In daily use, passports \"disappeared\", photos took long to upload and the free database paused itself after 7 days without activity."],
         ["Diagnosis", "Sessions expired when returning to the app, photo uploads were not optimized and Supabase pauses inactive projects."],
         ["Solution", "Session refresh on resume, fixed photo uploads and a scheduled GitHub Actions job that keeps the database active."],
-        ["Result", "A stable app, with an installable iPhone web version published at passport.lukychill.com."]
+        ["Result", "A stable app, with an installable iPhone web version published on GitHub Pages."]
       ],
       chips: ["React Native", "Expo", "TypeScript", "Supabase", "GitHub Actions"],
-      links: [["Open the app", "https://passport.lukychill.com"], ["Code", "https://github.com/LukychillGitHub/PassportPlanner"]]
+      links: [["Open the app", "https://lukychillgithub.github.io/PassportPlanner/"], ["Code", "https://github.com/LukychillGitHub/PassportPlanner"]]
     },
     {
       id: "costaflow", side: "CostaFlow", tag: "Personal project",
