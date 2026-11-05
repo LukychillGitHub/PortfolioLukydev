@@ -7,6 +7,9 @@
   <meta name="description" content="Portfolio de Lucas Román Fernández: Analista de Tecnología en SAP S/4HANA, migraciones de datos y análisis funcional. También Lukychill, creador de contenido de Rocket League.">
   <meta name="theme-color" content="#0a0c11">
   <link rel="canonical" href="https://lukychill.com/">
+  <link rel="alternate" hreflang="es" href="https://lukychill.com/?lang=es">
+  <link rel="alternate" hreflang="en" href="https://lukychill.com/?lang=en">
+  <link rel="alternate" hreflang="x-default" href="https://lukychill.com/">
   <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="assets/img/favicon.png" type="image/png" sizes="64x64">
   <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
@@ -67,6 +70,8 @@
     <p>Contacto: lukychillcontacto@gmail.com · <a href="https://linkedin.com/in/Lukychill">LinkedIn</a> · <a href="https://github.com/LukychillGitHub">GitHub</a></p>
     <h2>Lukychill</h2>
     <p>Creador de contenido de Rocket League (Grand Champion): <a href="https://www.tiktok.com/@lukychill">TikTok</a> · <a href="https://www.youtube.com/@lukychill">YouTube</a> · <a href="https://www.instagram.com/lukychill">Instagram</a> · <a href="https://www.twitch.tv/lukychill">Twitch</a> · <a href="https://kick.com/lukychill">Kick</a></p>
+    <h2>English</h2>
+    <p>Technology Analyst at Molinos Río de la Plata (SAP S/4HANA, FI module): data migration of acquired companies with SAP Migration Cockpit and Foreign Trade incident resolution with ABAP debugging. Computer Engineering student at Universidad del Salvador. <a href="assets/cv/LucasFernandezCV-English.pdf">Résumé (English)</a>.</p>
   </main></div>
 </noscript>
 
@@ -81,6 +86,7 @@
 
 <!-- LOGIN -->
 <main id="login" class="screen" hidden>
+  <div class="langs login-langs" role="group" aria-label="Idioma / Language"><button data-lang="es">Español</button><button data-lang="en">English</button></div>
   <div class="login-clock"><div class="t" id="lclock">--:--</div><div class="d" id="ldate"></div></div>
   <div class="users">
     <button class="user" data-go="lucas">
@@ -102,7 +108,7 @@
 <!-- ESCRITORIO -->
 <div id="desktop" class="screen" hidden>
   <div class="menubar">
-    <span class="logo" aria-hidden="true">&lt;L/&gt;</span>
+    <span class="logo" id="deskLogo">&lt;Lucas Fernández/&gt;</span>
     <span class="app-name" id="appName">Escritorio</span>
     <span class="spacer"></span>
     <span class="status">
@@ -110,6 +116,7 @@
       <button class="search" id="searchBtn" aria-label="Buscar (Ctrl K)"><svg viewBox="0 0 24 24"><circle cx="10.5" cy="10.5" r="6"/><path d="M15 15l5 5"/></svg><span>Buscar</span><kbd>⌘K</kbd></button>
       <span id="mclock"></span>
     </span>
+    <div class="langs" role="group" aria-label="Idioma / Language"><button data-lang="es">ES</button><button data-lang="en">EN</button></div>
     <button class="switch" id="switchUser">Cambiar usuario</button>
   </div>
   <div class="hello" id="hello"></div>
@@ -120,6 +127,7 @@
 </div>
 
 <script src="assets/js/content.js"></script>
+<script src="assets/js/content-en.js"></script>
 <script src="assets/js/lukyos.js"></script>
 </body>
 </html>

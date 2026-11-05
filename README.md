@@ -5,6 +5,8 @@ Portfolio de **Lucas Román Fernández** con forma de sistema operativo: una pan
 - **Lucas Fernández** (trabajo): Sobre mí, Casos resueltos, Trayectoria, Formación, Terminal, Currículum y Contacto.
 - **Lukychill** (redes): Stats con métricas en vivo, Rango, Videos, Colaboraciones y Lo que viene.
 
+Está en **español e inglés**: selector ES / EN en la barra de arriba y en el login; `?lang=en` abre directo en inglés. Los textos en inglés están en `assets/js/content-en.js` (misma estructura que `content.js`) y los de la interfaz en `lukyos.js` (objeto `T`).
+
 Atajos: `⌘K` / `Ctrl+K` abre el buscador, `Esc` cierra la ventana de adelante. Los enlaces `lukychill.com/#lucas` y `lukychill.com/#lukychill` entran directo a cada usuario.
 
 ## Estructura
@@ -12,7 +14,8 @@ Atajos: `⌘K` / `Ctrl+K` abre el buscador, `Esc` cierra la ventana de adelante.
 ```
 index.html                 estructura, SEO y versión sin JavaScript
 assets/css/lukyos.css      estilos (los dos temas: Lucas claro, Lukychill oscuro)
-assets/js/content.js       TODO el contenido: casos, trabajos, habilidades, redes, colaboraciones
+assets/js/content.js       TODO el contenido en español: casos, trabajos, habilidades, redes, colaboraciones
+assets/js/content-en.js    el mismo contenido en inglés
 assets/js/lukyos.js        el sistema: ventanas, dock, buscador, formulario, métricas
 assets/cv/                 CV en español e inglés
 assets/img/                fotos, favicon e imagen para compartir (og.png)
