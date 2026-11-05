@@ -77,6 +77,31 @@ async function youtubeAudience() {
   return { age, gender, country: Object.fromEntries((ct.rows || []).map(([c, v]) => [c, v])), period: "12m" };
 }
 
+
+// Rocket League: API oficial de Tracker Network (requiere la clave TRN_API_KEY).
+// Sin clave o si falla, se usan los datos de data/stats.manual.json.
+const RL_MODES = { "Ranked Duel 1v1": "1v1", "Ranked Doubles 2v2": "2v2", "Ranked Standard 3v3": "3v3", "Tournament Matches": "torneos", "Ranked 4v4 Quads": "4v4", "Hoops": "hoops", "Rumble": "rumble", "Dropshot": "dropshot", "Snowday": "snowday", "Heatseeker": "heatseeker" };
+async function rocketLeague() {
+  if (!env.TRN_API_KEY) return null;
+  const user = env.RL_EPIC || "LukyChill";
+  const j = await get(`https://public-api.tracker.gg/v2/rocket-league/standard/profile/epic/${encodeURIComponent(user)}`, {
+    headers: { "TRN-Api-Key": env.TRN_API_KEY, Accept: "application/json" }
+  });
+  const segs = j.data?.segments || [];
+  const peaks = Object.fromEntries(segs.filter((s) => s.type === "peak-rating").map((s) => [s.metadata?.name, s.stats?.peakRating]));
+  const playlists = segs.filter((s) => s.type === "playlist" && RL_MODES[s.metadata?.name]).map((s) => {
+    const p = peaks[s.metadata.name];
+    return { mode: RL_MODES[s.metadata.name], tier: s.stats?.tier?.metadata?.name || null, div: (s.stats?.division?.metadata?.name || "").replace("Division ", "") || null, mmr: num(s.stats?.rating?.value), peak: p ? num(p.value) : null, peakTier: p?.metadata?.name || null };
+  });
+  if (!playlists.length) throw new Error("la respuesta no trae rangos");
+  const o = segs.find((s) => s.type === "overview")?.stats || {};
+  return {
+    user, source: `https://rocketleague.tracker.network/rocket-league/profile/epic/${user}/overview`,
+    playlists,
+    lifetime: { wins: num(o.wins?.value), goals: num(o.goals?.value), saves: num(o.saves?.value), assists: num(o.assists?.value), shots: num(o.shots?.value), mvps: num(o.mVPs?.value), gsr: o.goalShotRatio ? Math.round(o.goalShotRatio.value * 10) / 10 : null }
+  };
+}
+
 /* ---------------- Plataformas ---------------- */
 const sources = {
   async youtube() {
@@ -163,6 +188,9 @@ for (const [id, fn] of Object.entries(sources)) {
   if (out.live[id] === undefined && prev.live?.[id] !== undefined && id === "twitch") out.live[id] = false;
 }
 
+let rl = null;
+try { rl = await rocketLeague(); if (rl) console.log(`✓ rocket league: ${rl.playlists.length} modos`); else console.log("- rocket league: sin TRN_API_KEY, uso datos manuales"); }
+catch (e) { console.warn("✗ rocket league:", e.message.slice(0, 160), "(se conservan los últimos datos)"); }
 try { extras.audience.youtube = await youtubeAudience(); if (extras.audience.youtube) console.log("✓ youtube: audiencia"); }
 catch (e) { console.warn("✗ youtube audiencia:", e.message.slice(0, 160)); }
 
@@ -171,8 +199,8 @@ const final = {
   live: out.live,
   youtubeLatest: extras.youtubeLatest || prev.youtubeLatest || null,
   audience: { instagram: extras.audience.instagram || prev.audience?.instagram || null, youtube: extras.audience.youtube || prev.audience?.youtube || null },
-  // Rocket League: Tracker Network no tiene API pública, se carga a mano en data/stats.manual.json.
-  rl: manual.rl || null
+  // Rocket League: API oficial de Tracker Network; si no está disponible, último valor o datos manuales.
+  rl: rl || prev.rl || manual.rl || null
 };
 // Solo cambia la fecha si cambió algún dato: así la Action no commitea de más.
 const strip = (o) => JSON.stringify(o);

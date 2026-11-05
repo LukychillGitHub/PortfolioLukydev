@@ -22,7 +22,7 @@ assets/js/lukyos.js        el sistema: ventanas, dock, buscador, formulario, mé
 assets/cv/                 CV en español e inglés
 assets/img/                fotos, capturas de proyectos, favicon e imagen para compartir (og.png)
 data/stats.json            métricas (lo escribe la GitHub Action)
-data/stats.manual.json     valores a mano: TikTok, Kick y Rocket League
+data/stats.manual.json     valores a mano: TikTok, Kick y respaldo de Rocket League
 scripts/fetch-stats.mjs    consulta las APIs y genera data/stats.json
 scripts/youtube-auth.mjs   autoriza una vez YouTube Analytics (audiencia)
 .github/workflows/stats.yml corre el script cada hora
@@ -44,7 +44,7 @@ Las credenciales se cargan en **Settings → Secrets and variables → Actions �
 | Instagram | seguidores, publicaciones y audiencia | `IG_ACCESS_TOKEN` (con permiso de estadísticas) |
 | TikTok | seguidores, likes, videos | `TIKTOK_CLIENT_KEY`, `TIKTOK_CLIENT_SECRET`, `TIKTOK_REFRESH_TOKEN` |
 | Kick | se carga a mano en `data/stats.manual.json` (no tiene API de seguidores) | — |
-| Rocket League | se carga a mano en `data/stats.manual.json` → `rl` (Tracker Network no tiene API pública) | — |
+| Rocket League | rangos, MMR, picos y carrera (API oficial de Tracker Network) | `TRN_API_KEY` |
 | Renovación de tokens | guarda los tokens nuevos de Instagram y TikTok | `GH_PAT` |
 
 ### YouTube
@@ -79,7 +79,10 @@ Sirve el mismo tipo de token de larga duración (60 días) que ya usa el bot de 
 Kick no ofrece la cantidad de seguidores por API. Para mostrarla, editá `kick.followers` en `data/stats.manual.json`; si queda vacío, la tarjeta muestra el link al canal.
 
 ### Rocket League
-Los datos salen de tu perfil en [Tracker Network](https://rocketleague.tracker.network/rocket-league/profile/epic/LukyChill/overview). Como no tiene API pública, se copian a mano en `data/stats.manual.json` → `rl` (rango, división, MMR y pico por modo, y estadísticas de carrera). La Action los publica tal cual.
+Usa la API oficial de Tracker Network con tu clave de desarrollador.
+1. Guardá la clave como secret `TRN_API_KEY`.
+2. Opcional: si tu usuario de Epic cambia, agregá el secret `RL_EPIC` (por defecto `LukyChill`).
+3. Si la API falla o no hay clave, el sitio muestra los últimos datos guardados o los de `data/stats.manual.json` → `rl`.
 
 ### GH_PAT (renovación automática de tokens)
 1. GitHub → Settings → Developer settings → **Fine-grained tokens** → Generate new token.

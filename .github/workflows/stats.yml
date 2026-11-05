@@ -1,5 +1,5 @@
 # Actualiza data/stats.json: seguidores, últimos videos de YouTube y audiencia de YouTube e Instagram.
-# Kick, TikTok y Rocket League se cargan a mano en data/stats.manual.json.
+# Rocket League sale de la API oficial de Tracker Network (TRN_API_KEY). Kick y TikTok se cargan a mano.
 # Corre cada hora y solo hace commit si algún número o estado en vivo cambió.
 # Las credenciales se cargan en Settings → Secrets and variables → Actions (ver README).
 name: Actualizar métricas
@@ -41,6 +41,8 @@ jobs:
           YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
           YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
           YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          TRN_API_KEY: ${{ secrets.TRN_API_KEY }}
+          RL_EPIC: ${{ secrets.RL_EPIC }}
 
       # Instagram y TikTok entregan tokens nuevos al renovarse. Con un token personal
       # (secret GH_PAT, permiso "Secrets: read and write" sobre este repo) se guardan solos.
