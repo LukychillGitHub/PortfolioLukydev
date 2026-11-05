@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T17:36:15.022Z",
+  "updated": "2026-11-05T18:33:47.447Z",
   "platforms": {
     "kick": null,
     "youtube": {
@@ -13,7 +13,7 @@
       "source": "api"
     },
     "instagram": {
-      "followers": 17652,
+      "followers": 17655,
       "videos": 10,
       "source": "api"
     },
@@ -148,7 +148,31 @@
         "TR": 5
       }
     },
-    "youtube": null
+    "youtube": {
+      "age": {
+        "13-17": 9.5,
+        "18-24": 19.5,
+        "25-34": 37.8,
+        "35-44": 19.9,
+        "45-54": 11.399999999999999,
+        "55-64": 1.1,
+        "65-": 0.8
+      },
+      "gender": {
+        "female": 12.200000000000001,
+        "male": 87.8,
+        "genderUserSpecified": 0
+      },
+      "country": {
+        "AR": 253842,
+        "ES": 198193,
+        "MX": 86524,
+        "CL": 46138,
+        "CO": 32929,
+        "UY": 14884
+      },
+      "period": "12m"
+    }
   },
   "rl": {
     "user": "LukyChill",
