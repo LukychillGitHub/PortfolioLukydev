@@ -1,15 +1,29 @@
 {
-  "updated": "2026-11-05T15:46:00.530Z",
+  "updated": "2026-11-05T15:59:51.218Z",
   "platforms": {
     "kick": null,
-    "youtube": null,
-    "twitch": null,
-    "instagram": null,
+    "youtube": {
+      "followers": 108000,
+      "views": 9003619,
+      "videos": 680,
+      "source": "api"
+    },
+    "twitch": {
+      "followers": 47727,
+      "source": "api"
+    },
+    "instagram": {
+      "followers": 17652,
+      "videos": 10,
+      "source": "api"
+    },
     "tiktok": {
       "followers": 391000,
       "likes": 10000000,
       "source": "manual"
     }
   },
-  "live": {}
+  "live": {
+    "twitch": false
+  }
 }
