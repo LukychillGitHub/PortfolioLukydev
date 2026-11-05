@@ -30,8 +30,6 @@ window.LUKY_EN = {
       lead: "I spend the rest of my time on Foreign Trade, from the purchase order to invoicing. Some incidents are fixed on the spot; others require going into the ABAP code to find where the process logic breaks. I also lead the weekly incident meeting with the external consulting firm that supports the Foreign Trade system.",
       flowTitle: "Where the incidents appeared",
       flow: [["Purchase order", "ME23N"], ["Customs file", "Authorizations"], ["Import invoice", "Also created via API", [1, 3]], ["Posting", "FB03 · G/L accounts", [2]], ["Supplier portal", "Invoicing status", [4]]],
-      txTitle: "Transactions by type of problem",
-      tx: [["Purchasing", "ME23N", "Review the purchase order"], ["Accounting", "FB03", "Check the accounting document and its accounts"], ["Materials & batches", "MM03 · BMBC", "Look up the material and fix batches"], ["HR", "PA30", "Fix bank details"], ["Data", "SE16N", "Query tables directly"], ["Logs", "SLG1", "Read the application log"], ["Code", "SE38 · SE37 · SE24", "Debug programs, function modules and classes"]],
       incidents: [
         { title: "Credit memos with an alternative payee", problem: "Import credit memos failed when they had an alternative payee.", cause: "Debugging the import invoice object, I found that the flow took the wrong path in that case.", fix: "Fixed the flow for credit memos with an alternative payee." },
         { title: "Compound taxes posted to a single account", problem: "With compound taxes, such as VAT plus gross income tax, the full amount was posted to the VAT account.", cause: "The tax split was not being applied at posting time.", fix: "Using a standard SAP function, I split the tax so each part posts to its own G/L account." },
@@ -40,7 +38,7 @@ window.LUKY_EN = {
       ],
       steps: [
         ["Scope", "Understand which step of the business process is not being met and in which document the problem appears."],
-        ["Diagnose", "Pick the transaction based on the problem (see the table) and, when the failure is in the logic, debug the ABAP code until I find where it breaks."],
+        ["Diagnose", "Review the documents and data involved in SAP and, when the failure is in the logic, debug the ABAP code until I find where it breaks."],
         ["Fix", "Apply or coordinate the fix with a functional specification and a transport request, test it in QA and validate it with the user."],
         ["Follow up", "In the weekly meeting the team reports incidents to me and I track each one until it is closed."]
       ],
@@ -58,6 +56,7 @@ window.LUKY_EN = {
         ["Solution", "I replaced the extraction strategy with an external service. I also solved Google OAuth scopes that could not be requested together, tokens expiring every 7 days and four chained errors in Instagram authentication."],
         ["Result", "It runs 24/7 on a Linux VPS with systemd, nginx, HTTPS and a non-privileged user. If one platform fails, the others still publish."]
       ],
+      gallery: [["assets/img/projects/bot-telegram.webp", "The bot on Telegram: I send the TikTok link and it replies with the Drive file, the YouTube Short and the published Reel.", "wide"]],
       chips: ["Python", "OAuth 2.0", "YouTube Data API", "Instagram Graph API", "Linux · nginx"]
     },
     {
@@ -72,6 +71,7 @@ window.LUKY_EN = {
         ["Solution", "Session refresh on resume, fixed photo uploads and a scheduled GitHub Actions job that keeps the database active."],
         ["Result", "A stable app, with an installable iPhone web version published on GitHub Pages."]
       ],
+      gallery: [["assets/img/projects/passport-pasaporte.webp", "Passport: each activity stamped with photos, stars and a review"], ["assets/img/projects/passport-ruleta.webp", "Wheel that picks the next plan"], ["assets/img/projects/passport-tops.webp", "Tops: shared rankings by category"], ["assets/img/projects/passport-cuenta.webp", "Each member's profile"]],
       chips: ["React Native", "Expo", "TypeScript", "Supabase", "GitHub Actions"],
       links: [["Open the app", "https://lukychillgithub.github.io/PassportPlanner/"], ["Code", "https://github.com/LukychillGitHub/PassportPlanner"]]
     },
@@ -143,7 +143,7 @@ window.LUKY_EN = {
       text: "Rocket League gaming community on TikTok, YouTube, Instagram, Twitch and Kick.",
       bullets: [
         "Production and editing of Rocket League content (Grand Champion rank).",
-        "390K+ followers and 10M likes on TikTok.",
+        "380K+ followers and 10M likes on TikTok.",
         "Metrics and trend analysis to drive organic growth strategy.",
         "Brand collaborations in the gaming industry, including Repeat.gg and Aoeah."
       ],
@@ -160,14 +160,30 @@ window.LUKY_EN = {
     ["People", ["Meeting leadership", "Documentation", "Teaching", "Business communication"]]
   ],
 
-  collabs: [
-    { name: "Repeat.gg", what: "Esports tournament platform", tag: "Gaming" },
-    { name: "Aoeah", what: "Rocket League item marketplace", tag: "Rocket League" }
-  ],
 
-  roadmap: [
-    { when: "2020 – 2024", title: "Short-form Rocket League", text: "Clips and challenges on TikTok and Shorts. The stage that built the community.", state: "done" },
-    { when: "Streams", title: "Live on Kick and Twitch", text: "Live gameplay with the community.", state: "done" },
-    { when: "Next", title: "Vlog with a gamer soul", text: "Day to day: the office, university, the setup and the matches. The same person behind both users of this system.", state: "cur" }
+  story: [
+    { cat: "tipos", when: "Dec 2020", title: "Player types", sub: "The channel's first format",
+      text: "I started by portraying the player types you meet in any Rocket League match, and brought in my brother as my duo partner. Community humor in short form: the base for everything that came after.",
+      videos: ["6908569921119128838", "6906222928715697414", "6930681882623446277"] },
+    { cat: "historias", when: "Jul 2021", title: "Reddit stories", sub: "The most viral format",
+      text: "I narrated Reddit stories while playing. It was the format that blew up the most: \"El niño en peligro\" reached 5.9M views and is the channel's most watched video.",
+      videos: ["6984235506779393286", "7095803050765339909", "6984917707757980934", "7075085373012970757"] },
+    { cat: "record", when: "Oct 2021", title: "Record: 10 stacked Mercs", sub: "The channel's milestone",
+      text: "I stacked 10 Mercs on top of each other and turned it into a record. The video passed 1.7M views and became a channel landmark, with several recaps afterwards.",
+      videos: ["7017881807240629510", "7017896957716892933"] },
+    { cat: "mecanicas", when: "Dec 2022", title: "Mechanics in 3 steps", sub: "Teaching people to play better",
+      text: "Short tutorials: one mechanic explained in 3 steps so anyone can learn it, from flying for the first time to air dribbling and wall dashing.",
+      videos: ["7269811856385051909", "7179288781852282118", "7271411749981539590", "7180845716753943814"] },
+    { cat: "mapas", when: "Jul 2023", title: "Custom maps", sub: "Fall Guys, Minecraft and challenges",
+      text: "Community maps brought into Rocket League, like Fall Guys or Minecraft, and challenges made to tag that friend. Today they are a playlist of 40+ posts on TikTok.",
+      videos: ["7259136265554087173", "7447346377752923397", "7449161364343393542", "7255324202746563845"] },
+    { cat: "hermano", when: "2025", title: "Duels against my brother", sub: "The same old rivalry",
+      text: "The duo from the early days is back, now as rivals: one-on-one matches with my brother and a series of duels of its own.",
+      videos: ["7529609287245647160", "7532172259524349190"] },
+    { cat: "streams", when: "Live", title: "Streams on Twitch and Kick", sub: "Gameplay with the community",
+      text: "Rocket League streams to play and chat with the community. The Twitch channel already has 47K+ followers.",
+      metric: ["47K+", "on Twitch"], link: ["Watch on Twitch", "https://www.twitch.tv/lukychill"] },
+    { cat: "next", state: "next", when: "Next", title: "Vlog with a gamer soul", sub: "What's next",
+      text: "Day to day: the office, university, the setup and the matches. The same person behind both users of this system." }
   ]
 };

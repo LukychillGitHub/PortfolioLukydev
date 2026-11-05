@@ -1,7 +1,108 @@
 {
-  "_comment": "Valores de respaldo. Se usan cuando una plataforma no tiene API configurada o falla. Kick no tiene API de seguidores: poné el número a mano en kick.followers.",
+  "_comment": "Valores de respaldo. Kick y TikTok: actualizá followers a mano. rl: tus datos de Rocket League copiados de tu perfil en rocketleague.tracker.network (actualizalos cuando quieras).",
   "platforms": {
-    "tiktok": { "followers": 391000, "likes": 10000000 },
-    "kick": { "followers": null }
+    "tiktok": {
+      "followers": 384700,
+      "likes": 10200000
+    },
+    "kick": {
+      "followers": null
+    }
+  },
+  "rl": {
+    "user": "LukyChill",
+    "updated": "2026-11-05",
+    "source": "https://rocketleague.tracker.network/rocket-league/profile/epic/LukyChill/overview",
+    "playlists": [
+      {
+        "mode": "1v1",
+        "tier": "Champion I",
+        "div": "IV",
+        "mmr": 1054,
+        "peak": 1200,
+        "peakTier": "Grand Champion I"
+      },
+      {
+        "mode": "2v2",
+        "tier": "Grand Champion I",
+        "div": "IV",
+        "mmr": 1550,
+        "peak": 1786,
+        "peakTier": "Grand Champion III"
+      },
+      {
+        "mode": "3v3",
+        "tier": "Champion III",
+        "div": "II",
+        "mmr": 1348,
+        "peak": 1712,
+        "peakTier": "Grand Champion II"
+      },
+      {
+        "mode": "torneos",
+        "tier": "Grand Champion I",
+        "div": "III",
+        "mmr": 1531,
+        "peak": 1756,
+        "peakTier": "Grand Champion III"
+      },
+      {
+        "mode": "4v4",
+        "tier": "Grand Champion II",
+        "div": "II",
+        "mmr": 1160,
+        "peak": 1203,
+        "peakTier": null
+      },
+      {
+        "mode": "hoops",
+        "tier": "Champion III",
+        "div": "IV",
+        "mmr": 1077,
+        "peak": 1139,
+        "peakTier": "Champion III"
+      },
+      {
+        "mode": "rumble",
+        "tier": "Grand Champion I",
+        "div": "II",
+        "mmr": 1212,
+        "peak": 1406,
+        "peakTier": "Grand Champion II"
+      },
+      {
+        "mode": "dropshot",
+        "tier": "Champion III",
+        "div": "II",
+        "mmr": 1007,
+        "peak": 1066,
+        "peakTier": "Grand Champion I"
+      },
+      {
+        "mode": "snowday",
+        "tier": "Champion II",
+        "div": "III",
+        "mmr": 1004,
+        "peak": 1103,
+        "peakTier": "Grand Champion I"
+      },
+      {
+        "mode": "heatseeker",
+        "tier": "Champion III",
+        "div": "III",
+        "mmr": 1100,
+        "peak": 1191,
+        "peakTier": "Grand Champion II"
+      }
+    ],
+    "lifetime": {
+      "wins": 13151,
+      "goals": 43132,
+      "saves": 34480,
+      "assists": 11526,
+      "shots": 94786,
+      "mvps": 5179,
+      "gsr": 45.5
+    }
   }
 }

@@ -40,8 +40,6 @@ window.LUKY = {
       lead: "Dedico el resto de mi tiempo a Comercio Exterior, desde la orden de compra hasta la facturación. Algunos incidentes se resuelven en el momento; otros requieren entrar al código ABAP para encontrar dónde se rompe la lógica del proceso. Además lidero la reunión semanal de incidentes con la consultora externa que da soporte al sistema de Comex.",
       flowTitle: "Dónde aparecieron los incidentes",
       flow: [["Orden de compra", "ME23N"], ["Despacho y legajo", "Autorizaciones"], ["Factura de importación", "Creada también por API", [1, 3]], ["Contabilización", "FB03 · cuentas de mayor", [2]], ["Portal de proveedores", "Estado de facturación", [4]]],
-      txTitle: "Transacciones según el problema",
-      tx: [["Compras", "ME23N", "Revisar la orden de compra"], ["Contabilidad", "FB03", "Ver el documento contable y sus cuentas"], ["Materiales y lotes", "MM03 · BMBC", "Consultar el material y corregir lotes"], ["Personal", "PA30", "Corregir datos bancarios"], ["Datos", "SE16N", "Consultar tablas directamente"], ["Logs", "SLG1", "Leer el log de la aplicación"], ["Código", "SE38 · SE37 · SE24", "Debuggear programas, funciones y clases"]],
       incidents: [
         { title: "Notas de crédito con receptor alternativo de pago", problem: "Las notas de crédito de importación fallaban cuando tenían un receptor alternativo de pago.", cause: "Debuggeando el objeto de facturas de importación encontré que, en ese caso, el flujo tomaba un camino incorrecto.", fix: "Corrección del flujo para las notas de crédito con receptor alternativo." },
         { title: "Impuestos compuestos en una sola cuenta", problem: "Con impuestos compuestos, como IVA más Ingresos Brutos, todo el importe se contabilizaba en la cuenta de IVA.", cause: "El split del impuesto no se estaba realizando al contabilizar.", fix: "Con una función estándar de SAP logré subdividir el impuesto para que cada parte impacte en su cuenta de mayor." },
@@ -50,7 +48,7 @@ window.LUKY = {
       ],
       steps: [
         ["Relevar", "Entender qué paso del proceso de negocio no se cumple y en qué documento aparece el problema."],
-        ["Diagnosticar", "Elegir la transacción según el problema (ver la tabla) y, cuando la falla está en la lógica, debuggear el código ABAP hasta encontrar dónde se rompe."],
+        ["Diagnosticar", "Revisar los documentos y datos involucrados en SAP y, cuando la falla está en la lógica, debuggear el código ABAP hasta encontrar dónde se rompe."],
         ["Corregir", "Ajustar o coordinar la corrección con especificación funcional y orden de transporte, probarla en calidad y validarla con el usuario."],
         ["Seguimiento", "En la reunión semanal el equipo me reporta los incidentes y llevo el control de cada uno hasta su cierre."]
       ],
@@ -68,6 +66,7 @@ window.LUKY = {
         ["Solución", "Cambié la estrategia de extracción por un servicio externo. Resolví además OAuth de Google con scopes incompatibles, tokens que vencían cada 7 días y cuatro errores encadenados en la autenticación de Instagram."],
         ["Resultado", "Corre 24/7 en un VPS Linux con systemd, nginx, HTTPS y un usuario sin privilegios. Si una plataforma falla, las otras se publican igual."]
       ],
+      gallery: [["assets/img/projects/bot-telegram.webp", "El bot en Telegram: le paso el link de TikTok y responde con el archivo en Drive, el YouTube Short y el Reel publicado.", "wide"]],
       chips: ["Python", "OAuth 2.0", "YouTube Data API", "Instagram Graph API", "Linux · nginx"]
     },
     {
@@ -82,6 +81,7 @@ window.LUKY = {
         ["Solución", "Refresco de sesión al reanudar, subida de fotos corregida y una tarea programada en GitHub Actions que mantiene la base activa."],
         ["Resultado", "App estable, con versión web instalable en iPhone publicada en GitHub Pages."]
       ],
+      gallery: [["assets/img/projects/passport-pasaporte.webp", "Pasaporte: cada actividad sellada con fotos, estrellas y reseña"], ["assets/img/projects/passport-ruleta.webp", "Ruleta que elige el próximo plan"], ["assets/img/projects/passport-tops.webp", "Tops: rankings compartidos por categoría"], ["assets/img/projects/passport-cuenta.webp", "Perfil de cada miembro"]],
       chips: ["React Native", "Expo", "TypeScript", "Supabase", "GitHub Actions"],
       links: [["Ver la app", "https://lukychillgithub.github.io/PassportPlanner/"], ["Código", "https://github.com/LukychillGitHub/PassportPlanner"]]
     },
@@ -153,7 +153,7 @@ window.LUKY = {
       text: "Comunidad de gaming sobre Rocket League en TikTok, YouTube, Instagram, Twitch y Kick.",
       bullets: [
         "Producción y edición de contenido de Rocket League (nivel Grand Champion).",
-        "Más de 390K seguidores y 10M de likes en TikTok.",
+        "Más de 380K seguidores y 10M de likes en TikTok.",
         "Análisis de métricas y tendencias para definir la estrategia de crecimiento orgánico.",
         "Colaboraciones con marcas del sector como Repeat.gg y Aoeah."
       ],
@@ -179,17 +179,31 @@ window.LUKY = {
     { id: "kick", name: "Kick", url: "https://kick.com/lukychill", manual: true }
   ],
 
-  /* Para destacar videos: { title, platform, url, note }. Vacío = se muestran los canales. */
-  clips: [],
 
-  collabs: [
-    { name: "Repeat.gg", what: "Plataforma de torneos de esports", tag: "Gaming" },
-    { name: "Aoeah", what: "Marketplace de ítems de Rocket League", tag: "Rocket League" }
-  ],
 
-  roadmap: [
-    { when: "2020 – 2024", title: "Rocket League en formato corto", text: "Clips y desafíos en TikTok y Shorts. La etapa que armó la comunidad.", state: "done" },
-    { when: "Streams", title: "Directos en Kick y Twitch", text: "Gameplay en vivo con la comunidad.", state: "done" },
-    { when: "Próximo", title: "Vlog con alma gamer", text: "El día a día: la oficina, la facu, el setup y las partidas. La misma persona de los dos usuarios de este sistema.", state: "cur" }
+  story: [
+    { cat: "tipos", when: "Dic 2020", title: "Tipos de jugadores", sub: "El primer formato del canal",
+      text: "Arranqué retratando los tipos de jugadores que te cruzás en cualquier partida de Rocket League, y sumé a mi hermano como compañero de dúo. Humor de la comunidad en formato corto: la base de todo lo que vino después.",
+      videos: ["6908569921119128838", "6906222928715697414", "6930681882623446277"] },
+    { cat: "historias", when: "Jul 2021", title: "Historias de Reddit", sub: "El formato más viral",
+      text: "Contaba historias de Reddit mientras jugaba. Fue el formato que más explotó: \"El niño en peligro\" llegó a 5,9M de vistas y es el video más visto del canal.",
+      videos: ["6984235506779393286", "7095803050765339909", "6984917707757980934", "7075085373012970757"] },
+    { cat: "record", when: "Oct 2021", title: "Récord: 10 mercs apiladas", sub: "El hito del canal",
+      text: "Apilé 10 Mercs una encima de la otra y lo convertí en récord. El video pasó el 1,7M de vistas y se volvió una referencia del canal, con varios recaps después.",
+      videos: ["7017881807240629510", "7017896957716892933"] },
+    { cat: "mecanicas", when: "Dic 2022", title: "Mecánicas en 3 pasos", sub: "Enseñar a jugar mejor",
+      text: "Tutoriales cortos: una mecánica explicada en 3 pasos para que cualquiera pueda aprenderla, desde volar por primera vez hasta el air dribbling y el walldash.",
+      videos: ["7269811856385051909", "7179288781852282118", "7271411749981539590", "7180845716753943814"] },
+    { cat: "mapas", when: "Jul 2023", title: "Mapas personalizados", sub: "Fall Guys, Minecraft y desafíos",
+      text: "Mapas de la comunidad llevados a Rocket League, como Fall Guys o Minecraft, y desafíos pensados para etiquetar a ese amigo. Hoy son una lista de más de 40 publicaciones en TikTok.",
+      videos: ["7259136265554087173", "7447346377752923397", "7449161364343393542", "7255324202746563845"] },
+    { cat: "hermano", when: "2025", title: "Duelos contra mi hermano", sub: "La rivalidad de siempre",
+      text: "Volvió el dúo de los inicios, ahora como rivales: partidos uno contra uno con mi hermano y una serie propia de duelos.",
+      videos: ["7529609287245647160", "7532172259524349190"] },
+    { cat: "streams", when: "En vivo", title: "Streams en Twitch y Kick", sub: "Gameplay con la comunidad",
+      text: "Directos de Rocket League para jugar y charlar con la comunidad. El canal de Twitch ya supera los 47K seguidores.",
+      metric: ["+47K", "en Twitch"], link: ["Ver Twitch", "https://www.twitch.tv/lukychill"] },
+    { cat: "next", state: "next", when: "Próximo", title: "Vlog con alma gamer", sub: "Lo que viene",
+      text: "El día a día: la oficina, la facu, el setup y las partidas. La misma persona detrás de los dos usuarios de este sistema." }
   ]
 };
