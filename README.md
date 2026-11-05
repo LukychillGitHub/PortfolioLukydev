@@ -29,7 +29,7 @@ Para cambiar textos, sumar un caso o un clip, editá solo `assets/js/content.js`
 
 ## Métricas automáticas
 
-La Action **Actualizar métricas** corre cada hora, consulta cada red y hace commit de `data/stats.json` solo si algo cambió. Cada red es independiente: si una falla o todavía no tiene credenciales, se conserva el último valor. El sitio suma los seguidores de todas las redes sincronizadas.
+La Action **Actualizar métricas** corre cada hora, consulta YouTube, Twitch, Instagram y TikTok y hace commit de `data/stats.json` solo si algo cambió. Cada red es independiente: si una falla o todavía no tiene credenciales, se conserva el último valor. El sitio suma los seguidores de todas las redes sincronizadas.
 
 Las credenciales se cargan en **Settings → Secrets and variables → Actions → New repository secret**. Nunca van en el código.
 
@@ -39,7 +39,7 @@ Las credenciales se cargan en **Settings → Secrets and variables → Actions �
 | Twitch | seguidores, en vivo | `TWITCH_CLIENT_ID`, `TWITCH_CLIENT_SECRET` |
 | Instagram | seguidores, publicaciones | `IG_ACCESS_TOKEN` |
 | TikTok | seguidores, likes, videos | `TIKTOK_CLIENT_KEY`, `TIKTOK_CLIENT_SECRET`, `TIKTOK_REFRESH_TOKEN` |
-| Kick | en vivo (la API no informa seguidores) | `KICK_CLIENT_ID`, `KICK_CLIENT_SECRET` |
+| Kick | se carga a mano en `data/stats.manual.json` (no tiene API de seguidores) | — |
 | Renovación de tokens | guarda los tokens nuevos de Instagram y TikTok | `GH_PAT` |
 
 ### YouTube
@@ -62,8 +62,7 @@ Sirve el mismo tipo de token de larga duración (60 días) que ya usa el bot de 
 3. TikTok entrega un refresh token nuevo al renovarse; con `GH_PAT` se actualiza solo.
 
 ### Kick
-1. En la configuración de desarrollador de Kick creá una app y copiá **Client ID** y **Client Secret** como `KICK_CLIENT_ID` y `KICK_CLIENT_SECRET`.
-2. La API pública no informa seguidores: actualizá `followers` de Kick en `data/stats.manual.json` cuando quieras.
+Kick no ofrece la cantidad de seguidores por API. Para mostrarla, editá `kick.followers` en `data/stats.manual.json`; si queda vacío, la tarjeta muestra el link al canal.
 
 ### GH_PAT (renovación automática de tokens)
 1. GitHub → Settings → Developer settings → **Fine-grained tokens** → Generate new token.

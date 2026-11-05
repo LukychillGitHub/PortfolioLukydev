@@ -176,7 +176,7 @@ window.LUKY = {
     { id: "youtube", name: "YouTube", url: "https://www.youtube.com/@lukychill" },
     { id: "instagram", name: "Instagram", url: "https://www.instagram.com/lukychill" },
     { id: "twitch", name: "Twitch", url: "https://www.twitch.tv/lukychill", live: true },
-    { id: "kick", name: "Kick", url: "https://kick.com/lukychill", live: true }
+    { id: "kick", name: "Kick", url: "https://kick.com/lukychill", manual: true }
   ],
 
   /* Para destacar videos: { title, platform, url, note }. Vacío = se muestran los canales. */

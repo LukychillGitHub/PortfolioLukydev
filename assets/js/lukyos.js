@@ -75,7 +75,7 @@
         invalid: "Completá tu nombre, un email válido y el mensaje.", didYouMean: "¿Quisiste decir", temp: "Usá un email permanente: no se aceptan direcciones temporales.", ok: "Mensaje enviado. Te respondo a la brevedad.", fail: (e) => `No se pudo enviar. Escribime directamente a ${e}.` },
       stats: { total: "Comunidad total", sumAll: "seguidores sumando todas las plataformas", sumSome: (a, b) => `seguidores sumando ${a} de ${b} plataformas`,
         updated: "Actualizado", waiting: "Esperando la primera sincronización", followers: "seguidores", subs: "suscriptores", likes: "likes", views: "vistas", videos: "videos",
-        pending: "Sin conectar", pendingSub: "Se completa al sincronizar" },
+        pending: "Sin conectar", pendingSub: "Se completa al sincronizar", visit: "Ver canal", visitSub: "@lukychill" },
       rank: { eyebrow: "Rocket League", text: "Del rango al contenido: jugadas, desafíos y formatos cortos pensados para la comunidad competitiva.", k: ["Rango alcanzado", "Años creando", "Plataformas"] },
       clips: { eyebrowHL: "Clips destacados", titleHL: "Lo mejor del canal", eyebrow: "Videos", title: "Dónde ver el contenido", desc: "Clips de Rocket League, desafíos y directos." },
       collab: { eyebrow: "Marcas", title: "Colaboraciones", desc: "Marcas del ecosistema gamer y de Rocket League que trabajaron con el canal.", cta: "Proponer una colaboración" },
@@ -132,7 +132,7 @@
         invalid: "Fill in your name, a valid email and the message.", didYouMean: "Did you mean", temp: "Please use a permanent email: temporary addresses are not accepted.", ok: "Message sent. I will get back to you soon.", fail: (e) => `It could not be sent. Write to me directly at ${e}.` },
       stats: { total: "Total community", sumAll: "followers across all platforms", sumSome: (a, b) => `followers across ${a} of ${b} platforms`,
         updated: "Updated", waiting: "Waiting for the first sync", followers: "followers", subs: "subscribers", likes: "likes", views: "views", videos: "videos",
-        pending: "Pending", pendingSub: "Fills in after syncing" },
+        pending: "Pending", pendingSub: "Fills in after syncing", visit: "Visit channel", visitSub: "@lukychill" },
       rank: { eyebrow: "Rocket League", text: "From rank to content: plays, challenges and short formats made for the competitive community.", k: ["Rank reached", "Years creating", "Platforms"] },
       clips: { eyebrowHL: "Featured clips", titleHL: "Best of the channel", eyebrow: "Videos", title: "Where to watch", desc: "Rocket League clips, challenges and streams." },
       collab: { eyebrow: "Brands", title: "Collaborations", desc: "Gaming and Rocket League brands that worked with the channel.", cta: "Propose a collaboration" },
@@ -284,9 +284,9 @@
     const S = L.stats, p = STATS.platforms || {}, live = STATS.live || {};
     const max = Math.max(1, ...C.platforms.map(({ id }) => (p[id] && p[id].followers) || 0));
     const sum = C.platforms.reduce((t, { id }) => t + ((p[id] && p[id].followers) || 0), 0);
-    const synced = C.platforms.filter(({ id }) => p[id] && p[id].followers).length;
+    const synced = C.platforms.filter(({ id }) => p[id] && p[id].followers).length, countable = C.platforms.filter(({ id, manual }) => !manual || (p[id] && p[id].followers)).length;
     const upd = STATS.updated ? new Date(STATS.updated).toLocaleString(locale(), { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" }) : null;
-    const tiles = C.platforms.map(({ id, name, url, live: canLive }) => {
+    const tiles = C.platforms.map(({ id, name, url, live: canLive, manual }) => {
       const d = p[id], on = !!live[id];
       const tag = canLive ? `<span class="dot-live ${on ? "on" : ""}"><i></i>${on ? L.live : L.offline}</span>` : "";
       if (d && d.followers) {
@@ -295,12 +295,14 @@
           <div><div class="num">${fmt(d.followers)}</div><div class="lab">${id === "youtube" ? S.subs : S.followers}${extra ? " · " + extra : ""}</div></div>
           <div class="bar"><i style="width:${Math.max(4, d.followers / max * 100)}%"></i></div></a>`;
       }
+      if (manual) return `<a class="plat pending" href="${url}" target="_blank" rel="noopener"><div class="top"><span class="nm">${name}</span></div>
+        <div><div class="num">${S.visit} ↗</div><div class="lab">${S.visitSub}</div></div><div class="bar"></div></a>`;
       return `<a class="plat pending" href="${url}" target="_blank" rel="noopener"><div class="top"><span class="nm">${name}</span>${tag}</div>
         <div><div class="num">${S.pending}</div><div class="lab">${S.pendingSub}</div></div><div class="bar"></div></a>`;
     }).join("");
     return `<div class="pad"><div class="stats-hero"><div style="display:flex;gap:16px;align-items:center"><img class="stats-face" src="assets/img/lukychill-avatar.webp" alt="" width="64" height="64">
       <div><div class="eyebrow">${S.total}</div><div class="big">${sum ? "+" + fmt(sum) : "—"}</div>
-      <div class="muted" style="margin-top:6px">${synced === C.platforms.length ? S.sumAll : S.sumSome(synced, C.platforms.length)}</div></div></div>
+      <div class="muted" style="margin-top:6px">${synced >= countable ? S.sumAll : S.sumSome(synced, countable)}</div></div></div>
       <div class="sync ${upd ? "ok" : ""}"><i></i>${upd ? S.updated + " " + upd : S.waiting}</div></div>
       <div class="plats">${tiles}</div></div>`;
   }

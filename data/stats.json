@@ -1,16 +1,13 @@
 {
-  "updated": "2026-11-05T12:33:08.631Z",
+  "updated": "2026-11-05T15:46:00.530Z",
   "platforms": {
+    "kick": null,
     "youtube": null,
     "twitch": null,
     "instagram": null,
     "tiktok": {
       "followers": 391000,
       "likes": 10000000,
-      "source": "manual"
-    },
-    "kick": {
-      "followers": null,
       "source": "manual"
     }
   },

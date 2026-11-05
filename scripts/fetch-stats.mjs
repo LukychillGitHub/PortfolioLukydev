@@ -1,4 +1,5 @@
 // Genera data/stats.json con las métricas de cada red.
+// Kick no tiene API de seguidores: se carga a mano en data/stats.manual.json.
 // Lo ejecuta la GitHub Action .github/workflows/stats.yml (cada hora).
 // Cada plataforma es independiente: si una falla o no tiene credenciales,
 // se conserva el último valor conocido o el de data/stats.manual.json.
@@ -79,25 +80,17 @@ const sources = {
     const u = j.data?.user;
     if (!u) throw new Error(j.error?.message || "respuesta sin usuario");
     return { data: { followers: num(u.follower_count), likes: num(u.likes_count), videos: num(u.video_count) } };
-  },
-
-  async kick() {
-    // La API pública de Kick informa si el canal está en vivo, pero no la cantidad de seguidores.
-    if (!env.KICK_CLIENT_ID || !env.KICK_CLIENT_SECRET) return null;
-    const tok = await get("https://id.kick.com/oauth/token", {
-      method: "POST",
-      headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      body: new URLSearchParams({ client_id: env.KICK_CLIENT_ID, client_secret: env.KICK_CLIENT_SECRET, grant_type: "client_credentials" })
-    });
-    const j = await get(`https://api.kick.com/public/v1/channels?slug=${HANDLE}`, { headers: { Authorization: `Bearer ${tok.access_token}` } });
-    const c = j.data?.[0];
-    if (!c) throw new Error("canal no encontrado");
-    return { data: {}, live: !!c.stream?.is_live };
   }
+
 };
 
 /* ---------------- Ejecución ---------------- */
 const out = { platforms: {}, live: {} };
+// Redes sin API: solo valores manuales.
+for (const id of ["kick"]) {
+  const m = manual.platforms?.[id];
+  out.platforms[id] = m && m.followers ? { followers: m.followers, source: "manual" } : null;
+}
 for (const [id, fn] of Object.entries(sources)) {
   const fallback = { ...(manual.platforms?.[id] || {}), ...(prev.platforms?.[id] || {}) };
   try {
@@ -116,7 +109,7 @@ for (const [id, fn] of Object.entries(sources)) {
     out.platforms[id] = Object.keys(fallback).length ? fallback : null;
     console.warn(`✗ ${id}: ${e.message} (se conserva el último valor)`);
   }
-  if (out.live[id] === undefined && prev.live?.[id] !== undefined && ["twitch", "kick"].includes(id)) out.live[id] = false;
+  if (out.live[id] === undefined && prev.live?.[id] !== undefined && id === "twitch") out.live[id] = false;
 }
 
 // Solo cambia la fecha si cambió algún número o estado: así la Action no commitea de más.

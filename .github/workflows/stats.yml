@@ -1,4 +1,4 @@
-# Actualiza data/stats.json con las métricas de TikTok, YouTube, Instagram, Twitch y Kick.
+# Actualiza data/stats.json con las métricas de TikTok, YouTube, Instagram y Twitch (Kick se carga a mano).
 # Corre cada hora y solo hace commit si algún número o estado en vivo cambió.
 # Las credenciales se cargan en Settings → Secrets and variables → Actions (ver README).
 name: Actualizar métricas
@@ -37,8 +37,6 @@ jobs:
           TIKTOK_CLIENT_KEY: ${{ secrets.TIKTOK_CLIENT_KEY }}
           TIKTOK_CLIENT_SECRET: ${{ secrets.TIKTOK_CLIENT_SECRET }}
           TIKTOK_REFRESH_TOKEN: ${{ secrets.TIKTOK_REFRESH_TOKEN }}
-          KICK_CLIENT_ID: ${{ secrets.KICK_CLIENT_ID }}
-          KICK_CLIENT_SECRET: ${{ secrets.KICK_CLIENT_SECRET }}
 
       # Instagram y TikTok entregan tokens nuevos al renovarse. Con un token personal
       # (secret GH_PAT, permiso "Secrets: read and write" sobre este repo) se guardan solos.
