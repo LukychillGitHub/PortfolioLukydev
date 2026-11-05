@@ -49,15 +49,15 @@
     yo: () => `<div class="about"><img class="about-photo" src="assets/img/lucas.webp" alt="Lucas Román Fernández" width="150" height="188"><div>
       <div class="eyebrow">Perfil profesional</div>
       <h2>Lucas Román Fernández</h2>
-      <p class="about-role">Analista de Tecnología · SAP S/4HANA · Migración de datos y análisis funcional</p>
-      <p>Soy Analista de Tecnología en Molinos Río de la Plata. Participo en la integración a SAP S/4HANA de las empresas que adquiere la compañía y en la resolución de incidentes de Comercio Exterior como analista funcional.</p>
-      <p>Mi perfil combina conocimiento de los procesos de negocio con formación técnica: curso Ingeniería en Informática en la Universidad del Salvador y desarrollo proyectos propios de automatización e integración de APIs con Python y TypeScript.</p>
-      <p>Trabajo con un método simple: entender el proceso, aislar la causa raíz con evidencia y dejar la solución documentada para que el equipo pueda sostenerla.</p>
+      <p class="about-role">Analista de Tecnología · SAP S/4HANA (FI) · Migración de datos · Comercio Exterior</p>
+      <p>Soy Analista de Tecnología en el equipo de Staff de Sistemas de Molinos Río de la Plata, especializado en el módulo FI de SAP S/4HANA. Soy responsable de las migraciones de datos de las empresas que adquiere la compañía y resuelvo incidentes de Comercio Exterior, muchas veces entrando al código ABAP para encontrar la falla.</p>
+      <p>En pocos meses pasé a liderar la reunión semanal de incidentes con la consultora externa de Comex. Curso Ingeniería en Informática en la Universidad del Salvador y busco crecer como Consultor Funcional SAP y en análisis de datos.</p>
+      <p>Me definen la iniciativa por aprender, el análisis riguroso de cada problema y el orden: documento todo para que ningún tema quede abierto. Mis proyectos de automatización nacen de lo mismo: resolver lo repetitivo para dedicar el tiempo a las decisiones que importan.</p>
       <div class="proj-links"><button class="btn primary" data-open="cases">Ver casos</button><button class="btn" data-open="cv">Currículum</button><button class="btn" data-open="mail">Contacto</button></div></div></div>
       <div class="kpis"><div class="kpi"><b>3</b><span>Empresas integradas a SAP</span></div><div class="kpi"><b>${C.study.gpa}</b><span>Promedio académico</span></div><div class="kpi"><b>2</b><span>Proyectos propios en producción</span></div></div>`,
     origen: () => `<div class="eyebrow">Recorrido</div><h2 class="h2">De la electromecánica a SAP</h2>
       <p style="max-width:62ch;margin-top:10px">Mi formación empezó en la Escuela Técnica Henry Ford, donde me recibí de Técnico Electromecánico. Ahí tuve el primer contacto con la programación a través de la robótica, y fue lo que me llevó a elegir Ingeniería en Informática.</p>
-      <p style="max-width:62ch">Pasé por una pasantía de calidad en Ford Argentina, más de dos años como docente de informática y, desde 2026, el área de Tecnología de Molinos. En cada etapa sumé algo distinto: el rigor de la industria, la capacidad de explicar lo técnico y la visión de los procesos de negocio.</p>
+      <p style="max-width:62ch">Pasé por una pasantía de calidad en Ford Argentina, más de dos años como docente de informática y, desde 2026, el área de Sistemas de Molinos, donde aprendí SAP, el circuito completo de Comercio Exterior y cómo se gestiona un cambio en un equipo grande. En cada etapa sumé algo distinto: el rigor de la industria, la capacidad de explicar lo técnico y la visión de los procesos de negocio.</p>
       <p style="max-width:62ch">En paralelo construí Lukychill, una comunidad de gaming en redes que me enseñó a analizar métricas y sostener un proyecto propio en el tiempo.</p>`,
     hago: () => `<div class="eyebrow">Competencias</div><h2 class="h2">Con qué trabajo</h2><div class="skills">${C.skills.map(([t, list], i) => `<div><div class="eyebrow">${esc(t)}</div><div class="chips" style="margin-top:6px">${list.map((x) => `<span class="chip${i === 0 ? " acc" : ""}">${esc(x)}</span>`).join("")}</div></div>`).join("")}</div>`
   };
@@ -72,6 +72,10 @@
   function caseBody(c) {
     let h = `<div class="case"><div class="eyebrow">${esc(c.tag)}</div><h2 class="h2">${esc(c.title)}</h2><p class="case-lead">${esc(c.lead)}</p>`;
     if (c.timeline) h += `<div class="mig">${c.timeline.map((t) => `<div class="${t.next ? "next" : ""}"><b>${esc(t.name)}</b><span><i></i>${esc(t.state)}</span></div>`).join("")}</div>`;
+    if (c.objects) h += `<div class="case-sec"><div class="eyebrow">Objetos migrados</div><div class="chips" style="margin-top:8px">${c.objects.map((o) => `<span class="chip acc">${esc(o)}</span>`).join("")}</div></div>`;
+    if (c.incidents) h += `<div class="case-sec"><div class="eyebrow">Incidentes resueltos</div><div class="incidents">${c.incidents.map((x) => `<details class="incident"><summary>${esc(x.title)}${'<svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 4l4 4-4 4"/></svg>'}</summary>
+      <dl><dt>Problema</dt><dd>${esc(x.problem)}</dd><dt>Causa</dt><dd>${esc(x.cause)}</dd><dt>Solución</dt><dd>${esc(x.fix)}</dd></dl></details>`).join("")}</div></div>`;
+    if (c.incidents && c.steps) h += `<div class="eyebrow" style="margin-top:22px">Cómo trabajo un incidente</div>`;
     if (c.archive) h += `<div class="archive">${c.archive.map((a) => `<a href="${a[2]}" target="_blank" rel="noopener"><b>${esc(a[0])} ↗</b><span>${esc(a[1])}</span></a>`).join("")}</div>`;
     if (c.steps) h += `<ol class="steps">${c.steps.map((s) => `<li><div><b>${esc(s[0])}</b><p>${esc(s[1])}</p></div></li>`).join("")}</ol>`;
     if (c.chips) h += `<div class="chips">${c.chips.map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</div>`;
@@ -113,14 +117,14 @@
       <p class="muted" style="margin:6px 0 0">Experiencia en SAP, proyectos propios y formación, listo para leer o pasar por un ATS.</p></div>
       <div class="cv-cards"><a class="cv-card" href="${C.links.cvEs}" target="_blank" rel="noopener">${ai("cv")}<b>Español</b><span>LucasFernandezCV-Spanish.pdf</span></a>
       <a class="cv-card" href="${C.links.cvEn}" target="_blank" rel="noopener">${ai("cv")}<b>English</b><span>LucasFernandezCV-English.pdf</span></a></div>
-      <ul class="cv-list"><li>Analista de Tecnología en Molinos Río de la Plata</li><li>Bot de republicación de videos y PassportPlanner</li><li>Ingeniería en Informática, promedio ${C.study.gpa}</li></ul></div>`;
+      <ul class="cv-list"><li>Analista de Tecnología en Molinos Río de la Plata (SAP S/4HANA, FI)</li><li>Bot de republicación de videos y PassportPlanner</li><li>Ingeniería en Informática, promedio ${C.study.gpa}</li></ul></div>`;
 
   const termHTML = () => `<div class="term"><div class="term-out" data-out><span class="d">LukyOS · escribí </span><span class="o">help</span><span class="d"> para ver comandos</span>\n</div>
       <label class="term-line"><span>lucas@lukyos ~ %</span><input data-in autocomplete="off" autocapitalize="off" spellcheck="false" aria-label="Comando"></label></div>`;
   const CMDS = {
     help: () => '<span class="g">whoami</span>    quién soy\n<span class="g">casos</span>     abrir casos resueltos\n<span class="g">stack</span>     con qué trabajo\n<span class="g">cv</span>        ver el currículum\n<span class="g">contacto</span>  escribirme\n<span class="g">lukychill</span> cambiar al otro usuario\n<span class="g">clear</span>     limpiar',
-    whoami: () => `Lucas Román Fernández · Analista de Tecnología (SAP)\nIngeniería en Informática · USAL · promedio ${C.study.gpa}`,
-    stack: () => "sap.s4hana  migration_cockpit  ltmc  ltmom\npython  typescript  react-native  next  supabase\nlinux  nginx  systemd  github-actions",
+    whoami: () => `Lucas Román Fernández · Analista de Tecnología · SAP S/4HANA (FI)\nIngeniería en Informática · USAL · promedio ${C.study.gpa}`,
+    stack: () => "sap.s4hana  fi  migration_cockpit  ltmc  ltmom  abap_debug\nse16n  se38  se37  se24  me23n  fb03  slg1\npython  typescript  react-native  next  supabase\nlinux  nginx  systemd  github-actions",
     ls: () => C.cases.map((c) => c.side.replace(/\s/g, "_") + "/").join("  ") + "  CV.pdf",
     cv: () => { openApp("cv"); return "Abriendo el currículum…"; },
     casos: () => { openApp("cases"); return "Abriendo Casos…"; },
@@ -210,7 +214,7 @@
   const DESK = {
     lucas: {
       icons: [["cases", "Casos", "folderL"], ["path", "Trayectoria", "folderL"], ["cv", "CV.pdf", "cv"]],
-      hello: `<div class="eyebrow">Analista de Tecnología · SAP S/4HANA</div><h1>Lucas<br>Fernández</h1><p>Migración de datos, análisis funcional y resolución de incidentes. Los proyectos están en <b>Casos</b>, en el dock.</p>`,
+      hello: `<div class="eyebrow">Analista de Tecnología · SAP S/4HANA</div><h1>Lucas<br>Fernández</h1><p>Migraciones de datos, incidentes de Comercio Exterior y debugging ABAP. Los proyectos están en <b>Casos</b>, en el dock.</p>`,
       first: "about",
       notif: { ico: "cases", title: "Nuevo caso", text: "Bot de videos: un link de TikTok, tres redes publicadas.", open: ["cases", "bot"] }
     },

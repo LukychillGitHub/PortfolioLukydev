@@ -14,34 +14,41 @@ window.LUKY = {
 
   cases: [
     {
-      id: "migraciones", side: "Migraciones SAP", tag: "Molinos Río de la Plata",
-      title: "Integrar empresas adquiridas a SAP S/4HANA",
-      lead: "Cada adquisición llega con sus propios datos maestros, formatos y reglas. El trabajo es que entren al sistema de Molinos sin frenar la operación del día siguiente.",
+      id: "migraciones", side: "Migraciones SAP", tag: "Molinos · Equipo de Staff de Sistemas (FI)",
+      title: "Integrar a SAP S/4HANA las empresas que adquiere Molinos",
+      lead: "Cuando Molinos compra una empresa, sus datos tienen que entrar a SAP sin frenar la operación. Soy el responsable de las cargas con SAP Migration Cockpit: armo las plantillas, limpio los datos, cargo primero en el ambiente de calidad y después en producción, y valido todo con el negocio.",
       timeline: [
-        { name: "Bodegas Etchart", state: "Migrada" },
+        { name: "Bodegas Etchart", state: "Migrada · la primera" },
         { name: "NotCo", state: "Migrada" },
-        { name: "Complejo Alimenticio San Salvador", state: "Migrada" },
-        { name: "Grupo Ayudín", state: "Próxima", next: true }
+        { name: "Complejo Alimenticio San Salvador", state: "Migrada · mayor volumen" },
+        { name: "Grupo Ayudín", state: "Confirmada · próxima", next: true }
       ],
+      objects: ["Clientes", "Proveedores", "Materiales", "Producto terminado", "Materia prima", "Insumos", "Stocks", "Lotes", "Versiones de fabricación"],
       steps: [
-        ["Problema", "Datos de la empresa adquirida que no siguen la estructura ni las reglas de negocio de Molinos."],
-        ["Diagnóstico", "Relevar los objetos a migrar, mapear campos entre sistemas y detectar qué datos rompen validaciones antes de cargarlos."],
-        ["Solución", "Especificación funcional y plantillas en SAP Migration Cockpit (LTMC/LTMOM), con cargas de prueba y corrección iterativa de errores."],
-        ["Resultado", "Tres compañías integradas al sistema. La cuarta, Grupo Ayudín, es la próxima en la fila."]
+        ["Problema", "Cada empresa trae datos con otra estructura y otros criterios de carga, y cada migración es más exigente: Etchart fue la primera, con la herramienta por aprender, y Complejo Alimenticio San Salvador implicó un volumen de datos mucho mayor."],
+        ["Diagnóstico", "Los errores que devuelve Migration Cockpit suelen venir de un período contable sin abrir, decimales mal formateados o datos mal cargados en el origen. En la última migración, los lotes estaban cargados de forma incorrecta."],
+        ["Solución", "Limpieza y normalización de los datos, corrección de cada error junto al área dueña del dato (datos maestros, IT Logística por EWM, desarrollo) y nuevas pruebas en calidad antes de pasar a producción."],
+        ["Resultado", "Tres empresas integradas y toda la evidencia de cada carga ordenada en SharePoint para futuras auditorías. Hoy soy el responsable de las cargas con Migration Cockpit."]
       ],
-      chips: ["SAP S/4HANA", "Migration Cockpit", "LTMC / LTMOM", "Datos maestros", "Análisis funcional"]
+      chips: ["SAP S/4HANA", "Migration Cockpit", "LTMC / LTMOM", "Datos maestros", "Calidad → Producción", "Documentación auditable"]
     },
     {
-      id: "comex", side: "Incidentes Comex", tag: "Molinos Río de la Plata",
-      title: "Resolver incidentes de Comercio Exterior en producción",
-      lead: "Cuando un proceso de exportación o importación se traba, hay operaciones esperando. Trabajo como analista funcional: entender el negocio, encontrar la causa y cerrar el incidente.",
-      steps: [
-        ["Problema", "Un usuario reporta un proceso de Comex bloqueado o con datos inconsistentes."],
-        ["Diagnóstico", "Reproducir el caso, seguir el dato entre sistemas y aislar si la causa es de configuración, de datos o de proceso."],
-        ["Solución", "Corregir o coordinar el ajuste con el equipo técnico, validarlo con el usuario y documentarlo para la próxima vez."],
-        ["Resultado", "Continuidad operativa y una base de conocimiento que acorta el tiempo del siguiente incidente parecido."]
+      id: "comex", side: "Incidentes Comex", tag: "Molinos · Comercio Exterior",
+      title: "Encontrar la falla de lógica que frena un proceso de Comex",
+      lead: "Dedico el resto de mi tiempo a Comercio Exterior, desde la orden de compra hasta la facturación. Algunos incidentes se resuelven en el momento; otros requieren entrar al código ABAP para encontrar dónde se rompe la lógica del proceso. Además lidero la reunión semanal de incidentes con la consultora externa que da soporte al sistema de Comex.",
+      incidents: [
+        { title: "Notas de crédito con receptor alternativo de pago", problem: "Las notas de crédito de importación fallaban cuando tenían un receptor alternativo de pago.", cause: "Debuggeando el objeto de facturas de importación encontré que, en ese caso, el flujo tomaba un camino incorrecto.", fix: "Corrección del flujo para las notas de crédito con receptor alternativo." },
+        { title: "Impuestos compuestos en una sola cuenta", problem: "Con impuestos compuestos, como IVA más Ingresos Brutos, todo el importe se contabilizaba en la cuenta de IVA.", cause: "El split del impuesto no se estaba realizando al contabilizar.", fix: "Con una función estándar de SAP logré subdividir el impuesto para que cada parte impacte en su cuenta de mayor." },
+        { title: "Unidades de medida en facturas creadas por API", problem: "Las facturas creadas desde el sistema de Comex por API fallaban en las unidades de medida.", cause: "SAP convierte las unidades entre su código interno y el nombre que se visualiza, y la integración enviaba el valor equivocado.", fix: "Analizando el código ABAP corregimos la conversión de unidades." },
+        { title: "Portal de proveedores y tolerancias", problem: "Cuando una factura entraba en la tolerancia por debajo, el portal mostraba como facturado algo que no lo estaba.", cause: "La forma en que se calculaban y mostraban los datos de facturación.", fix: "Ayudé con el análisis y lo resolvimos cambiando cómo se visualizaban los datos." }
       ],
-      chips: ["Gestión de incidentes", "Análisis de causa raíz", "Análisis funcional", "Soporte a usuarios"]
+      steps: [
+        ["Relevar", "Entender qué paso del proceso de negocio no se cumple y en qué documento aparece el problema."],
+        ["Diagnosticar", "Revisar documentos y tablas (ME23N, FB03, SE16N), logs (SLG1) y, cuando hace falta, debuggear programas, funciones y clases (SE38, SE37, SE24)."],
+        ["Corregir", "Ajustar o coordinar la corrección con especificación funcional y orden de transporte, probarla en calidad y validarla con el usuario."],
+        ["Seguimiento", "En la reunión semanal el equipo me reporta los incidentes y llevo el control de cada uno hasta su cierre."]
+      ],
+      chips: ["Debugging ABAP", "SE38 · SE37 · SE24", "ME23N · FB03 · SE16N · SLG1", "Service Manager", "Cuentas de mayor", "Órdenes de transporte"]
     },
     {
       id: "bot", side: "Bot de videos", tag: "Proyecto propio · en producción",
@@ -96,17 +103,18 @@ window.LUKY = {
 
   jobs: [
     {
-      when: ["Feb 2026", "Actualidad"], now: true, role: "Analista de Tecnología", org: "Molinos Río de la Plata", place: "Buenos Aires",
-      text: "Integración de empresas adquiridas a SAP S/4HANA y resolución de incidentes de Comercio Exterior como analista funcional.",
+      when: ["Feb 2026", "Actualidad"], now: true, role: "Analista de Tecnología", org: "Molinos Río de la Plata", place: "Equipo de Staff · Sistemas (FI)",
+      text: "Migraciones de datos de empresas adquiridas a SAP S/4HANA e incidentes de Comercio Exterior, en un equipo de tres analistas especializado en el módulo FI.",
       bullets: [
-        "Migración de datos maestros a SAP S/4HANA con SAP Migration Cockpit (LTMC/LTMOM) para Bodegas Etchart, NotCo y Complejo Alimenticio San Salvador. Próxima integración: Grupo Ayudín.",
-        "Redacción de especificaciones funcionales y mapeo de campos entre los sistemas de origen y SAP.",
-        "Cargas de prueba y corrección iterativa de errores antes de cada migración productiva.",
-        "Resolución de incidentes de Comercio Exterior: reproducción del caso, análisis de causa raíz, coordinación con el equipo técnico y validación con el usuario.",
-        "Gestión de tickets desde el equipo de staff para asegurar la continuidad operativa."
+        "Responsable de las cargas con SAP Migration Cockpit en la integración de Bodegas Etchart, NotCo y Complejo Alimenticio San Salvador: clientes, proveedores, materiales, stocks, lotes y versiones de fabricación. Próxima: Grupo Ayudín.",
+        "Ciclo completo de cada migración: plantillas, limpieza de datos, pruebas en calidad, carga en producción, validación con el negocio y documentación en SharePoint para auditoría.",
+        "Lidero la reunión semanal de incidentes de Comex con la consultora externa: el equipo me reporta y llevo el control de cada caso hasta su cierre.",
+        "Diagnóstico de incidentes de Comex de punta a punta, desde la orden de compra hasta la facturación, con debugging de código ABAP para encontrar fallas de lógica.",
+        "Especificaciones funcionales, órdenes de transporte, relevamiento de cambios y altas de Business Partners.",
+        "Coordinación con Comex, datos maestros, IT Logística (EWM) y desarrollo."
       ],
-      tools: ["SAP S/4HANA", "Migration Cockpit", "LTMC / LTMOM", "Datos maestros", "Análisis funcional", "Ticketing"],
-      actions: [{ label: "Ver caso de migraciones", open: "cases", arg: "migraciones" }, { label: "Ver caso de Comex", open: "cases", arg: "comex" }]
+      tools: ["SAP S/4HANA", "Módulo FI", "Migration Cockpit", "LTMC / LTMOM", "Debugging ABAP", "SE16N", "ME23N", "FB03", "SLG1", "Service Manager", "Órdenes de transporte"],
+      actions: [{ label: "Ver caso de migraciones", open: "cases", arg: "migraciones" }, { label: "Ver incidentes de Comex", open: "cases", arg: "comex" }]
     },
     {
       when: ["Ago 2023", "Ene 2026"], role: "Docente de Informática", org: "Colegio Secundario Carlos Maschwitz",
@@ -145,10 +153,11 @@ window.LUKY = {
   ],
 
   skills: [
-    ["Negocio y SAP", ["SAP S/4HANA", "Migration Cockpit", "LTMC / LTMOM", "Datos maestros", "Análisis funcional", "Gestión de incidentes", "Comercio Exterior"]],
+    ["SAP y negocio", ["SAP S/4HANA", "Módulo FI", "Migration Cockpit", "LTMC / LTMOM", "Datos maestros", "Debugging ABAP", "Comercio Exterior", "Análisis funcional", "Órdenes de transporte"]],
+    ["Transacciones SAP", ["SE16N", "SE38", "SE37", "SE24", "ME23N", "FB03", "SLG1"]],
     ["Desarrollo", ["Python", "TypeScript", "JavaScript", "React Native", "Next.js", "Node.js", "Supabase", "PostgreSQL", "MySQL", "APIs REST", "OAuth 2.0"]],
     ["Infraestructura", ["Linux", "systemd", "nginx", "HTTPS", "GitHub Actions", "Git"]],
-    ["Personas", ["Docencia", "Soporte a usuarios", "Comunicación con negocio"]]
+    ["Personas", ["Liderazgo de reuniones", "Documentación", "Docencia", "Comunicación con negocio"]]
   ],
 
   /* ---------------- Lukychill (redes) ---------------- */
