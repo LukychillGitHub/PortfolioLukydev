@@ -72,7 +72,7 @@
       cmdCases: "casos", cmdContact: "contacto",
       mail: { to: "Para", from: "De", email: "Email", subject: "Asunto", name: "Tu nombre", msg: "Mensaje", copy: "Copiar", copied: "Copiado", selected: "Seleccionado", send: "Enviar", sending: "Enviando…",
         subjLucas: "Contacto desde tu portfolio", subjLuky: "Colaboración con Lukychill", phLucas: "Contame en qué te puedo ayudar.", phLuky: "Contame sobre la marca, la campaña y los tiempos.",
-        invalid: "Completá tu nombre, un email válido y el mensaje.", ok: "Mensaje enviado. Te respondo a la brevedad.", fail: (e) => `No se pudo enviar. Escribime directamente a ${e}.` },
+        invalid: "Completá tu nombre, un email válido y el mensaje.", didYouMean: "¿Quisiste decir", temp: "Usá un email permanente: no se aceptan direcciones temporales.", ok: "Mensaje enviado. Te respondo a la brevedad.", fail: (e) => `No se pudo enviar. Escribime directamente a ${e}.` },
       stats: { total: "Comunidad total", sumAll: "seguidores sumando todas las plataformas", sumSome: (a, b) => `seguidores sumando ${a} de ${b} plataformas`,
         updated: "Actualizado", waiting: "Esperando la primera sincronización", followers: "seguidores", subs: "suscriptores", likes: "likes", views: "vistas", videos: "videos",
         pending: "Sin conectar", pendingSub: "Se completa al sincronizar" },
@@ -129,7 +129,7 @@
       cmdCases: "cases", cmdContact: "contact",
       mail: { to: "To", from: "From", email: "Email", subject: "Subject", name: "Your name", msg: "Message", copy: "Copy", copied: "Copied", selected: "Selected", send: "Send", sending: "Sending…",
         subjLucas: "Contact from your portfolio", subjLuky: "Collaboration with Lukychill", phLucas: "Tell me how I can help.", phLuky: "Tell me about the brand, the campaign and the timing.",
-        invalid: "Fill in your name, a valid email and the message.", ok: "Message sent. I will get back to you soon.", fail: (e) => `It could not be sent. Write to me directly at ${e}.` },
+        invalid: "Fill in your name, a valid email and the message.", didYouMean: "Did you mean", temp: "Please use a permanent email: temporary addresses are not accepted.", ok: "Message sent. I will get back to you soon.", fail: (e) => `It could not be sent. Write to me directly at ${e}.` },
       stats: { total: "Total community", sumAll: "followers across all platforms", sumSome: (a, b) => `followers across ${a} of ${b} platforms`,
         updated: "Updated", waiting: "Waiting for the first sync", followers: "followers", subs: "subscribers", likes: "likes", views: "views", videos: "videos",
         pending: "Pending", pendingSub: "Fills in after syncing" },
@@ -266,7 +266,9 @@
     return `<form class="mailer" data-mail novalidate>
       <div class="row"><b>${M.to}</b><span class="addr">${C.email}</span><button type="button" class="btn" data-copy style="margin-left:auto;padding:4px 10px">${M.copy}</button></div>
       <div class="row"><label for="m-name-${who}"><b>${M.from}</b></label><input id="m-name-${who}" name="nombre" placeholder="${M.name}" required autocomplete="name"></div>
-      <div class="row"><label for="m-mail-${who}"><b>${M.email}</b></label><input id="m-mail-${who}" name="email" type="email" placeholder="tu@email.com" required autocomplete="email"></div>
+      <div class="row"><label for="m-mail-${who}"><b>${M.email}</b></label><input id="m-mail-${who}" name="email" type="email" maxlength="120" placeholder="${LANG === "en" ? "you@email.com" : "tu@email.com"}" required autocomplete="email"></div>
+      <div class="suggest" data-suggest hidden></div>
+      <div class="hp" aria-hidden="true"><label>No completar<input type="text" name="_gotcha" tabindex="-1" autocomplete="off"></label></div>
       <div class="row"><label for="m-subj-${who}"><b>${M.subject}</b></label><input id="m-subj-${who}" name="asunto" value="${who === "luky" ? M.subjLuky : M.subjLucas}"></div>
       <div class="body"><label class="sr" for="m-body-${who}">${M.msg}</label><textarea id="m-body-${who}" name="mensaje" rows="6" required placeholder="${who === "luky" ? M.phLuky : M.phLucas}"></textarea></div>
       <div class="actions"><button class="btn primary" type="submit">${M.send}</button>
@@ -445,8 +447,39 @@
       out.parentElement.scrollTop = out.parentElement.scrollHeight;
     });
   }
+  /* Dominios de mail temporal que se usan para spam */
+  const DISPOSABLE = ["mailinator.com", "10minutemail.com", "10minutemail.net", "guerrillamail.com", "guerrillamail.net", "sharklasers.com", "grr.la", "tempmail.com", "temp-mail.org", "tempmail.net", "tempail.com", "yopmail.com", "yopmail.net", "trashmail.com", "getnada.com", "nada.email", "dispostable.com", "maildrop.cc", "throwawaymail.com", "fakeinbox.com", "mailnesia.com", "mohmal.com", "emailondeck.com", "minuteinbox.com", "mintemail.com", "spamgourmet.com", "mailcatch.com", "moakt.com", "tempr.email", "discard.email", "burnermail.io", "inboxkitten.com", "mytemp.email", "emailfake.com", "fakemail.net", "33mail.com"];
+  /* Dominios comunes, para sugerir correcciones de tipeo */
+  const COMMON = ["gmail.com", "hotmail.com", "outlook.com", "yahoo.com", "yahoo.com.ar", "hotmail.com.ar", "live.com", "live.com.ar", "icloud.com", "protonmail.com", "proton.me", "msn.com", "aol.com", "fibertel.com.ar", "outlook.es", "hotmail.es", "yahoo.es"];
+  function lev(a, b) {
+    const m = a.length, n = b.length, d = Array.from({ length: m + 1 }, (_, i) => [i, ...Array(n).fill(0)]);
+    for (let j = 1; j <= n; j++) d[0][j] = j;
+    for (let i = 1; i <= m; i++) for (let j = 1; j <= n; j++) d[i][j] = Math.min(d[i - 1][j] + 1, d[i][j - 1] + 1, d[i - 1][j - 1] + (a[i - 1] === b[j - 1] ? 0 : 1));
+    return d[m][n];
+  }
+  function suggestDomain(dom) {
+    if (!dom || COMMON.includes(dom)) return null;
+    let best = null, bd = 3;
+    COMMON.forEach((c) => { const k = lev(dom, c); if (k < bd) { bd = k; best = c; } });
+    return bd <= 2 ? best : null;
+  }
   function wireMail(form) {
     const M = L.mail, toast = $("[data-toast]", form), btn = $("button[type=submit]", form);
+    const mailIn = $("input[name=email]", form), sug = $("[data-suggest]", form);
+    const check = () => {
+      const v = mailIn.value.trim(), at = v.lastIndexOf("@");
+      const s = at > 0 ? suggestDomain(v.slice(at + 1).toLowerCase()) : null;
+      if (!s) { sug.hidden = true; return; }
+      const fixed = v.slice(0, at + 1) + s;
+      sug.innerHTML = `${M.didYouMean} <button type="button">${esc(fixed)}</button>?`;
+      sug.hidden = false;
+      $("button", sug).onclick = () => { mailIn.value = fixed; sug.hidden = true; mailIn.focus(); };
+    };
+    mailIn.addEventListener("blur", check);
+    mailIn.addEventListener("input", () => {
+      if (/\s/.test(mailIn.value)) { const pos = mailIn.selectionStart; const before = mailIn.value.slice(0, pos).replace(/\s/g, "").length; mailIn.value = mailIn.value.replace(/\s/g, ""); try { mailIn.setSelectionRange(before, before); } catch (_) {} }
+      if (!sug.hidden) check();
+    });
     $("[data-copy]", form).onclick = async (e) => {
       const b = e.currentTarget;
       try { await navigator.clipboard.writeText(C.email); b.textContent = M.copied; }
@@ -457,6 +490,8 @@
       e.preventDefault();
       const say = (msg, err) => { toast.hidden = false; toast.textContent = msg; toast.classList.toggle("err", !!err); };
       if (!form.checkValidity()) { say(M.invalid, true); return; }
+      const dom = (mailIn.value.split("@")[1] || "").toLowerCase().trim();
+      if (DISPOSABLE.some((d) => dom === d || dom.endsWith("." + d))) { say(M.temp, true); mailIn.focus(); return; }
       btn.disabled = true; btn.textContent = M.sending;
       try {
         const r = await fetch(C.formspree, { method: "POST", body: new FormData(form), headers: { Accept: "application/json" } });
