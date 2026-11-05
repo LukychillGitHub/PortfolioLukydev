@@ -160,8 +160,12 @@
     for (const url of STATS_URLS) {
       try {
         const r = await fetch(url, { cache: "no-store" });
-        if (r.ok) { const j = await r.json(); if (j && j.platforms) { STATS = j; return; } }
+        if (r.ok) { const j = await r.json(); if (j && j.platforms) { STATS = j; break; } }
       } catch (_) { /* probar la siguiente */ }
+    }
+    // Rocket League se carga a mano: si stats.json todavía no lo trae, se lee del archivo manual.
+    if (!STATS.rl) {
+      try { const r = await fetch("data/stats.manual.json", { cache: "no-store" }); if (r.ok) { const m = await r.json(); if (m.rl) STATS.rl = m.rl; } } catch (_) {}
     }
   }
   const fmt = (n) => n >= 1e6 ? (n / 1e6).toFixed(n >= 1e7 ? 0 : 1).replace(".", LANG === "en" ? "." : ",") + "M" : n >= 1e3 ? Math.round(n / 1e3) + "K" : String(n);
