@@ -18,10 +18,10 @@ window.LUKY = {
       title: "Integrar a SAP S/4HANA las empresas que adquiere Molinos",
       lead: "Cuando Molinos compra una empresa, sus datos tienen que entrar a SAP sin frenar la operación. Soy el responsable de las cargas con SAP Migration Cockpit: armo las plantillas, limpio los datos, cargo primero en el ambiente de calidad y después en producción, y valido todo con el negocio.",
       timeline: [
-        { name: "Bodegas Etchart", state: "Migrada · la primera" },
+        { name: "Bodegas Etchart", state: "Migrada" },
         { name: "NotCo", state: "Migrada" },
-        { name: "Complejo Alimenticio San Salvador", state: "Migrada · mayor volumen" },
-        { name: "Grupo Ayudín", state: "Confirmada · próxima", next: true }
+        { name: "Complejo Alimenticio San Salvador", state: "Migrada" },
+        { name: "Grupo Ayudín", state: "Próxima", next: true }
       ],
       objects: ["Clientes", "Proveedores", "Materiales", "Producto terminado", "Materia prima", "Insumos", "Stocks", "Lotes", "Versiones de fabricación"],
       steps: [

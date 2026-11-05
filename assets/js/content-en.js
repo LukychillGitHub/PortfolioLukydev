@@ -8,10 +8,10 @@ window.LUKY_EN = {
       title: "Bringing the companies Molinos acquires into SAP S/4HANA",
       lead: "When Molinos buys a company, its data has to enter SAP without stopping operations. I own the SAP Migration Cockpit loads: I build the templates, cleanse the data, load first into the QA environment and then into production, and validate everything with the business.",
       timeline: [
-        { name: "Bodegas Etchart", state: "Migrated · the first one" },
+        { name: "Bodegas Etchart", state: "Migrated" },
         { name: "NotCo", state: "Migrated" },
-        { name: "Complejo Alimenticio San Salvador", state: "Migrated · largest volume" },
-        { name: "Grupo Ayudín", state: "Confirmed · next", next: true }
+        { name: "Complejo Alimenticio San Salvador", state: "Migrated" },
+        { name: "Grupo Ayudín", state: "Next", next: true }
       ],
       objects: ["Customers", "Vendors", "Materials", "Finished goods", "Raw materials", "Supplies", "Stock", "Batches", "Production versions"],
       steps: [
