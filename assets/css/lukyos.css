@@ -420,3 +420,30 @@ a{color:inherit}
 }
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .mailer .row label{display:contents}
+
+/* ---------- Ajustes: Formación ---------- */
+.edu-item{align-items:center}
+.edu-item .chip{align-self:center;line-height:1.4}
+
+/* ---------- Sobre mí profesional ---------- */
+.about-role{margin:6px 0 0;color:var(--accent);font-weight:500;font-size:13.5px}
+.about .proj-links{margin-top:16px}
+
+/* ---------- Trayectoria expandible ---------- */
+.track-hint{margin:0 0 6px;font-size:12px;color:var(--muted)}
+details.job{display:block;padding:0;border-top:1px solid var(--line)}
+details.job:first-of-type{border-top:0}
+details.job summary{list-style:none;display:grid;grid-template-columns:110px 1fr 20px;gap:20px;padding:16px 10px;margin:0 -10px;border-radius:10px;cursor:pointer;align-items:start}
+details.job summary::-webkit-details-marker{display:none}
+details.job summary:hover{background:var(--sunk)}
+details.job summary p{margin:6px 0 0;max-width:62ch;color:var(--muted)}
+.chev{width:16px;height:16px;margin-top:3px;fill:none;stroke:var(--muted);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;transition:transform .2s}
+details.job[open] .chev{transform:rotate(90deg);stroke:var(--accent)}
+.job-body{display:grid;gap:16px;margin:0 0 18px 130px;padding:16px 18px;border-radius:12px;background:var(--sunk);border:1px solid var(--line);animation:pop .2s ease-out}
+.job-list{margin:8px 0 0;padding-left:18px;display:grid;gap:5px}
+.job-list li::marker{color:var(--accent)}
+@media (max-width:720px){
+  details.job summary{grid-template-columns:1fr 20px;gap:4px 12px}
+  details.job summary .when{grid-column:1/-1}
+  .job-body{margin-left:0}
+}

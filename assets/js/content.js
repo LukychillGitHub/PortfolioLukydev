@@ -95,14 +95,53 @@ window.LUKY = {
   ],
 
   jobs: [
-    { when: ["Feb 2026", "Actualidad"], now: true, role: "Analista de Tecnología", org: "Molinos Río de la Plata",
-      text: "Migración de empresas adquiridas a SAP S/4HANA con Migration Cockpit, análisis funcional y resolución de incidentes de Comercio Exterior desde el equipo de staff." },
-    { when: ["Ago 2023", "Ene 2026"], role: "Docente de Informática", org: "Colegio Secundario Carlos Maschwitz",
-      text: "Office, diagramas de flujo, compuertas lógicas y fundamentos de hardware. Explicar lo técnico a quien recién empieza es la base de cómo hoy hablo con usuarios de negocio." },
-    { when: ["Mar 2022", "Nov 2022"], role: "Pasante en Calidad", org: "Ford Argentina",
-      text: "Diseño de dispositivos en impresión 3D para la línea de producción y soporte al equipo de calidad con foco en mejora continua." },
-    { when: ["2020", "Hoy"], role: "Creador de contenido", org: "Lukychill", switchTo: "luky",
-      text: "Comunidad de gaming en TikTok, YouTube, Instagram, Twitch y Kick. Está en el otro usuario de este sistema." }
+    {
+      when: ["Feb 2026", "Actualidad"], now: true, role: "Analista de Tecnología", org: "Molinos Río de la Plata", place: "Buenos Aires",
+      text: "Integración de empresas adquiridas a SAP S/4HANA y resolución de incidentes de Comercio Exterior como analista funcional.",
+      bullets: [
+        "Migración de datos maestros a SAP S/4HANA con SAP Migration Cockpit (LTMC/LTMOM) para Bodegas Etchart, NotCo y Complejo Alimenticio San Salvador. Próxima integración: Grupo Ayudín.",
+        "Redacción de especificaciones funcionales y mapeo de campos entre los sistemas de origen y SAP.",
+        "Cargas de prueba y corrección iterativa de errores antes de cada migración productiva.",
+        "Resolución de incidentes de Comercio Exterior: reproducción del caso, análisis de causa raíz, coordinación con el equipo técnico y validación con el usuario.",
+        "Gestión de tickets desde el equipo de staff para asegurar la continuidad operativa."
+      ],
+      tools: ["SAP S/4HANA", "Migration Cockpit", "LTMC / LTMOM", "Datos maestros", "Análisis funcional", "Ticketing"],
+      actions: [{ label: "Ver caso de migraciones", open: "cases", arg: "migraciones" }, { label: "Ver caso de Comex", open: "cases", arg: "comex" }]
+    },
+    {
+      when: ["Ago 2023", "Ene 2026"], role: "Docente de Informática", org: "Colegio Secundario Carlos Maschwitz",
+      text: "Enseñanza de informática en nivel secundario, desde herramientas de oficina hasta lógica y hardware.",
+      bullets: [
+        "Dictado de clases de Office (Word, Excel y PowerPoint) orientadas a casos prácticos.",
+        "Enseñanza de diagramas de flujo, compuertas lógicas y fundamentos del funcionamiento de la computadora.",
+        "Planificación de clases y seguimiento de las entregas de los estudiantes.",
+        "Promoción del trabajo en equipo, la comunicación y la responsabilidad en las entregas."
+      ],
+      tools: ["Excel", "Word", "PowerPoint", "Lógica digital", "Diagramas de flujo", "Comunicación"]
+    },
+    {
+      when: ["Mar 2022", "Nov 2022"], role: "Pasante en Calidad interna", org: "Ford Argentina", place: "Motores PUMA",
+      text: "Soporte al equipo de calidad de la planta de motores, con foco en mejora continua.",
+      bullets: [
+        "Diseño y fabricación de dispositivos con impresión 3D para optimizar procesos de la línea de producción.",
+        "Identificación y resolución de problemas técnicos junto al equipo de calidad.",
+        "Gestión y actualización de planillas de Excel para mejorar la trazabilidad de los datos.",
+        "Trabajo en un entorno industrial de alta exigencia con estándares de calidad automotriz."
+      ],
+      tools: ["Impresión 3D", "Excel", "Mejora continua", "Calidad automotriz"]
+    },
+    {
+      when: ["Mar 2020", "Actualidad"], role: "Creador de contenido", org: "Lukychill", place: "Marca personal",
+      text: "Comunidad de gaming sobre Rocket League en TikTok, YouTube, Instagram, Twitch y Kick.",
+      bullets: [
+        "Producción y edición de contenido de Rocket League (nivel Grand Champion).",
+        "Más de 390K seguidores y 10M de likes en TikTok.",
+        "Análisis de métricas y tendencias para definir la estrategia de crecimiento orgánico.",
+        "Colaboraciones con marcas del sector como Repeat.gg y Aoeah."
+      ],
+      tools: ["Análisis de métricas", "CapCut", "Photoshop", "OBS", "Estrategia de contenido"],
+      actions: [{ label: "Entrar como Lukychill", switchTo: "luky" }]
+    }
   ],
 
   skills: [

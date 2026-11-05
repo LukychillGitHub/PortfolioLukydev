@@ -45,23 +45,26 @@
   const DESK_ICONS = { folderL: FOLDER("#7aa5ff", "#4d82f0"), folderK: FOLDER("#ff8f3a", "#c95a10") };
 
   /* ---------------- Lucas: ventanas ---------------- */
-  const yearsTeaching = "+2 años";
   const ABOUT = {
-    yo: () => `<div class="about"><img class="about-photo" src="assets/img/lucas.webp" alt="Lucas Fernández" width="150" height="188"><div>
-      <div class="eyebrow">Analista de Tecnología · Molinos</div>
-      <h2>Hola, soy Lucas.<br>Me dicen Luky.</h2>
-      <p>Me engancho con los problemas que nadie quiere agarrar. Trabajo en el cruce entre la tecnología y el negocio: entiendo cómo opera la empresa, encuentro dónde se rompe el dato y lo arreglo.</p>
-      <p>Hoy integro empresas adquiridas a SAP S/4HANA y resuelvo incidentes de Comercio Exterior. En paralelo estudio Ingeniería en Informática en la USAL y armo mis propias automatizaciones y apps.</p>
-      <p class="quote">// Soy lo que compilo.</p></div></div>
-      <div class="kpis"><div class="kpi"><b>3</b><span>Adquisiciones migradas a SAP</span></div><div class="kpi"><b>${C.study.gpa}</b><span>Promedio en la facultad</span></div><div class="kpi"><b>${yearsTeaching}</b><span>Enseñando informática</span></div></div>`,
-    origen: () => `<h2 class="h2">Cómo empezó</h2><p style="max-width:60ch">Mi primer contacto con la tecnología fue en la secundaria técnica, cuando vi un robot de LEGO con sensores resolviendo tareas por su cuenta. Ahí se encendió la curiosidad.</p>
-      <p style="max-width:60ch">Después vinieron la electromecánica, una pasantía en Ford diseñando piezas en impresión 3D, años dando clases y, hoy, SAP. El hilo es siempre el mismo: pensar, probar, equivocarme y volver a intentarlo.</p>`,
-    hago: () => `<h2 class="h2">Qué hago bien</h2><div class="skills">${C.skills.map(([t, list], i) => `<div><div class="eyebrow">${esc(t)}</div><div class="chips" style="margin-top:6px">${list.map((x) => `<span class="chip${i === 0 ? " acc" : ""}">${esc(x)}</span>`).join("")}</div></div>`).join("")}</div>`
+    yo: () => `<div class="about"><img class="about-photo" src="assets/img/lucas.webp" alt="Lucas Román Fernández" width="150" height="188"><div>
+      <div class="eyebrow">Perfil profesional</div>
+      <h2>Lucas Román Fernández</h2>
+      <p class="about-role">Analista de Tecnología · SAP S/4HANA · Migración de datos y análisis funcional</p>
+      <p>Soy Analista de Tecnología en Molinos Río de la Plata. Participo en la integración a SAP S/4HANA de las empresas que adquiere la compañía y en la resolución de incidentes de Comercio Exterior como analista funcional.</p>
+      <p>Mi perfil combina conocimiento de los procesos de negocio con formación técnica: curso Ingeniería en Informática en la Universidad del Salvador y desarrollo proyectos propios de automatización e integración de APIs con Python y TypeScript.</p>
+      <p>Trabajo con un método simple: entender el proceso, aislar la causa raíz con evidencia y dejar la solución documentada para que el equipo pueda sostenerla.</p>
+      <div class="proj-links"><button class="btn primary" data-open="cases">Ver casos</button><button class="btn" data-open="cv">Currículum</button><button class="btn" data-open="mail">Contacto</button></div></div></div>
+      <div class="kpis"><div class="kpi"><b>3</b><span>Empresas integradas a SAP</span></div><div class="kpi"><b>${C.study.gpa}</b><span>Promedio académico</span></div><div class="kpi"><b>2</b><span>Proyectos propios en producción</span></div></div>`,
+    origen: () => `<div class="eyebrow">Recorrido</div><h2 class="h2">De la electromecánica a SAP</h2>
+      <p style="max-width:62ch;margin-top:10px">Mi formación empezó en la Escuela Técnica Henry Ford, donde me recibí de Técnico Electromecánico. Ahí tuve el primer contacto con la programación a través de la robótica, y fue lo que me llevó a elegir Ingeniería en Informática.</p>
+      <p style="max-width:62ch">Pasé por una pasantía de calidad en Ford Argentina, más de dos años como docente de informática y, desde 2026, el área de Tecnología de Molinos. En cada etapa sumé algo distinto: el rigor de la industria, la capacidad de explicar lo técnico y la visión de los procesos de negocio.</p>
+      <p style="max-width:62ch">En paralelo construí Lukychill, una comunidad de gaming en redes que me enseñó a analizar métricas y sostener un proyecto propio en el tiempo.</p>`,
+    hago: () => `<div class="eyebrow">Competencias</div><h2 class="h2">Con qué trabajo</h2><div class="skills">${C.skills.map(([t, list], i) => `<div><div class="eyebrow">${esc(t)}</div><div class="chips" style="margin-top:6px">${list.map((x) => `<span class="chip${i === 0 ? " acc" : ""}">${esc(x)}</span>`).join("")}</div></div>`).join("")}</div>`
   };
-  const aboutHTML = () => `<div class="notes"><nav class="notes-side" aria-label="Notas">
-      <button data-note="yo" class="on"><b>Sobre mí</b><small>Quién soy hoy</small></button>
-      <button data-note="origen"><b>Cómo empezó</b><small>El robot de LEGO</small></button>
-      <button data-note="hago"><b>Qué hago bien</b><small>Habilidades</small></button></nav>
+  const aboutHTML = () => `<div class="notes"><nav class="notes-side" aria-label="Secciones">
+      <button data-note="yo" class="on"><b>Perfil</b><small>Resumen profesional</small></button>
+      <button data-note="origen"><b>Recorrido</b><small>Cómo llegué hasta acá</small></button>
+      <button data-note="hago"><b>Competencias</b><small>SAP, desarrollo e infraestructura</small></button></nav>
       <div class="notes-main"><div class="date" data-date></div><div data-note-body>${ABOUT.yo()}</div></div></div>`;
 
   const casesHTML = () => `<div class="finder"><nav class="finder-side" aria-label="Casos"><div class="lbl">Casos</div>${C.cases.map((c) => `<button data-case="${c.id}">${FOLD_S}${esc(c.side)}</button>`).join("")}</nav>
@@ -82,9 +85,15 @@
     const body = $("[data-case-body]", w); body.innerHTML = caseBody(c); body.parentElement.scrollTop = 0;
   }
 
-  const pathHTML = () => `<div class="track">${C.jobs.map((j) => `<div class="job"><div class="when">${esc(j.when[0])}<br>${j.now ? `<span class="now">● ${esc(j.when[1])}</span>` : esc(j.when[1])}</div>
-      <div><h3 class="h3">${esc(j.role)}</h3><div class="org">${esc(j.org)}</div><p>${esc(j.text)}</p>
-      ${j.switchTo ? `<button class="btn" data-switch="${j.switchTo}" style="margin-top:10px">Entrar como Lukychill →</button>` : ""}</div></div>`).join("")}</div>`;
+  const CHEV = '<svg class="chev" viewBox="0 0 16 16" aria-hidden="true"><path d="M6 4l4 4-4 4"/></svg>';
+  const pathHTML = () => `<div class="track"><p class="track-hint">Tocá un puesto para ver el detalle.</p>${C.jobs.map((j, i) => `<details class="job"${i === 0 ? " open" : ""}>
+      <summary><div class="when">${esc(j.when[0])}<br>${j.now ? `<span class="now">● ${esc(j.when[1])}</span>` : esc(j.when[1])}</div>
+      <div class="job-head"><h3 class="h3">${esc(j.role)}</h3><div class="org">${esc(j.org)}${j.place ? ` <span class="muted">· ${esc(j.place)}</span>` : ""}</div><p>${esc(j.text)}</p></div>${CHEV}</summary>
+      <div class="job-body">
+        <div><div class="eyebrow">Responsabilidades</div><ul class="job-list">${j.bullets.map((b) => `<li>${esc(b)}</li>`).join("")}</ul></div>
+        <div><div class="eyebrow">Herramientas y conocimientos</div><div class="chips" style="margin-top:8px">${j.tools.map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</div></div>
+        ${j.actions && j.actions.length ? `<div class="proj-links">${j.actions.map((x) => x.switchTo ? `<button class="btn" data-switch="${x.switchTo}">${esc(x.label)} →</button>` : `<button class="btn" data-open="${x.open}"${x.arg ? ` data-arg="${x.arg}"` : ""}>${esc(x.label)} →</button>`).join("")}</div>` : ""}
+      </div></details>`).join("")}</div>`;
 
   function eduHTML() {
     const { done, total, gpa, since } = C.study, R = 2 * Math.PI * 56;
@@ -179,9 +188,9 @@
   /* ---------------- Apps por usuario ---------------- */
   const APPS = {
     lucas: [
-      { id: "about", name: "Sobre mí", ico: "about", title: "Notas — Sobre mí", w: 760, h: 620, html: aboutHTML },
+      { id: "about", name: "Sobre mí", ico: "about", title: "Notas — Sobre mí", w: 780, h: 740, html: aboutHTML },
       { id: "cases", name: "Casos", ico: "cases", title: "Casos", w: 880, h: 600, html: casesHTML },
-      { id: "path", name: "Trayectoria", ico: "path", title: "Trayectoria", w: 680, h: 580, html: pathHTML },
+      { id: "path", name: "Trayectoria", ico: "path", title: "Trayectoria", w: 720, h: 620, html: pathHTML },
       { id: "edu", name: "Formación", ico: "edu", title: "Formación", w: 640, h: 560, html: eduHTML },
       { id: "term", name: "Terminal", ico: "term", title: "lucas — zsh", w: 580, h: 360, html: termHTML },
       { sep: true },
@@ -201,7 +210,7 @@
   const DESK = {
     lucas: {
       icons: [["cases", "Casos", "folderL"], ["path", "Trayectoria", "folderL"], ["cv", "CV.pdf", "cv"]],
-      hello: `<div class="eyebrow">Analista de Tecnología · SAP</div><h1>Lucas<br>Fernández</h1><p>Resuelvo problemas donde se cruzan la tecnología y el negocio. Abrí <b>Casos</b> en el dock para ver cómo.</p>`,
+      hello: `<div class="eyebrow">Analista de Tecnología · SAP S/4HANA</div><h1>Lucas<br>Fernández</h1><p>Migración de datos, análisis funcional y resolución de incidentes. Los proyectos están en <b>Casos</b>, en el dock.</p>`,
       first: "about",
       notif: { ico: "cases", title: "Nuevo caso", text: "Bot de videos: un link de TikTok, tres redes publicadas.", open: ["cases", "bot"] }
     },
@@ -271,7 +280,7 @@
     });
     w.addEventListener("click", (e) => {
       const sw = e.target.closest("[data-switch]"); if (sw) return enter(sw.dataset.switch);
-      const op = e.target.closest("[data-open]"); if (op) return openApp(op.dataset.open);
+      const op = e.target.closest("[data-open]"); if (op) return openApp(op.dataset.open, op.dataset.arg);
       const cb = e.target.closest("[data-case]"); if (cb) return showCase(w, cb.dataset.case);
       const nb = e.target.closest("[data-note]");
       if (nb) { w.querySelectorAll("[data-note]").forEach((b) => b.classList.toggle("on", b === nb)); $("[data-note-body]", w).innerHTML = ABOUT[nb.dataset.note](); }
