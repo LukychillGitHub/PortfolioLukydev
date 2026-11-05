@@ -81,7 +81,7 @@
         lt: { wins: "Victorias", goals: "Goles", saves: "Atajadas", assists: "Asistencias", mvps: "MVPs", gsr: "Efectividad de tiro" }, src: "Datos de Tracker Network", srcLink: "Ver perfil completo" },
       V: { eyebrow: "TikTok", top: "Lo más visto", all: "Todos", views: "vistas", play: "Ver video", open: "Abrir en TikTok", yt: "Últimos en YouTube", cta: "Ver videos",
         cats: { historias: "Historias", record: "Récord", mapas: "Mapas", mecanicas: "Mecánicas", humor: "Humor", tipos: "Tipos de jugadores", hermano: "Mi hermano" },
-        note: "Vistas de TikTok al momento de cargar la lista. Tocá un video para verlo acá." },
+        note: "Vistas de TikTok al 5 de noviembre de 2026. Tocá un video para verlo acá." },
       A: { eyebrow: "Audiencia", title: "Quién mira el contenido", desc: "Datos demográficos de YouTube e Instagram, actualizados automáticamente.", cta: "Ver audiencia", gender: "Género", age: "Edad", country: "Países principales", male: "Hombres", female: "Mujeres", other: "Sin dato",
         ytSub: "Vistas de los últimos 12 meses", igSub: "Seguidores", pending: "Pendiente de conexión", emptyYT: "Se completa cuando se conecte YouTube Analytics.", emptyIG: "Se completa cuando se conecte el permiso de estadísticas de Instagram." },
       H: { eyebrow: "Desde 2020", title: "Historia del canal", hint: "Tocá cada etapa para ver qué se hizo y sus videos.", peak: "su video más visto" },
@@ -143,7 +143,7 @@
         lt: { wins: "Wins", goals: "Goals", saves: "Saves", assists: "Assists", mvps: "MVPs", gsr: "Shot accuracy" }, src: "Data from Tracker Network", srcLink: "Full profile" },
       V: { eyebrow: "TikTok", top: "Most watched", all: "All", views: "views", play: "Watch video", open: "Open on TikTok", yt: "Latest on YouTube", cta: "See videos",
         cats: { historias: "Stories", record: "Record", mapas: "Maps", mecanicas: "Mechanics", humor: "Humor", tipos: "Player types", hermano: "My brother" },
-        note: "TikTok views as of when the list was made. Tap a video to watch it here." },
+        note: "TikTok views as of November 5, 2026. Tap a video to watch it here." },
       A: { eyebrow: "Audience", title: "Who watches the content", desc: "YouTube and Instagram demographics, updated automatically.", cta: "See audience", gender: "Gender", age: "Age", country: "Top countries", male: "Men", female: "Women", other: "Unknown",
         ytSub: "Views in the last 12 months", igSub: "Followers", pending: "Not connected yet", emptyYT: "Fills in once YouTube Analytics is connected.", emptyIG: "Fills in once Instagram insights permission is connected." },
       H: { eyebrow: "Since 2020", title: "Channel story", hint: "Tap each stage to see what was done and its videos.", peak: "most watched video" },
@@ -377,7 +377,7 @@
   const monthYear = (ym) => { const [y, m] = ym.split("-"); return new Date(+y, +m - 1, 1).toLocaleDateString(locale(), { month: "short", year: "numeric" }).replace(".", ""); };
   function ttCard(v, big) {
     if (!v) return "";
-    return `<button class="tt ${big ? "big" : ""}" data-tt="${v.id}" data-cat="${v.cat}" aria-label="${L.V.play}: ${esc(v.title)}">
+    return `<button class="tt ${big ? "big" : ""}${v.thumb ? " has-thumb" : ""}" data-tt="${v.id}" data-cat="${v.cat}" aria-label="${L.V.play}: ${esc(v.title)}">${v.thumb ? `<img class="tt-img" src="assets/img/tt/${v.id}.webp" alt="" loading="lazy">` : ""}
       <span class="tt-top">${LOGO("tiktok")}<span>${monthYear(v.date)} · ${v.dur}s</span></span>
       <span class="tt-views"><b>${fmt(v.views)}</b><small>${L.V.views}</small></span>
       <span class="tt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
