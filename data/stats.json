@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T15:59:51.218Z",
+  "updated": "2026-11-05T17:36:15.022Z",
   "platforms": {
     "kick": null,
     "youtube": {
@@ -9,7 +9,7 @@
       "source": "api"
     },
     "twitch": {
-      "followers": 47727,
+      "followers": 47729,
       "source": "api"
     },
     "instagram": {
@@ -18,12 +18,232 @@
       "source": "api"
     },
     "tiktok": {
-      "followers": 391000,
-      "likes": 10000000,
+      "followers": 384700,
+      "likes": 10200000,
       "source": "manual"
     }
   },
   "live": {
     "twitch": false
+  },
+  "youtubeLatest": [
+    {
+      "id": "GRNoFIbKBYY",
+      "title": "MAPA PARA TU AMIGO BAJITO EN #rocketleague - #lukychill#fyp#parati#rocket#league#fypage#viral#virale",
+      "published": "2026-10-16T14:43:49Z",
+      "views": 130,
+      "likes": 5
+    },
+    {
+      "id": "pHvwMOV5pMM",
+      "title": "@ A ESE AMIGO QUE LE GANARIAS EN ESTE MAPA - #fyp#parati#rocketleague#rl#rlclip#rlclips#lukychill#fy",
+      "published": "2026-10-16T14:41:38Z",
+      "views": 101,
+      "likes": 2
+    },
+    {
+      "id": "f5i0ZCwx6x4",
+      "title": "APRENDE EL AIRDRIBBLING EN ESTE MAPA DE #rocketleague - #lukychill#fyp#parati#rocket#league#fypage#v",
+      "published": "2026-10-16T14:31:14Z",
+      "views": 227,
+      "likes": 4
+    },
+    {
+      "id": "ssIpY9o_Ez0",
+      "title": "Que mapa le podes recomendar a ese amigo que le ganas siempre ?? - Uno de mis videos mas virales - #",
+      "published": "2026-10-16T14:27:06Z",
+      "views": 10709,
+      "likes": 276
+    },
+    {
+      "id": "PPFwE7TeLYk",
+      "title": "#Minecraft en #RocketLeague ? como es esto posible ?! UN POQUITITO DE HUMORCITO - #lukychill #fyp #p",
+      "published": "2026-10-16T14:25:48Z",
+      "views": 52,
+      "likes": 1
+    },
+    {
+      "id": "HTGe1DuyEpI",
+      "title": "Como que #fallguys en #rocketleague !? - #lukychill#rl#rocket#league#fyp#parati#foryoupage#viral#vir",
+      "published": "2026-10-16T14:21:30Z",
+      "views": 44,
+      "likes": 0
+    },
+    {
+      "id": "lNx0--hAFdI",
+      "title": "POR FIN se puede tener el AUTO 100% NEGRO en Rocket League 😱 (Season 24)",
+      "published": "2026-09-25T16:52:55Z",
+      "views": 510,
+      "likes": 6
+    },
+    {
+      "id": "LN6q5wO-IVQ",
+      "title": "MAPA PARA TU AMIGO BAJITO EN #rocketleague - #lukychill#fyp#parati#rocket#league#fypage#viral#virale",
+      "published": "2026-09-22T18:58:31Z",
+      "views": 120,
+      "likes": 3
+    }
+  ],
+  "audience": {
+    "instagram": {
+      "age": {
+        "13-17": 3202,
+        "18-24": 5805,
+        "25-34": 6297,
+        "35-44": 1352,
+        "45-54": 637,
+        "55-64": 133,
+        "65+": 162
+      },
+      "gender": {
+        "F": 638,
+        "M": 12566,
+        "U": 4384
+      },
+      "country": {
+        "DE": 8,
+        "PR": 83,
+        "BE": 3,
+        "PT": 29,
+        "JP": 3,
+        "HN": 105,
+        "PY": 223,
+        "DO": 77,
+        "FR": 14,
+        "HU": 7,
+        "BO": 80,
+        "BR": 88,
+        "MA": 5,
+        "DZ": 7,
+        "GB": 4,
+        "CA": 17,
+        "EC": 268,
+        "US": 413,
+        "EG": 3,
+        "SV": 108,
+        "UY": 432,
+        "IN": 7,
+        "CH": 9,
+        "IQ": 4,
+        "CL": 1240,
+        "IT": 42,
+        "MX": 3768,
+        "KW": 2,
+        "CO": 651,
+        "GT": 142,
+        "ES": 1695,
+        "CR": 171,
+        "VE": 344,
+        "PA": 65,
+        "AR": 6843,
+        "GY": 2,
+        "CU": 104,
+        "CW": 2,
+        "AU": 9,
+        "PE": 392,
+        "TN": 4,
+        "NI": 64,
+        "PL": 5,
+        "RO": 3,
+        "TR": 5
+      }
+    },
+    "youtube": null
+  },
+  "rl": {
+    "user": "LukyChill",
+    "updated": "2026-11-05",
+    "source": "https://rocketleague.tracker.network/rocket-league/profile/epic/LukyChill/overview",
+    "playlists": [
+      {
+        "mode": "1v1",
+        "tier": "Champion I",
+        "div": "IV",
+        "mmr": 1054,
+        "peak": 1200,
+        "peakTier": "Grand Champion I"
+      },
+      {
+        "mode": "2v2",
+        "tier": "Grand Champion I",
+        "div": "IV",
+        "mmr": 1550,
+        "peak": 1786,
+        "peakTier": "Grand Champion III"
+      },
+      {
+        "mode": "3v3",
+        "tier": "Champion III",
+        "div": "II",
+        "mmr": 1348,
+        "peak": 1712,
+        "peakTier": "Grand Champion II"
+      },
+      {
+        "mode": "torneos",
+        "tier": "Grand Champion I",
+        "div": "III",
+        "mmr": 1531,
+        "peak": 1756,
+        "peakTier": "Grand Champion III"
+      },
+      {
+        "mode": "4v4",
+        "tier": "Grand Champion II",
+        "div": "II",
+        "mmr": 1160,
+        "peak": 1203,
+        "peakTier": null
+      },
+      {
+        "mode": "hoops",
+        "tier": "Champion III",
+        "div": "IV",
+        "mmr": 1077,
+        "peak": 1139,
+        "peakTier": "Champion III"
+      },
+      {
+        "mode": "rumble",
+        "tier": "Grand Champion I",
+        "div": "II",
+        "mmr": 1212,
+        "peak": 1406,
+        "peakTier": "Grand Champion II"
+      },
+      {
+        "mode": "dropshot",
+        "tier": "Champion III",
+        "div": "II",
+        "mmr": 1007,
+        "peak": 1066,
+        "peakTier": "Grand Champion I"
+      },
+      {
+        "mode": "snowday",
+        "tier": "Champion II",
+        "div": "III",
+        "mmr": 1004,
+        "peak": 1103,
+        "peakTier": "Grand Champion I"
+      },
+      {
+        "mode": "heatseeker",
+        "tier": "Champion III",
+        "div": "III",
+        "mmr": 1100,
+        "peak": 1191,
+        "peakTier": "Grand Champion II"
+      }
+    ],
+    "lifetime": {
+      "wins": 13151,
+      "goals": 43132,
+      "saves": 34480,
+      "assists": 11526,
+      "shots": 94786,
+      "mvps": 5179,
+      "gsr": 45.5
+    }
   }
 }
