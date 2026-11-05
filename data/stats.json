@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-05T18:33:47.447Z",
+  "updated": "2026-11-05T21:55:58.140Z",
   "platforms": {
     "kick": null,
     "youtube": {
@@ -13,7 +13,7 @@
       "source": "api"
     },
     "instagram": {
-      "followers": 17655,
+      "followers": 17665,
       "videos": 10,
       "source": "api"
     },
@@ -31,28 +31,28 @@
       "id": "GRNoFIbKBYY",
       "title": "MAPA PARA TU AMIGO BAJITO EN #rocketleague - #lukychill#fyp#parati#rocket#league#fypage#viral#virale",
       "published": "2026-10-16T14:43:49Z",
-      "views": 130,
+      "views": 131,
       "likes": 5
     },
     {
       "id": "pHvwMOV5pMM",
       "title": "@ A ESE AMIGO QUE LE GANARIAS EN ESTE MAPA - #fyp#parati#rocketleague#rl#rlclip#rlclips#lukychill#fy",
       "published": "2026-10-16T14:41:38Z",
-      "views": 101,
+      "views": 102,
       "likes": 2
     },
     {
       "id": "f5i0ZCwx6x4",
       "title": "APRENDE EL AIRDRIBBLING EN ESTE MAPA DE #rocketleague - #lukychill#fyp#parati#rocket#league#fypage#v",
       "published": "2026-10-16T14:31:14Z",
-      "views": 227,
+      "views": 229,
       "likes": 4
     },
     {
       "id": "ssIpY9o_Ez0",
       "title": "Que mapa le podes recomendar a ese amigo que le ganas siempre ?? - Uno de mis videos mas virales - #",
       "published": "2026-10-16T14:27:06Z",
-      "views": 10709,
+      "views": 10710,
       "likes": 276
     },
     {
@@ -164,11 +164,11 @@
         "genderUserSpecified": 0
       },
       "country": {
-        "AR": 253842,
-        "ES": 198193,
-        "MX": 86524,
+        "AR": 254001,
+        "ES": 198387,
+        "MX": 86591,
         "CL": 46138,
-        "CO": 32929,
+        "CO": 32969,
         "UY": 14884
       },
       "period": "12m"
