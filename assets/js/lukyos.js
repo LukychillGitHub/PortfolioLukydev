@@ -33,13 +33,13 @@
       loginFoot: "Elegí con quién entrar. Podés <b>cambiar de usuario</b> cuando quieras desde la barra de arriba.",
       desktop: "Escritorio", search: "Buscar", switchUser: "Cambiar usuario", streamsOff: "Streams · offline", live: "EN VIVO", offline: "offline",
       close: "Cerrar", minimize: "Minimizar", maximize: "Maximizar",
-      apps: { about: "Sobre mí", cases: "Casos", path: "Trayectoria", edu: "Formación", term: "Terminal", cv: "Currículum", mail: "Contacto", stats: "Stats", rank: "Rango", clips: "Videos", collab: "Collabs", next: "Lo que viene", kmail: "Contacto marcas" },
-      titles: { about: "Notas — Sobre mí", cases: "Casos", path: "Trayectoria", edu: "Formación", term: "lucas — zsh", cv: "Currículum", mail: "Nuevo mensaje", stats: "Stats — en vivo", rank: "Rango", clips: "Videos", collab: "Colaboraciones", next: "Lo que viene", kmail: "Nuevo mensaje" },
-      deskCases: "Casos", deskPath: "Trayectoria", deskClips: "Videos", deskCollab: "Collabs",
+      apps: { about: "Sobre mí", cases: "Casos", path: "Trayectoria", edu: "Formación", term: "Terminal", cv: "Currículum", mail: "Contacto", stats: "Stats", rank: "Rango", clips: "Videos", aud: "Audiencia", story: "Historia", kmail: "Contacto marcas" },
+      titles: { about: "Notas — Sobre mí", cases: "Casos", path: "Trayectoria", edu: "Formación", term: "lucas — zsh", cv: "Currículum", mail: "Nuevo mensaje", stats: "Stats — en vivo", rank: "Rocket League — Rango", clips: "Videos", aud: "Audiencia", story: "Historia del canal", kmail: "Nuevo mensaje" },
+      deskCases: "Casos", deskPath: "Trayectoria", deskClips: "Videos", deskStory: "Historia",
       helloLucas: `<div class="eyebrow">Analista de Tecnología · SAP S/4HANA</div><h1>Lucas<br>Fernández</h1><p>Migraciones de datos, incidentes de Comercio Exterior y debugging ABAP. Los proyectos están en <b>Casos</b>, en el dock.</p>`,
-      helloLuky: `<div class="eyebrow">@lukychill · Rocket League</div><h1>Luky<br>chill</h1><p>Grand Champion, streams y lo que viene: vlog con alma gamer.</p>`,
+      helloLuky: `<div class="eyebrow">@lukychill · Rocket League</div><h1>Luky<br>chill</h1><p>Grand Champion III de pico, más de 10M de likes en TikTok y lo que viene: vlog con alma gamer.</p>`,
       notifLucas: ["Nuevo caso", "Bot de videos: un link de TikTok, tres redes publicadas."],
-      notifLuky: ["Próximamente", "Vlog con alma gamer: la oficina, la facu y las partidas."],
+      notifLuky: ["Historia del canal", "De los tipos de jugadores al récord de las 10 mercs. Tocá para verla."],
       now: "ahora",
       aboutTabs: [["Perfil", "Resumen profesional"], ["Recorrido", "Cómo llegué hasta acá"], ["Competencias", "SAP, desarrollo e infraestructura"]],
       aboutYo: (gpa) => `<div class="eyebrow">Perfil profesional</div><h2>Lucas Román Fernández</h2>
@@ -55,7 +55,7 @@
         <p style="max-width:62ch">En paralelo construí Lukychill, una comunidad de gaming en redes que me enseñó a analizar métricas y sostener un proyecto propio en el tiempo.</p>`,
       skillsHead: ["Competencias", "Con qué trabajo"],
       casesLbl: "Casos", folders: "carpetas", crumbRoot: "Lucas › Casos › ",
-      objects: "Objetos migrados", incidents: "Incidentes resueltos", howIncident: "Cómo trabajo un incidente",
+      objects: "Objetos migrados", shots: "Capturas", incidents: "Incidentes resueltos", howIncident: "Cómo trabajo un incidente",
       dl: ["Problema", "Causa", "Solución"],
       trackHint: "Tocá un puesto para ver el detalle.", resp: "Responsabilidades", toolsLbl: "Herramientas y conocimientos",
       eduSub: (since) => `Universidad del Salvador · ${since} – hoy`, eduTitle: "Ingeniería en Informática",
@@ -76,10 +76,15 @@
       stats: { total: "Comunidad total", sumAll: "seguidores sumando todas las plataformas", sumSome: (a, b) => `seguidores sumando ${a} de ${b} plataformas`,
         updated: "Actualizado", waiting: "Esperando la primera sincronización", followers: "seguidores", subs: "suscriptores", likes: "likes", views: "vistas", videos: "videos", posts: "publicaciones",
         pending: "Sin conectar", pendingSub: "Se completa al sincronizar", visit: "Ver canal", visitSub: "@lukychill" },
-      rank: { eyebrow: "Rocket League", text: "Del rango al contenido: jugadas, desafíos y formatos cortos pensados para la comunidad competitiva.", k: ["Rango alcanzado", "Años creando", "Plataformas"] },
-      clips: { eyebrowHL: "Clips destacados", titleHL: "Lo mejor del canal", eyebrow: "Videos", title: "Dónde ver el contenido", desc: "Clips de Rocket League, desafíos y directos." },
-      collab: { eyebrow: "Marcas", title: "Colaboraciones", desc: "Marcas del ecosistema gamer y de Rocket League que trabajaron con el canal.", cta: "Proponer una colaboración" },
-      next: { eyebrow: "Hoja de ruta", title: "Lo que viene en el canal" },
+      R: { eyebrow: "Rocket League · Epic: LukyChill", empty: "Sin datos de Rocket League todavía", best: "Mejor rango actual", peakAll: "Pico histórico", peak: "Pico", peakShort: "pico", div: "Div.", ranked: "Competitivo", extra: "Modos extra", lifetime: "Carrera",
+        modes: { "1v1": "1v1 Duelo", "2v2": "2v2 Dobles", "3v3": "3v3 Estándar", torneos: "Torneos", "4v4": "4v4 Quads", hoops: "Hoops", rumble: "Rumble", dropshot: "Dropshot", snowday: "Snowday", heatseeker: "Heatseeker" },
+        lt: { wins: "Victorias", goals: "Goles", saves: "Atajadas", assists: "Asistencias", mvps: "MVPs", gsr: "Efectividad de tiro" }, src: "Datos de Tracker Network", srcLink: "Ver perfil completo" },
+      V: { eyebrow: "TikTok", top: "Lo más visto", all: "Todos", views: "vistas", play: "Ver video", open: "Abrir en TikTok", yt: "Últimos en YouTube", cta: "Ver videos",
+        cats: { historias: "Historias", record: "Récord", mapas: "Mapas", mecanicas: "Mecánicas", humor: "Humor", tipos: "Tipos de jugadores", hermano: "Mi hermano" },
+        note: "Vistas de TikTok al momento de cargar la lista. Tocá un video para verlo acá." },
+      A: { eyebrow: "Audiencia", title: "Quién mira el contenido", desc: "Datos demográficos de YouTube e Instagram, actualizados automáticamente.", cta: "Ver audiencia", gender: "Género", age: "Edad", country: "Países principales", male: "Hombres", female: "Mujeres",
+        ytSub: "Vistas de los últimos 12 meses", igSub: "Seguidores", pending: "Pendiente de conexión", emptyYT: "Se completa cuando se conecte YouTube Analytics.", emptyIG: "Se completa cuando se conecte el permiso de estadísticas de Instagram." },
+      H: { eyebrow: "Desde 2020", title: "Historia del canal", hint: "Tocá cada etapa para ver qué se hizo y sus videos.", peak: "su video más visto" },
       spot: { ph: "Buscar apps, casos…", empty: "Sin resultados", app: "App", case: "Caso", user: "Usuario", toLuky: "Cambiar a Lukychill", toLucas: "Cambiar a Lucas Fernández", lang: "Switch to English", langKind: "Idioma" },
       docTitle: { lucas: "Lucas Fernández · LukyOS", luky: "Lukychill · LukyOS", login: "Lucas Fernández · LukyOS" }
     },
@@ -90,13 +95,13 @@
       loginFoot: "Choose who to log in as. You can <b>switch user</b> anytime from the top bar.",
       desktop: "Desktop", search: "Search", switchUser: "Switch user", streamsOff: "Streams · offline", live: "LIVE", offline: "offline",
       close: "Close", minimize: "Minimize", maximize: "Maximize",
-      apps: { about: "About me", cases: "Cases", path: "Experience", edu: "Education", term: "Terminal", cv: "Résumé", mail: "Contact", stats: "Stats", rank: "Rank", clips: "Videos", collab: "Collabs", next: "What's next", kmail: "Brand contact" },
-      titles: { about: "Notes — About me", cases: "Cases", path: "Experience", edu: "Education", term: "lucas — zsh", cv: "Résumé", mail: "New message", stats: "Stats — live", rank: "Rank", clips: "Videos", collab: "Collaborations", next: "What's next", kmail: "New message" },
-      deskCases: "Cases", deskPath: "Experience", deskClips: "Videos", deskCollab: "Collabs",
+      apps: { about: "About me", cases: "Cases", path: "Experience", edu: "Education", term: "Terminal", cv: "Résumé", mail: "Contact", stats: "Stats", rank: "Rank", clips: "Videos", aud: "Audience", story: "Story", kmail: "Brand contact" },
+      titles: { about: "Notes — About me", cases: "Cases", path: "Experience", edu: "Education", term: "lucas — zsh", cv: "Résumé", mail: "New message", stats: "Stats — live", rank: "Rocket League — Rank", clips: "Videos", aud: "Audience", story: "Channel story", kmail: "New message" },
+      deskCases: "Cases", deskPath: "Experience", deskClips: "Videos", deskStory: "Story",
       helloLucas: `<div class="eyebrow">Technology Analyst · SAP S/4HANA</div><h1>Lucas<br>Fernández</h1><p>Data migration, Foreign Trade incidents and ABAP debugging. Projects live in <b>Cases</b>, in the dock.</p>`,
-      helloLuky: `<div class="eyebrow">@lukychill · Rocket League</div><h1>Luky<br>chill</h1><p>Grand Champion, streams and what's next: a vlog with a gamer soul.</p>`,
+      helloLuky: `<div class="eyebrow">@lukychill · Rocket League</div><h1>Luky<br>chill</h1><p>Grand Champion III peak, 10M+ likes on TikTok and what's next: a vlog with a gamer soul.</p>`,
       notifLucas: ["New case", "Video bot: one TikTok link, three networks published."],
-      notifLuky: ["Coming soon", "A vlog with a gamer soul: the office, university and the matches."],
+      notifLuky: ["Channel story", "From player types to the 10 stacked Mercs record. Tap to see it."],
       now: "now",
       aboutTabs: [["Profile", "Professional summary"], ["Background", "How I got here"], ["Skills", "SAP, development and infrastructure"]],
       aboutYo: () => `<div class="eyebrow">Professional profile</div><h2>Lucas Román Fernández</h2>
@@ -112,7 +117,7 @@
         <p style="max-width:62ch">In parallel I built Lukychill, a gaming community that taught me to analyze metrics and sustain a personal project over time.</p>`,
       skillsHead: ["Skills", "What I work with"],
       casesLbl: "Cases", folders: "folders", crumbRoot: "Lucas › Cases › ",
-      objects: "Migrated objects", incidents: "Incidents resolved", howIncident: "How I work an incident",
+      objects: "Migrated objects", shots: "Screenshots", incidents: "Incidents resolved", howIncident: "How I work an incident",
       dl: ["Problem", "Cause", "Solution"],
       trackHint: "Tap a role to see the details.", resp: "Responsibilities", toolsLbl: "Tools and knowledge",
       eduSub: (since) => `Universidad del Salvador · ${since} – present`, eduTitle: "B.S. in Computer Engineering",
@@ -133,10 +138,15 @@
       stats: { total: "Total community", sumAll: "followers across all platforms", sumSome: (a, b) => `followers across ${a} of ${b} platforms`,
         updated: "Updated", waiting: "Waiting for the first sync", followers: "followers", subs: "subscribers", likes: "likes", views: "views", videos: "videos", posts: "posts",
         pending: "Pending", pendingSub: "Fills in after syncing", visit: "Visit channel", visitSub: "@lukychill" },
-      rank: { eyebrow: "Rocket League", text: "From rank to content: plays, challenges and short formats made for the competitive community.", k: ["Rank reached", "Years creating", "Platforms"] },
-      clips: { eyebrowHL: "Featured clips", titleHL: "Best of the channel", eyebrow: "Videos", title: "Where to watch", desc: "Rocket League clips, challenges and streams." },
-      collab: { eyebrow: "Brands", title: "Collaborations", desc: "Gaming and Rocket League brands that worked with the channel.", cta: "Propose a collaboration" },
-      next: { eyebrow: "Roadmap", title: "What's next on the channel" },
+      R: { eyebrow: "Rocket League · Epic: LukyChill", empty: "No Rocket League data yet", best: "Best current rank", peakAll: "All-time peak", peak: "Peak", peakShort: "peak", div: "Div.", ranked: "Competitive", extra: "Extra modes", lifetime: "Career",
+        modes: { "1v1": "1v1 Duel", "2v2": "2v2 Doubles", "3v3": "3v3 Standard", torneos: "Tournaments", "4v4": "4v4 Quads", hoops: "Hoops", rumble: "Rumble", dropshot: "Dropshot", snowday: "Snowday", heatseeker: "Heatseeker" },
+        lt: { wins: "Wins", goals: "Goals", saves: "Saves", assists: "Assists", mvps: "MVPs", gsr: "Shot accuracy" }, src: "Data from Tracker Network", srcLink: "Full profile" },
+      V: { eyebrow: "TikTok", top: "Most watched", all: "All", views: "views", play: "Watch video", open: "Open on TikTok", yt: "Latest on YouTube", cta: "See videos",
+        cats: { historias: "Stories", record: "Record", mapas: "Maps", mecanicas: "Mechanics", humor: "Humor", tipos: "Player types", hermano: "My brother" },
+        note: "TikTok views as of when the list was made. Tap a video to watch it here." },
+      A: { eyebrow: "Audience", title: "Who watches the content", desc: "YouTube and Instagram demographics, updated automatically.", cta: "See audience", gender: "Gender", age: "Age", country: "Top countries", male: "Men", female: "Women",
+        ytSub: "Views in the last 12 months", igSub: "Followers", pending: "Not connected yet", emptyYT: "Fills in once YouTube Analytics is connected.", emptyIG: "Fills in once Instagram insights permission is connected." },
+      H: { eyebrow: "Since 2020", title: "Channel story", hint: "Tap each stage to see what was done and its videos.", peak: "most watched video" },
       spot: { ph: "Search apps, cases…", empty: "No results", app: "App", case: "Case", user: "User", toLuky: "Switch to Lukychill", toLucas: "Switch to Lucas Fernández", lang: "Cambiar a español", langKind: "Language" },
       docTitle: { lucas: "Lucas Fernández · LukyOS", luky: "Lukychill · LukyOS", login: "Lucas Fernández · LukyOS" }
     }
@@ -150,8 +160,12 @@
     for (const url of STATS_URLS) {
       try {
         const r = await fetch(url, { cache: "no-store" });
-        if (r.ok) { const j = await r.json(); if (j && j.platforms) { STATS = j; return; } }
+        if (r.ok) { const j = await r.json(); if (j && j.platforms) { STATS = j; break; } }
       } catch (_) { /* probar la siguiente */ }
+    }
+    // Rocket League se carga a mano: si stats.json todavía no lo trae, se lee del archivo manual.
+    if (!STATS.rl) {
+      try { const r = await fetch("data/stats.manual.json", { cache: "no-store" }); if (r.ok) { const m = await r.json(); if (m.rl) STATS.rl = m.rl; } } catch (_) {}
     }
   }
   const fmt = (n) => n >= 1e6 ? (n / 1e6).toFixed(n >= 1e7 ? 0 : 1).replace(".", LANG === "en" ? "." : ",") + "M" : n >= 1e3 ? Math.round(n / 1e3) + "K" : String(n);
@@ -171,6 +185,8 @@
     clips: '<rect x="6.5" y="3.5" width="11" height="17" rx="2.5"/><path d="M10.5 9.5v5l4-2.5z"/>',
     collab: '<circle cx="9" cy="9" r="3"/><circle cx="16.5" cy="10.5" r="2.4"/><path d="M3.5 19c.8-3 3-4.5 5.5-4.5s4.7 1.5 5.5 4.5M14.5 15c2.4-.5 4.6.7 5.5 3.5"/>',
     next: '<rect x="3.5" y="7" width="12" height="10" rx="2"/><path d="M15.5 11l5-3v8l-5-3z"/>',
+    aud: '<path d="M4 19V9M9.5 19V5M15 19v-7M20.5 19V8"/>',
+    story: '<path d="M5 4v16"/><circle cx="5" cy="7" r="2"/><circle cx="5" cy="17" r="2"/><path d="M9 7h10M9 12h7M9 17h10"/>',
     lang: '<circle cx="12" cy="12" r="8.5"/><path d="M3.5 12h17M12 3.5c2.5 2.6 2.5 14.4 0 17M12 3.5c-2.5 2.6-2.5 14.4 0 17"/>'
   };
   const ai = (k) => `<span class="ai" data-k="${k}" aria-hidden="true"><svg viewBox="0 0 24 24">${G[k]}</svg></span>`;
@@ -197,7 +213,7 @@
     let h = `<div class="case"><div class="eyebrow">${esc(c.tag)}</div><h2 class="h2">${esc(c.title)}</h2><p class="case-lead">${esc(c.lead)}</p>`;
     if (c.timeline) h += `<div class="mig">${c.timeline.map((t) => `<div class="${t.next ? "next" : ""}"><b>${esc(t.name)}</b><span><i></i>${esc(t.state)}</span></div>`).join("")}</div>`;
     if (c.flow) h += `<div class="case-sec"><div class="eyebrow">${esc(c.flowTitle)}</div><ol class="flow">${c.flow.map((f, i) => `<li class="flow-node${f[2] ? " hit" : ""}"><span class="flow-n">${i + 1}</span><b>${esc(f[0])}</b><small>${esc(f[1])}</small>${f[2] ? `<span class="flow-marks">${f[2].map((m) => `<i title="${L.incidents} ${m}">${m}</i>`).join("")}</span>` : ""}</li>`).join("")}</ol></div>`;
-    if (c.gallery && c.gallery.length) h += `<div class="case-sec"><div class="gallery">${c.gallery.map((g) => `<figure><img src="${g[0]}" alt="${esc(g[1])}" loading="lazy"><figcaption>${esc(g[1])}</figcaption></figure>`).join("")}</div></div>`;
+    if (c.gallery && c.gallery.length) h += `<div class="case-sec"><div class="eyebrow">${L.shots}</div><div class="gallery${c.gallery.length === 1 ? " one" : ""}">${c.gallery.map((g) => `<figure class="${g[2] || ""}"><button class="shot" data-shot="${g[0]}" data-cap="${esc(g[1])}" aria-label="${esc(g[1])}"><img src="${g[0]}" alt="${esc(g[1])}" loading="lazy"></button><figcaption>${esc(g[1])}</figcaption></figure>`).join("")}</div></div>`;
     if (c.tx) h += `<div class="case-sec"><div class="eyebrow">${esc(c.txTitle)}</div><div class="tx-wrap"><table class="tx"><tbody>${c.tx.map((t) => `<tr><th scope="row">${esc(t[0])}</th><td><code>${esc(t[1])}</code></td><td>${esc(t[2])}</td></tr>`).join("")}</tbody></table></div></div>`;
     if (c.objects) h += `<div class="case-sec"><div class="eyebrow">${L.objects}</div><div class="chips" style="margin-top:8px">${c.objects.map((o) => `<span class="chip acc">${esc(o)}</span>`).join("")}</div></div>`;
     if (c.incidents) h += `<div class="case-sec"><div class="eyebrow">${L.incidents}</div><div class="incidents">${c.incidents.map((x, i) => `<details class="incident"><summary><span><i class="inc-n">${i + 1}</i>${esc(x.title)}</span>${CHEV}</summary>
@@ -280,6 +296,7 @@
   };
 
   /* ---------------- Lukychill: ventanas ---------------- */
+  const LOGO = (id, cls = "") => window.LUKY_LOGOS && window.LUKY_LOGOS[id] ? `<svg class="brand ${cls}" viewBox="0 0 24 24" aria-hidden="true"><path d="${window.LUKY_LOGOS[id]}"/></svg>` : "";
   function statsHTML() {
     const S = L.stats, p = STATS.platforms || {}, live = STATS.live || {};
     const max = Math.max(1, ...C.platforms.map(({ id }) => (p[id] && p[id].followers) || 0));
@@ -289,45 +306,160 @@
     const tiles = C.platforms.map(({ id, name, url, live: canLive, manual }) => {
       const d = p[id], on = !!live[id];
       const tag = canLive ? `<span class="dot-live ${on ? "on" : ""}"><i></i>${on ? L.live : L.offline}</span>` : "";
+      const head = `<div class="top"><span class="nm"><span class="logo-chip" data-b="${id}">${LOGO(id)}</span>${name}</span>${tag}</div>`;
       if (d && d.followers) {
         const extra = [d.likes ? [fmt(d.likes), S.likes] : null, d.views ? [fmt(d.views), S.views] : null, d.videos ? [fmt(d.videos), id === "instagram" ? S.posts : S.videos] : null].filter(Boolean);
-        return `<a class="plat" href="${url}" target="_blank" rel="noopener"><div class="top"><span class="nm">${name}</span>${tag}</div>
+        return `<a class="plat" data-b="${id}" href="${url}" target="_blank" rel="noopener">${head}
           <div><div class="num">${fmt(d.followers)}</div><div class="lab">${id === "youtube" ? S.subs : S.followers}</div></div>
           ${extra.length ? `<div class="extra">${extra.map(([v, l]) => `<span><b>${v}</b> ${l}</span>`).join("")}</div>` : ""}
           <div class="bar"><i style="width:${Math.max(4, d.followers / max * 100)}%"></i></div></a>`;
       }
-      if (manual) return `<a class="plat pending" href="${url}" target="_blank" rel="noopener"><div class="top"><span class="nm">${name}</span></div>
+      if (manual) return `<a class="plat pending" data-b="${id}" href="${url}" target="_blank" rel="noopener">${head}
         <div><div class="num">${S.visit} ↗</div><div class="lab">${S.visitSub}</div></div><div class="bar"></div></a>`;
-      return `<a class="plat pending" href="${url}" target="_blank" rel="noopener"><div class="top"><span class="nm">${name}</span>${tag}</div>
+      return `<a class="plat pending" data-b="${id}" href="${url}" target="_blank" rel="noopener">${head}
         <div><div class="num">${S.pending}</div><div class="lab">${S.pendingSub}</div></div><div class="bar"></div></a>`;
     }).join("");
     return `<div class="pad"><div class="stats-hero"><div style="display:flex;gap:16px;align-items:center"><img class="stats-face" src="assets/img/lukychill-avatar.webp" alt="" width="64" height="64">
       <div><div class="eyebrow">${S.total}</div><div class="big">${sum ? "+" + fmt(sum) : "—"}</div>
       <div class="muted" style="margin-top:6px">${synced >= countable ? S.sumAll : S.sumSome(synced, countable)}</div></div></div>
       <div class="sync ${upd ? "ok" : ""}"><i></i>${upd ? S.updated + " " + upd : S.waiting}</div></div>
-      <div class="plats">${tiles}</div></div>`;
+      <div class="plats">${tiles}</div>
+      <div class="proj-links" style="margin-top:16px"><button class="btn" data-open="aud">${L.A.cta} →</button><button class="btn" data-open="clips">${L.V.cta} →</button></div></div>`;
   }
-  const rankHTML = () => {
-    const years = new Date().getFullYear() - 2020, R = L.rank;
-    return `<div class="pad"><div class="rank"><div class="crest">
-      <svg viewBox="0 0 150 150" aria-hidden="true"><defs><linearGradient id="cg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9a3d"/><stop offset=".55" stop-color="#e2560a"/><stop offset="1" stop-color="#4c8dff"/></linearGradient></defs>
-      <path d="M75 6 132 30v46c0 33-24 56-57 68C42 132 18 109 18 76V30z" fill="url(#cg)"/><path d="M75 18 121 38v38c0 26-19 45-46 56-27-11-46-30-46-56V38z" fill="#0d0f14" stroke="rgba(255,154,61,.5)" stroke-width="1.5"/></svg><b>GC</b></div>
-      <div><div class="eyebrow">${R.eyebrow}</div><h2>Grand Champion</h2><p class="muted" style="margin:8px 0 0;max-width:46ch">${R.text}</p></div></div>
-      <div class="rank-grid"><div class="kpi"><b>GC</b><span>${R.k[0]}</span></div><div class="kpi"><b>+${years}</b><span>${R.k[1]}</span></div><div class="kpi"><b>${C.platforms.length}</b><span>${R.k[2]}</span></div></div></div>`;
-  };
-  const clipsHTML = () => {
-    const K = L.clips;
-    if (C.clips.length) {
-      return `<div class="pad"><div class="eyebrow">${K.eyebrowHL}</div><h2 class="h2">${K.titleHL}</h2><div class="channels">${C.clips.map((c) => `<a class="channel" href="${c.url}" target="_blank" rel="noopener"><b>${esc(c.title)} ↗</b><span>${esc(c.platform)}${c.note ? " · " + esc(c.note) : ""}</span></a>`).join("")}</div></div>`;
+
+  /* --- Rocket League --- */
+  const TIER_COLORS = [["Supersonic", "#e9edf5"], ["Grand Champion", "#ff4f5e"], ["Champion", "#b06cff"], ["Diamond", "#4c8dff"], ["Platinum", "#5fd3e8"], ["Gold", "#f2b632"], ["Silver", "#b8c2d3"], ["Bronze", "#c07a45"]];
+  const tierColor = (t) => (TIER_COLORS.find(([k]) => (t || "").startsWith(k)) || [0, "#6b7280"])[1];
+  const tierShort = (t) => !t ? "—" : t.replace("Grand Champion", "GC").replace("Champion", "C").replace("Supersonic Legend", "SSL").replace("Diamond", "D").replace("Platinum", "P").replace(" III", "3").replace(" II", "2").replace(" I", "1");
+  const roman = (r) => ({ I: 1, II: 2, III: 3 })[(r || "").split(" ").pop()] || 0;
+  function emblem(t, size = 120) {
+    const c = tierColor(t), n = roman(t);
+    const pips = Array.from({ length: 3 }, (_, i) => `<circle cx="${45 + i * 15}" cy="80" r="4" fill="${i < n ? "#0b0d12" : "rgba(11,13,18,.25)"}"/>`).join("");
+    return `<svg class="emblem" viewBox="0 0 120 120" width="${size}" height="${size}" aria-hidden="true">
+      <defs><linearGradient id="eg${n}${c.slice(1)}" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${c}"/><stop offset="1" stop-color="${c}" stop-opacity=".35"/></linearGradient></defs>
+      <path d="M60 6 104 24v34c0 26-19 44-44 54C35 102 16 84 16 58V24z" fill="url(#eg${n}${c.slice(1)})" opacity=".22"/>
+      <path d="M60 6 104 24v34c0 26-19 44-44 54C35 102 16 84 16 58V24z" fill="none" stroke="${c}" stroke-width="3"/>
+      <path d="M60 22 88 34v22c0 17-12 29-28 36-16-7-28-19-28-36V34z" fill="${c}" opacity=".9"/><path d="M60 22 88 34v22c0 17-12 29-28 36" fill="none" stroke="#fff" stroke-opacity=".25" stroke-width="1.5"/>
+      <text x="60" y="62" text-anchor="middle" font-family="Unbounded, Geist, sans-serif" font-weight="800" font-size="22" fill="#0b0d12">${tierShort(t).replace(/\d$/, "")}</text>${pips}</svg>`;
+  }
+  function rankHTML() {
+    const R = L.R, rl = STATS.rl;
+    if (!rl || !rl.playlists) return `<div class="pad"><div class="eyebrow">${R.eyebrow}</div><h2 class="h2">${R.empty}</h2></div>`;
+    const by = Object.fromEntries(rl.playlists.map((p) => [p.mode, p]));
+    const ranked = ["1v1", "2v2", "3v3", "torneos"].map((m) => by[m]).filter(Boolean);
+    const extra = ["4v4", "hoops", "rumble", "dropshot", "snowday", "heatseeker"].map((m) => by[m]).filter(Boolean);
+    const best = [...ranked].sort((a, b) => b.mmr - a.mmr)[0];
+    const peak = [...rl.playlists].filter((p) => p.peakTier && p.peakTier !== "Unranked").sort((a, b) => b.peak - a.peak)[0];
+    const maxMMR = Math.max(...rl.playlists.map((p) => p.peak || p.mmr));
+    const row = (p) => `<div class="rl-row"><span class="rl-mode">${R.modes[p.mode]}</span>
+      <span class="rl-tier" style="--tc:${tierColor(p.tier)}"><i></i>${esc(p.tier)}${p.div ? ` <small>${R.div} ${p.div}</small>` : ""}</span>
+      <span class="rl-bar"><i style="width:${(p.mmr / maxMMR) * 100}%;--tc:${tierColor(p.tier)}"></i>${p.peak ? `<em style="left:${(p.peak / maxMMR) * 100}%" title="${R.peak}: ${p.peak}"></em>` : ""}</span>
+      <span class="rl-mmr">${p.mmr}</span><span class="rl-peak">${p.peak ? `${R.peakShort} ${p.peak}` : ""}</span></div>`;
+    const lt = rl.lifetime || {}, nf = (n) => n == null ? "—" : n.toLocaleString(locale());
+    const ltItems = [["wins", nf(lt.wins)], ["goals", nf(lt.goals)], ["saves", nf(lt.saves)], ["assists", nf(lt.assists)], ["mvps", nf(lt.mvps)], ["gsr", lt.gsr != null ? `${String(lt.gsr).replace(".", LANG === "en" ? "." : ",")}%` : "—"]];
+    return `<div class="rl"><div class="rl-hero">
+        <div class="rl-card" style="--tc:${tierColor(best.tier)}">${emblem(best.tier)}<div><div class="eyebrow">${R.best} · ${R.modes[best.mode]}</div><h2>${esc(best.tier)}</h2><p>${R.div} ${best.div} · <b>${best.mmr}</b> MMR</p></div></div>
+        ${peak ? `<div class="rl-card peak" style="--tc:${tierColor(peak.peakTier)}">${emblem(peak.peakTier, 92)}<div><div class="eyebrow">${R.peakAll} · ${R.modes[peak.mode]}</div><h2>${esc(peak.peakTier)}</h2><p><b>${peak.peak}</b> MMR</p></div></div>` : ""}
+      </div>
+      <div class="rl-sec"><div class="eyebrow">${R.ranked}</div><div class="rl-table">${ranked.map(row).join("")}</div></div>
+      <div class="rl-sec"><div class="eyebrow">${R.lifetime}</div><div class="rl-life">${ltItems.map(([k, v]) => `<div><b>${v}</b><span>${R.lt[k]}</span></div>`).join("")}</div></div>
+      <details class="rl-sec rl-more"><summary><span class="eyebrow">${R.extra}</span>${CHEV}</summary><div class="rl-table">${extra.map(row).join("")}</div></details>
+      <p class="rl-src">${R.src} · <a href="${rl.source || "https://rocketleague.tracker.network/rocket-league/profile/epic/LukyChill/overview"}" target="_blank" rel="noopener">${R.srcLink} ↗</a></p></div>`;
+  }
+
+  /* --- Videos --- */
+  const VIDS = () => (window.LUKY_VIDEOS || []).slice().sort((a, b) => b.views - a.views);
+  const vById = (id) => (window.LUKY_VIDEOS || []).find((v) => v.id === id);
+  const monthYear = (ym) => { const [y, m] = ym.split("-"); return new Date(+y, +m - 1, 1).toLocaleDateString(locale(), { month: "short", year: "numeric" }).replace(".", ""); };
+  function ttCard(v, big) {
+    if (!v) return "";
+    return `<button class="tt ${big ? "big" : ""}" data-tt="${v.id}" data-cat="${v.cat}" aria-label="${L.V.play}: ${esc(v.title)}">
+      <span class="tt-top">${LOGO("tiktok")}<span>${monthYear(v.date)} · ${v.dur}s</span></span>
+      <span class="tt-views"><b>${fmt(v.views)}</b><small>${L.V.views}</small></span>
+      <span class="tt-play"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></span>
+      <span class="tt-title">${esc(v.title)}</span>
+      <span class="tt-cat">${L.V.cats[v.cat] || ""}</span></button>`;
+  }
+  function clipsHTML() {
+    const V = L.V, all = VIDS(), cats = ["all", ...new Set(all.map((v) => v.cat))];
+    const yt = STATS.youtubeLatest;
+    const brands = C.platforms.map((p) => `<a class="brand-tile" data-b="${p.id}" href="${p.url}" target="_blank" rel="noopener">${LOGO(p.id)}<span><b>${p.name}</b><small>@lukychill</small></span></a>`).join("");
+    return `<div class="pad vids"><div class="brand-row">${brands}</div>
+      <div class="vids-head"><div><div class="eyebrow">${V.eyebrow}</div><h2 class="h2">${V.top}</h2></div>
+      <div class="vfilter" role="tablist">${cats.map((c, i) => `<button role="tab" data-vf="${c}" class="${i === 0 ? "on" : ""}">${c === "all" ? V.all : V.cats[c]}</button>`).join("")}</div></div>
+      <div class="tt-grid" data-ttgrid>${all.map((v) => ttCard(v)).join("")}</div>
+      ${yt && yt.length ? `<div class="vids-head" style="margin-top:26px"><div><div class="eyebrow">YouTube</div><h2 class="h2">${V.yt}</h2></div></div>
+        <div class="yt-grid">${yt.slice(0, 8).map((y) => `<a class="yt" href="https://www.youtube.com/watch?v=${y.id}" target="_blank" rel="noopener"><span class="yt-thumb"><img src="https://i.ytimg.com/vi/${y.id}/hqdefault.jpg" alt="" loading="lazy">${LOGO("youtube")}</span><b>${esc(y.title)}</b><small>${y.views != null ? fmt(y.views) + " " + V.views + " · " : ""}${new Date(y.published).toLocaleDateString(locale(), { day: "numeric", month: "short", year: "numeric" })}</small></a>`).join("")}</div>` : ""}
+      <p class="rl-src">${V.note}</p></div>`;
+  }
+  function playTT(id) {
+    const v = vById(id); if (!v) return;
+    const old = $(".player-back"); if (old) old.remove();
+    const back = document.createElement("div");
+    back.className = "player-back";
+    const url = `https://www.tiktok.com/@lukychill/video/${id}`;
+    back.innerHTML = `<div class="player" role="dialog" aria-label="${esc(v.title)}"><div class="player-frame"><iframe src="https://www.tiktok.com/player/v1/${id}?autoplay=1&music_info=1&description=1&rel=0" allow="autoplay; encrypted-media; fullscreen; picture-in-picture" allowfullscreen title="${esc(v.title)}"></iframe></div>
+      <div class="player-info"><b>${esc(v.title)}</b><span>${fmt(v.views)} ${L.V.views} · ${monthYear(v.date)}</span><div class="proj-links"><a class="btn" href="${url}" target="_blank" rel="noopener">${L.V.open} ↗</a><button class="btn" data-close>${L.close}</button></div></div></div>`;
+    back.addEventListener("click", (e) => { if (e.target === back || e.target.closest("[data-close]")) back.remove(); });
+    $("#desktop").appendChild(back);
+  }
+  document.addEventListener("click", (e) => {
+    const sh = e.target.closest("[data-shot]");
+    if (sh) {
+      const back = document.createElement("div"); back.className = "player-back shot-back";
+      back.innerHTML = `<figure class="shot-big"><img src="${sh.dataset.shot}" alt=""><figcaption>${sh.dataset.cap}</figcaption></figure>`;
+      back.addEventListener("click", () => back.remove()); $("#desktop").appendChild(back); return;
     }
-    return `<div class="pad"><div class="eyebrow">${K.eyebrow}</div><h2 class="h2">${K.title}</h2><p class="muted" style="margin:6px 0 0">${K.desc}</p>
-      <div class="channels">${C.platforms.map((p) => `<a class="channel" href="${p.url}" target="_blank" rel="noopener"><b>${p.name} ↗</b><span>@lukychill</span></a>`).join("")}</div></div>`;
-  };
-  const collabHTML = () => `<div class="pad"><div class="eyebrow">${L.collab.eyebrow}</div><h2 class="h2">${L.collab.title}</h2><p class="muted" style="margin:6px 0 0">${L.collab.desc}</p>
-      <div class="collabs">${C.collabs.map((c) => `<div class="collab"><div class="lg">${esc(c.name[0])}</div><div><b>${esc(c.name)}</b><div class="muted">${esc(c.what)}</div></div><span class="chip">${esc(c.tag)}</span></div>`).join("")}</div>
-      <button class="btn primary" data-open="kmail" style="margin-top:16px">${L.collab.cta}</button></div>`;
-  const nextHTML = () => `<div class="pad"><div class="eyebrow">${L.next.eyebrow}</div><h2 class="h2">${L.next.title}</h2>
-      <ol class="road">${C.roadmap.map((r) => `<li class="${r.state}"><span class="st">${esc(r.when)}</span><div><b>${esc(r.title)}</b><div class="muted">${esc(r.text)}</div></div></li>`).join("")}</ol></div>`;
+    const t = e.target.closest("[data-tt]"); if (t) { playTT(t.dataset.tt); return; }
+    const f = e.target.closest("[data-vf]");
+    if (f) {
+      const win = f.closest(".win"), c = f.dataset.vf;
+      win.querySelectorAll("[data-vf]").forEach((b) => b.classList.toggle("on", b === f));
+      win.querySelectorAll("[data-ttgrid] .tt").forEach((el) => (el.hidden = c !== "all" && el.dataset.cat !== c));
+    }
+  });
+
+  /* --- Audiencia --- */
+  const flag = (cc) => cc && cc.length === 2 ? String.fromCodePoint(...[...cc.toUpperCase()].map((ch) => 127397 + ch.charCodeAt(0))) : "";
+  const countryName = (cc) => { try { return new Intl.DisplayNames([locale()], { type: "region" }).of(cc); } catch (_) { return cc; } };
+  function audPanel(key, data) {
+    const A = L.A, name = key === "youtube" ? "YouTube" : "Instagram";
+    if (!data) return `<section class="aud-panel empty" data-b="${key}"><header>${LOGO(key)}<b>${name}</b><small>${key === "youtube" ? A.ytSub : A.igSub}</small></header>
+      <span class="aud-badge">${A.pending}</span><p>${key === "youtube" ? A.emptyYT : A.emptyIG}</p>
+      <div class="aud-ghost" aria-hidden="true"><div class="gbar"><i style="width:62%"></i><i style="width:38%"></i></div>
+      <div class="agebars">${[30, 80, 100, 55, 25, 12].map((h, i) => `<div><span style="height:${h}%"></span><small>${["13-17", "18-24", "25-34", "35-44", "45-54", "55+"][i]}</small></div>`).join("")}</div></div></section>`;
+    const tot = (o) => Object.values(o || {}).reduce((a, b) => a + b, 0) || 1;
+    const age = data.age || {}, ageT = tot(age), ageKeys = Object.keys(age).sort();
+    const g = data.gender || {}, gT = tot(g);
+    const male = ((g.M || g.male || 0) / gT) * 100, female = ((g.F || g.female || 0) / gT) * 100;
+    const ct = Object.entries(data.country || {}).sort((a, b) => b[1] - a[1]).slice(0, 5), ctT = tot(Object.fromEntries(ct));
+    const ageMax = Math.max(...ageKeys.map((k) => age[k] / ageT), 0.01);
+    return `<section class="aud-panel" data-b="${key}"><header>${LOGO(key)}<b>${name}</b><small>${key === "youtube" ? A.ytSub : A.igSub}</small></header>
+      <div class="aud-block"><div class="eyebrow">${A.gender}</div><div class="gbar"><i style="width:${male}%"></i><i style="width:${female}%"></i></div>
+        <div class="glegend"><span><i></i>${A.male} ${Math.round(male)}%</span><span><i></i>${A.female} ${Math.round(female)}%</span></div></div>
+      <div class="aud-block"><div class="eyebrow">${A.age}</div><div class="agebars">${ageKeys.map((k) => { const v = age[k] / ageT; return `<div><span style="height:${(v / ageMax) * 100}%"><b>${Math.round(v * 100)}%</b></span><small>${k}</small></div>`; }).join("")}</div></div>
+      <div class="aud-block"><div class="eyebrow">${A.country}</div><ol class="ctry">${ct.map(([c, v]) => `<li><span>${flag(c)} ${esc(countryName(c))}</span><i style="--w:${(v / ctT) * 100}%"></i><b>${Math.round((v / ctT) * 100)}%</b></li>`).join("")}</ol></div></section>`;
+  }
+  function audHTML() {
+    const a = STATS.audience || {};
+    return `<div class="pad"><div class="eyebrow">${L.A.eyebrow}</div><h2 class="h2">${L.A.title}</h2><p class="muted" style="margin:6px 0 0">${L.A.desc}</p>
+      <div class="aud">${audPanel("youtube", a.youtube)}${audPanel("instagram", a.instagram)}</div></div>`;
+  }
+
+  /* --- Historia del canal --- */
+  function storyHTML() {
+    const H = L.H, stages = C.story || [];
+    return `<div class="pad"><div class="eyebrow">${H.eyebrow}</div><h2 class="h2">${H.title}</h2><p class="muted" style="margin:6px 0 0">${H.hint}</p>
+      <ol class="story">${stages.map((s, i) => {
+        const vs = (s.videos || []).map(vById).filter(Boolean), top = vs.slice().sort((a, b) => b.views - a.views)[0];
+        return `<li class="stage ${s.state || ""}" style="--sc:var(--cat-${s.cat || "next"})"><details${i === stages.length - 1 ? " open" : ""}>
+          <summary><span class="st-dot"></span><span class="st-when">${esc(s.when)}</span>
+            <span class="st-main"><b>${esc(s.title)}</b><small>${esc(s.sub)}</small></span>
+            ${top ? `<span class="st-metric"><b>${fmt(top.views)}</b><small>${H.peak}</small></span>` : s.metric ? `<span class="st-metric"><b>${esc(s.metric[0])}</b><small>${esc(s.metric[1])}</small></span>` : ""}${CHEV}</summary>
+          <div class="st-body"><p>${esc(s.text)}</p>${vs.length ? `<div class="tt-grid small">${vs.map((v) => ttCard(v)).join("")}</div>` : ""}
+          ${s.link ? `<a class="btn" href="${s.link[1]}" target="_blank" rel="noopener">${esc(s.link[0])} ↗</a>` : ""}</div></details></li>`;
+      }).join("")}</ol></div>`;
+  }
 
   /* ---------------- Apps por usuario ---------------- */
   const APPS = {
@@ -343,10 +475,10 @@
     ],
     luky: [
       { id: "stats", ico: "stats", w: 820, h: 410, html: statsHTML },
-      { id: "rank", ico: "rank", w: 600, h: 470, html: rankHTML },
-      { id: "clips", ico: "clips", w: 640, h: 420, html: clipsHTML },
-      { id: "collab", ico: "collab", w: 580, h: 470, html: collabHTML },
-      { id: "next", ico: "next", w: 620, h: 500, html: nextHTML },
+      { id: "clips", ico: "clips", w: 900, h: 640, html: clipsHTML },
+      { id: "aud", ico: "aud", w: 860, h: 600, html: audHTML },
+      { id: "rank", ico: "rank", w: 780, h: 640, html: rankHTML },
+      { id: "story", ico: "story", w: 820, h: 640, html: storyHTML },
       { sep: true },
       { id: "kmail", ico: "mail", w: 560, h: 520, html: () => mailHTML("luky") }
     ]
@@ -354,8 +486,8 @@
   const DESK = {
     lucas: { logo: "&lt;Lucas Fernández/&gt;", icons: () => [["cases", L.deskCases, "folderL"], ["path", L.deskPath, "folderL"], ["cv", "CV.pdf", "cv"]], hello: () => L.helloLucas, first: "about",
       notif: () => ({ ico: "cases", title: L.notifLucas[0], text: L.notifLucas[1], open: ["cases", "bot"] }) },
-    luky: { logo: "&lt;Lukychill/&gt;", icons: () => [["clips", L.deskClips, "folderK"], ["collab", L.deskCollab, "folderK"]], hello: () => L.helloLuky, first: "stats",
-      notif: () => ({ ico: "next", title: L.notifLuky[0], text: L.notifLuky[1], open: ["next"] }) }
+    luky: { logo: "&lt;Lukychill/&gt;", icons: () => [["clips", L.deskClips, "folderK"], ["story", L.deskStory, "folderK"]], hello: () => L.helloLuky, first: "stats",
+      notif: () => ({ ico: "story", title: L.notifLuky[0], text: L.notifLuky[1], open: ["story"] }) }
   };
 
   /* ---------------- Gestor de ventanas ---------------- */
