@@ -29,7 +29,7 @@ window.LUKY_EN = {
       title: "Finding the logic failure that blocks a Foreign Trade process",
       lead: "I spend the rest of my time on Foreign Trade, from the purchase order to invoicing. Some incidents are fixed on the spot; others require going into the ABAP code to find where the process logic breaks. I also lead the weekly incident meeting with the external consulting firm that supports the Foreign Trade system.",
       flowTitle: "Where the incidents appeared",
-      flow: [["Purchase order", "ME23N"], ["Customs file", "Authorizations"], ["Import invoice", "Also created via API", [1, 3]], ["Posting", "FB03 · G/L accounts", [2]], ["Supplier portal", "Invoicing status", [4]]],
+      flow: [["Purchase order", "Start of the cycle"], ["Customs file", "Authorizations"], ["Import invoice", "Also created via API", [1, 3]], ["Posting", "Impact on G/L accounts", [2]], ["Supplier portal", "Invoicing status", [4]]],
       incidents: [
         { title: "Credit memos with an alternative payee", problem: "Import credit memos failed when they had an alternative payee.", cause: "Debugging the import invoice object, I found that the flow took the wrong path in that case.", fix: "Fixed the flow for credit memos with an alternative payee." },
         { title: "Compound taxes posted to a single account", problem: "With compound taxes, such as VAT plus gross income tax, the full amount was posted to the VAT account.", cause: "The tax split was not being applied at posting time.", fix: "Using a standard SAP function, I split the tax so each part posts to its own G/L account." },
