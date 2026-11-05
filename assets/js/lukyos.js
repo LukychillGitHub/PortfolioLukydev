@@ -74,7 +74,7 @@
         subjLucas: "Contacto desde tu portfolio", subjLuky: "Colaboración con Lukychill", phLucas: "Contame en qué te puedo ayudar.", phLuky: "Contame sobre la marca, la campaña y los tiempos.",
         invalid: "Completá tu nombre, un email válido y el mensaje.", didYouMean: "¿Quisiste decir", temp: "Usá un email permanente: no se aceptan direcciones temporales.", ok: "Mensaje enviado. Te respondo a la brevedad.", fail: (e) => `No se pudo enviar. Escribime directamente a ${e}.` },
       stats: { total: "Comunidad total", sumAll: "seguidores sumando todas las plataformas", sumSome: (a, b) => `seguidores sumando ${a} de ${b} plataformas`,
-        updated: "Actualizado", waiting: "Esperando la primera sincronización", followers: "seguidores", subs: "suscriptores", likes: "likes", views: "vistas", videos: "videos",
+        updated: "Actualizado", waiting: "Esperando la primera sincronización", followers: "seguidores", subs: "suscriptores", likes: "likes", views: "vistas", videos: "videos", posts: "publicaciones",
         pending: "Sin conectar", pendingSub: "Se completa al sincronizar", visit: "Ver canal", visitSub: "@lukychill" },
       rank: { eyebrow: "Rocket League", text: "Del rango al contenido: jugadas, desafíos y formatos cortos pensados para la comunidad competitiva.", k: ["Rango alcanzado", "Años creando", "Plataformas"] },
       clips: { eyebrowHL: "Clips destacados", titleHL: "Lo mejor del canal", eyebrow: "Videos", title: "Dónde ver el contenido", desc: "Clips de Rocket League, desafíos y directos." },
@@ -131,7 +131,7 @@
         subjLucas: "Contact from your portfolio", subjLuky: "Collaboration with Lukychill", phLucas: "Tell me how I can help.", phLuky: "Tell me about the brand, the campaign and the timing.",
         invalid: "Fill in your name, a valid email and the message.", didYouMean: "Did you mean", temp: "Please use a permanent email: temporary addresses are not accepted.", ok: "Message sent. I will get back to you soon.", fail: (e) => `It could not be sent. Write to me directly at ${e}.` },
       stats: { total: "Total community", sumAll: "followers across all platforms", sumSome: (a, b) => `followers across ${a} of ${b} platforms`,
-        updated: "Updated", waiting: "Waiting for the first sync", followers: "followers", subs: "subscribers", likes: "likes", views: "views", videos: "videos",
+        updated: "Updated", waiting: "Waiting for the first sync", followers: "followers", subs: "subscribers", likes: "likes", views: "views", videos: "videos", posts: "posts",
         pending: "Pending", pendingSub: "Fills in after syncing", visit: "Visit channel", visitSub: "@lukychill" },
       rank: { eyebrow: "Rocket League", text: "From rank to content: plays, challenges and short formats made for the competitive community.", k: ["Rank reached", "Years creating", "Platforms"] },
       clips: { eyebrowHL: "Featured clips", titleHL: "Best of the channel", eyebrow: "Videos", title: "Where to watch", desc: "Rocket League clips, challenges and streams." },
@@ -290,9 +290,10 @@
       const d = p[id], on = !!live[id];
       const tag = canLive ? `<span class="dot-live ${on ? "on" : ""}"><i></i>${on ? L.live : L.offline}</span>` : "";
       if (d && d.followers) {
-        const extra = [d.likes ? fmt(d.likes) + " " + S.likes : "", d.views ? fmt(d.views) + " " + S.views : "", d.videos ? d.videos + " " + S.videos : ""].filter(Boolean).join(" · ");
+        const extra = [d.likes ? [fmt(d.likes), S.likes] : null, d.views ? [fmt(d.views), S.views] : null, d.videos ? [fmt(d.videos), id === "instagram" ? S.posts : S.videos] : null].filter(Boolean);
         return `<a class="plat" href="${url}" target="_blank" rel="noopener"><div class="top"><span class="nm">${name}</span>${tag}</div>
-          <div><div class="num">${fmt(d.followers)}</div><div class="lab">${id === "youtube" ? S.subs : S.followers}${extra ? " · " + extra : ""}</div></div>
+          <div><div class="num">${fmt(d.followers)}</div><div class="lab">${id === "youtube" ? S.subs : S.followers}</div></div>
+          ${extra.length ? `<div class="extra">${extra.map(([v, l]) => `<span><b>${v}</b> ${l}</span>`).join("")}</div>` : ""}
           <div class="bar"><i style="width:${Math.max(4, d.followers / max * 100)}%"></i></div></a>`;
       }
       if (manual) return `<a class="plat pending" href="${url}" target="_blank" rel="noopener"><div class="top"><span class="nm">${name}</span></div>
