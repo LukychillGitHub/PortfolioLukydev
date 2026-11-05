@@ -82,7 +82,7 @@
       V: { eyebrow: "TikTok", top: "Lo más visto", all: "Todos", views: "vistas", play: "Ver video", open: "Abrir en TikTok", yt: "Últimos en YouTube", cta: "Ver videos",
         cats: { historias: "Historias", record: "Récord", mapas: "Mapas", mecanicas: "Mecánicas", humor: "Humor", tipos: "Tipos de jugadores", hermano: "Mi hermano" },
         note: "Vistas de TikTok al momento de cargar la lista. Tocá un video para verlo acá." },
-      A: { eyebrow: "Audiencia", title: "Quién mira el contenido", desc: "Datos demográficos de YouTube e Instagram, actualizados automáticamente.", cta: "Ver audiencia", gender: "Género", age: "Edad", country: "Países principales", male: "Hombres", female: "Mujeres",
+      A: { eyebrow: "Audiencia", title: "Quién mira el contenido", desc: "Datos demográficos de YouTube e Instagram, actualizados automáticamente.", cta: "Ver audiencia", gender: "Género", age: "Edad", country: "Países principales", male: "Hombres", female: "Mujeres", other: "Sin dato",
         ytSub: "Vistas de los últimos 12 meses", igSub: "Seguidores", pending: "Pendiente de conexión", emptyYT: "Se completa cuando se conecte YouTube Analytics.", emptyIG: "Se completa cuando se conecte el permiso de estadísticas de Instagram." },
       H: { eyebrow: "Desde 2020", title: "Historia del canal", hint: "Tocá cada etapa para ver qué se hizo y sus videos.", peak: "su video más visto" },
       spot: { ph: "Buscar apps, casos…", empty: "Sin resultados", app: "App", case: "Caso", user: "Usuario", toLuky: "Cambiar a Lukychill", toLucas: "Cambiar a Lucas Fernández", lang: "Switch to English", langKind: "Idioma" },
@@ -144,7 +144,7 @@
       V: { eyebrow: "TikTok", top: "Most watched", all: "All", views: "views", play: "Watch video", open: "Open on TikTok", yt: "Latest on YouTube", cta: "See videos",
         cats: { historias: "Stories", record: "Record", mapas: "Maps", mecanicas: "Mechanics", humor: "Humor", tipos: "Player types", hermano: "My brother" },
         note: "TikTok views as of when the list was made. Tap a video to watch it here." },
-      A: { eyebrow: "Audience", title: "Who watches the content", desc: "YouTube and Instagram demographics, updated automatically.", cta: "See audience", gender: "Gender", age: "Age", country: "Top countries", male: "Men", female: "Women",
+      A: { eyebrow: "Audience", title: "Who watches the content", desc: "YouTube and Instagram demographics, updated automatically.", cta: "See audience", gender: "Gender", age: "Age", country: "Top countries", male: "Men", female: "Women", other: "Unknown",
         ytSub: "Views in the last 12 months", igSub: "Followers", pending: "Not connected yet", emptyYT: "Fills in once YouTube Analytics is connected.", emptyIG: "Fills in once Instagram insights permission is connected." },
       H: { eyebrow: "Since 2020", title: "Channel story", hint: "Tap each stage to see what was done and its videos.", peak: "most watched video" },
       spot: { ph: "Search apps, cases…", empty: "No results", app: "App", case: "Case", user: "User", toLuky: "Switch to Lukychill", toLucas: "Switch to Lucas Fernández", lang: "Cambiar a español", langKind: "Language" },
@@ -157,12 +157,16 @@
   let STATS = { updated: null, platforms: {}, live: {} };
   const STATS_URLS = ["https://raw.githubusercontent.com/LukychillGitHub/PortfolioLukydev/main/data/stats.json", "data/stats.json"];
   async function loadStats() {
-    for (const url of STATS_URLS) {
+    // Se piden las dos copias y se usa la más nueva: el CDN de GitHub a veces queda atrasado.
+    const got = await Promise.all(STATS_URLS.map(async (url) => {
       try {
-        const r = await fetch(url, { cache: "no-store" });
-        if (r.ok) { const j = await r.json(); if (j && j.platforms) { STATS = j; break; } }
-      } catch (_) { /* probar la siguiente */ }
-    }
+        const r = await fetch(url + (url.startsWith("http") ? "?t=" + Date.now() : ""), { cache: "no-store" });
+        if (r.ok) { const j = await r.json(); if (j && j.platforms) return j; }
+      } catch (_) {}
+      return null;
+    }));
+    const best = got.filter(Boolean).sort((a, b) => new Date(b.updated || 0) - new Date(a.updated || 0))[0];
+    if (best) STATS = best;
     // Rocket League se carga a mano: si stats.json todavía no lo trae, se lee del archivo manual.
     if (!STATS.rl) {
       try { const r = await fetch("data/stats.manual.json", { cache: "no-store" }); if (r.ok) { const m = await r.json(); if (m.rl) STATS.rl = m.rl; } } catch (_) {}
@@ -431,12 +435,12 @@
     const tot = (o) => Object.values(o || {}).reduce((a, b) => a + b, 0) || 1;
     const age = data.age || {}, ageT = tot(age), ageKeys = Object.keys(age).sort();
     const g = data.gender || {}, gT = tot(g);
-    const male = ((g.M || g.male || 0) / gT) * 100, female = ((g.F || g.female || 0) / gT) * 100;
-    const ct = Object.entries(data.country || {}).sort((a, b) => b[1] - a[1]).slice(0, 5), ctT = tot(Object.fromEntries(ct));
+    const male = ((g.M || g.male || 0) / gT) * 100, female = ((g.F || g.female || 0) / gT) * 100, other = Math.max(0, 100 - male - female);
+    const ct = Object.entries(data.country || {}).sort((a, b) => b[1] - a[1]).slice(0, 6), ctT = tot(data.country);
     const ageMax = Math.max(...ageKeys.map((k) => age[k] / ageT), 0.01);
     return `<section class="aud-panel" data-b="${key}"><header>${LOGO(key)}<b>${name}</b><small>${key === "youtube" ? A.ytSub : A.igSub}</small></header>
-      <div class="aud-block"><div class="eyebrow">${A.gender}</div><div class="gbar"><i style="width:${male}%"></i><i style="width:${female}%"></i></div>
-        <div class="glegend"><span><i></i>${A.male} ${Math.round(male)}%</span><span><i></i>${A.female} ${Math.round(female)}%</span></div></div>
+      <div class="aud-block"><div class="eyebrow">${A.gender}</div><div class="gbar"><i class="gm" style="width:${male}%"></i><i class="gf" style="width:${female}%"></i>${other >= 0.5 ? `<i class="go" style="width:${other}%"></i>` : ""}</div>
+        <div class="glegend"><span><i class="gm"></i>${A.male} ${Math.round(male)}%</span><span><i class="gf"></i>${A.female} ${Math.round(female)}%</span>${other >= 0.5 ? `<span><i class="go"></i>${A.other} ${Math.round(other)}%</span>` : ""}</div></div>
       <div class="aud-block"><div class="eyebrow">${A.age}</div><div class="agebars">${ageKeys.map((k) => { const v = age[k] / ageT; return `<div><span style="height:${(v / ageMax) * 100}%"><b>${Math.round(v * 100)}%</b></span><small>${k}</small></div>`; }).join("")}</div></div>
       <div class="aud-block"><div class="eyebrow">${A.country}</div><ol class="ctry">${ct.map(([c, v]) => `<li><span>${flag(c)} ${esc(countryName(c))}</span><i style="--w:${(v / ctT) * 100}%"></i><b>${Math.round((v / ctT) * 100)}%</b></li>`).join("")}</ol></div></section>`;
   }

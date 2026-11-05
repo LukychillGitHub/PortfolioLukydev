@@ -708,3 +708,7 @@ details.incident dd{margin:0}
 .aud-ghost .agebars span{background:var(--line)}
 .aud-badge{justify-self:start;font-family:var(--f-mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;padding:3px 8px;border-radius:99px;border:1px dashed color-mix(in srgb,var(--bc) 60%,transparent);color:var(--bc)}
 @media (max-width:720px){ .menubar .live-pill{display:none} }
+
+.gbar i.gm{background:#4c8dff}.gbar i.gf{background:#ff5fa2}.gbar i.go{background:var(--muted);opacity:.5}
+.glegend i.gm{background:#4c8dff}.glegend i.gf{background:#ff5fa2}.glegend i.go{background:var(--muted)}
+.glegend{flex-wrap:wrap}
