@@ -36,23 +36,29 @@
       apps: { about: "Sobre mí", cases: "Casos", path: "Trayectoria", edu: "Formación", term: "Terminal", cv: "Currículum", mail: "Contacto", stats: "Stats", rank: "Rango", clips: "Videos", aud: "Audiencia", story: "Historia", kmail: "Contacto marcas" },
       titles: { about: "Notas — Sobre mí", cases: "Casos", path: "Trayectoria", edu: "Formación", term: "lucas — zsh", cv: "Currículum", mail: "Nuevo mensaje", stats: "Stats — en vivo", rank: "Rocket League — Rango", clips: "Videos", aud: "Audiencia", story: "Historia del canal", kmail: "Nuevo mensaje" },
       deskCases: "Casos", deskPath: "Trayectoria", deskClips: "Videos", deskStory: "Historia",
-      helloLucas: `<div class="eyebrow">Analista de Tecnología · SAP S/4HANA</div><h1>Lucas<br>Fernández</h1><p>Migraciones de datos, incidentes de Comercio Exterior y debugging ABAP. Los proyectos están en <b>Casos</b>, en el dock.</p>`,
+      helloLucas: `<div class="eyebrow">Analista de Tecnología · SAP S/4HANA</div><h1>Lucas<br>Fernández</h1><p>Análisis y resolución de incidentes, integraciones a SAP y debugging ABAP. Los proyectos están en <b>Casos</b>, en el dock.</p>`,
       helloLuky: `<div class="eyebrow">@lukychill · Rocket League</div><h1>Luky<br>chill</h1><p>Grand Champion III de pico, más de 10M de likes en TikTok y lo que viene: vlog con alma gamer.</p>`,
       notifLucas: ["Nuevo caso", "Bot de videos: un link de TikTok, tres redes publicadas."],
       notifLuky: ["Historia del canal", "De los tipos de jugadores al récord de las 10 mercs. Tocá para verla."],
       now: "ahora",
       aboutTabs: [["Perfil", "Resumen profesional"], ["Recorrido", "Cómo llegué hasta acá"], ["Competencias", "SAP, desarrollo e infraestructura"]],
       aboutYo: (gpa) => `<div class="eyebrow">Perfil profesional</div><h2>Lucas Román Fernández</h2>
-        <p class="about-role">Analista de Tecnología · SAP S/4HANA (FI) · Migración de datos · Comercio Exterior</p>
-        <p>Soy Analista de Tecnología en el equipo de Staff de Sistemas de Molinos Río de la Plata, especializado en el módulo FI de SAP S/4HANA. Soy responsable de las migraciones de datos de las empresas que adquiere la compañía y resuelvo incidentes de Comercio Exterior, muchas veces entrando al código ABAP para encontrar la falla.</p>
-        <p>En pocos meses pasé a liderar la reunión semanal de incidentes con la consultora externa de Comex. Curso Ingeniería en Informática en la Universidad del Salvador y busco crecer como Consultor Funcional SAP y en análisis de datos.</p>
-        <p>Me definen la iniciativa por aprender, el análisis riguroso de cada problema y el orden: documento todo para que ningún tema quede abierto. Mis proyectos de automatización nacen de lo mismo: resolver lo repetitivo para dedicar el tiempo a las decisiones que importan.</p>`,
+        <p class="about-role">Analista de Tecnología · SAP S/4HANA · Estudiante de Ingeniería en Informática</p>
+        <p>Soy Analista de Tecnología en el área de Sistemas de Molinos Río de la Plata, en el equipo de Staff especializado en el módulo FI de SAP S/4HANA. Mi trabajo es analizar y resolver incidentes: relevo el proceso de negocio, reviso datos, documentos y configuración, y cuando hace falta entro al código ABAP hasta encontrar la causa raíz. También participé en la integración a SAP de las empresas que adquirió la compañía.</p>
+        <p>Curso Ingeniería en Informática en la Universidad del Salvador, con promedio ${gpa}, y busco seguir creciendo dentro del ecosistema SAP y como ingeniero.</p>
+        <p>Trabajo con orden y documento cada caso para que ningún tema quede abierto. Me animo a tomar desafíos nuevos y a sumarme a lo que el equipo necesite. Mis proyectos personales nacen de lo mismo: resolver problemas del día a día y automatizar lo repetitivo.</p>`,
       aboutBtns: ["Ver casos", "Currículum", "Contacto"],
       kpis: [["3", "Empresas integradas a SAP"], ["gpa", "Promedio académico"], ["2", "Proyectos propios en producción"]],
       origen: `<div class="eyebrow">Recorrido</div><h2 class="h2">De la electromecánica a SAP</h2>
-        <p style="max-width:62ch;margin-top:10px">Mi formación empezó en la Escuela Técnica Henry Ford, donde me recibí de Técnico Electromecánico. Ahí tuve el primer contacto con la programación a través de la robótica, y fue lo que me llevó a elegir Ingeniería en Informática.</p>
-        <p style="max-width:62ch">Pasé por una pasantía de calidad en Ford Argentina, más de dos años como docente de informática y, desde 2026, el área de Sistemas de Molinos, donde aprendí SAP, el circuito completo de Comercio Exterior y cómo se gestiona un cambio en un equipo grande. En cada etapa sumé algo distinto: el rigor de la industria, la capacidad de explicar lo técnico y la visión de los procesos de negocio.</p>
-        <p style="max-width:62ch">En paralelo construí Lukychill, una comunidad de gaming en redes que me enseñó a analizar métricas y sostener un proyecto propio en el tiempo.</p>`,
+        <p class="story-lead">No llegué a sistemas por un camino recto. Cada etapa me dejó una herramienta distinta, y hoy uso todas en mi trabajo.</p>
+        <ol class="story">
+          <li><span class="story-when">2015 – 2022</span><b>La base: Escuela Técnica Henry Ford</b><p>Me recibí de Técnico Electromecánico. Ahí tuve el primer contacto con la programación a través de la robótica, y eso fue lo que me llevó a elegir Ingeniería en Informática.</p></li>
+          <li><span class="story-when">2022</span><b>El primer trabajo: Ford Argentina</b><p>Hice una pasantía en Calidad interna en la planta de motores PUMA. Diseñé dispositivos con impresión 3D para la línea y ordené los datos de calidad. Aprendí que un problema chico impacta en todo el proceso y que la solución hay que encontrarla con método.</p></li>
+          <li><span class="story-when">2020 – hoy</span><b>Algo propio: Lukychill</b><p>Lo que empezó como un canal de Rocket League creció hasta una comunidad de más de 550.000 seguidores. Hacer todo yo, desde la cámara y la edición hasta las métricas y las marcas, me enseñó constancia y a sostener un proyecto en el tiempo, incluso cuando algo no funcionaba.</p></li>
+          <li><span class="story-when">2023 – 2026</span><b>Aprender a explicar: docente de informática</b><p>Di clases en un colegio secundario: Office, diagramas de flujo, compuertas lógicas y hardware. Frente a un aula aprendí a traducir conceptos complejos a un lenguaje simple, algo que hoy uso cada vez que hablo con un usuario de negocio.</p></li>
+          <li class="is-now"><span class="story-when">2026 – hoy</span><b>Analista de Tecnología en Molinos</b><p>Entré al área de Sistemas, en un equipo de tres analistas y nuestro jefe. Tengo a cargo incidentes de SAP S/4HANA y participé en la integración de empresas adquiridas. Aprendí SAP, cómo se gestiona un cambio en una compañía grande y qué significa que un sistema que uso yo lo use toda la empresa. Acá se juntan el método de la industria, la constancia de las redes y la claridad de la docencia.</p></li>
+        </ol>
+        <div class="proj-links"><button class="btn" data-open="path">Ver la trayectoria completa →</button></div>`,
       skillsHead: ["Competencias", "Con qué trabajo"],
       casesLbl: "Casos", folders: "carpetas", crumbRoot: "Lucas › Casos › ",
       objects: "Objetos migrados", shots: "Capturas", incidents: "Incidentes resueltos", howIncident: "Cómo trabajo un incidente",
@@ -98,23 +104,29 @@
       apps: { about: "About me", cases: "Cases", path: "Experience", edu: "Education", term: "Terminal", cv: "Résumé", mail: "Contact", stats: "Stats", rank: "Rank", clips: "Videos", aud: "Audience", story: "Story", kmail: "Brand contact" },
       titles: { about: "Notes — About me", cases: "Cases", path: "Experience", edu: "Education", term: "lucas — zsh", cv: "Résumé", mail: "New message", stats: "Stats — live", rank: "Rocket League — Rank", clips: "Videos", aud: "Audience", story: "Channel story", kmail: "New message" },
       deskCases: "Cases", deskPath: "Experience", deskClips: "Videos", deskStory: "Story",
-      helloLucas: `<div class="eyebrow">Technology Analyst · SAP S/4HANA</div><h1>Lucas<br>Fernández</h1><p>Data migration, Foreign Trade incidents and ABAP debugging. Projects live in <b>Cases</b>, in the dock.</p>`,
+      helloLucas: `<div class="eyebrow">Technology Analyst · SAP S/4HANA</div><h1>Lucas<br>Fernández</h1><p>Incident analysis and resolution, SAP integrations and ABAP debugging. Projects live in <b>Cases</b>, in the dock.</p>`,
       helloLuky: `<div class="eyebrow">@lukychill · Rocket League</div><h1>Luky<br>chill</h1><p>Grand Champion III peak, 10M+ likes on TikTok and what's next: a vlog with a gamer soul.</p>`,
       notifLucas: ["New case", "Video bot: one TikTok link, three networks published."],
       notifLuky: ["Channel story", "From player types to the 10 stacked Mercs record. Tap to see it."],
       now: "now",
       aboutTabs: [["Profile", "Professional summary"], ["Background", "How I got here"], ["Skills", "SAP, development and infrastructure"]],
-      aboutYo: () => `<div class="eyebrow">Professional profile</div><h2>Lucas Román Fernández</h2>
-        <p class="about-role">Technology Analyst · SAP S/4HANA (FI) · Data migration · Foreign Trade</p>
-        <p>I am a Technology Analyst on the Systems staff team at Molinos Río de la Plata, specialized in the SAP S/4HANA FI module. I own the data migration of the companies Molinos acquires and I resolve Foreign Trade incidents, often going into the ABAP code to find the failure.</p>
-        <p>Within a few months I started leading the weekly incident meeting with the external Foreign Trade consulting firm. I study Computer Engineering at Universidad del Salvador and I am growing toward an SAP Functional Consultant role and data analysis.</p>
-        <p>I am defined by a drive to learn, rigorous analysis of every problem and order: I document everything so no issue is left open. My automation projects come from the same place: solving the repetitive so time goes to the decisions that matter.</p>`,
+      aboutYo: (gpa) => `<div class="eyebrow">Professional profile</div><h2>Lucas Román Fernández</h2>
+        <p class="about-role">Technology Analyst · SAP S/4HANA · Computer Engineering student</p>
+        <p>I am a Technology Analyst in the Systems area at Molinos Río de la Plata, on the Staff team specialized in the SAP S/4HANA FI module. My job is to analyze and resolve incidents: I map the business process, review data, documents and configuration and, when needed, go into the ABAP code until I find the root cause. I also took part in integrating the companies Molinos acquired into SAP.</p>
+        <p>I study Computer Engineering at Universidad del Salvador, with a GPA of ${gpa}/10, and I want to keep growing within the SAP ecosystem and as an engineer.</p>
+        <p>I work in an organized way and document every case so nothing is left open. I like taking on new challenges and helping wherever the team needs it. My personal projects come from the same place: solving everyday problems and automating what is repetitive.</p>`,
       aboutBtns: ["See cases", "Résumé", "Contact"],
       kpis: [["3", "Companies integrated into SAP"], ["gpa", "GPA (out of 10)"], ["2", "Personal projects in production"]],
       origen: `<div class="eyebrow">Background</div><h2 class="h2">From electromechanics to SAP</h2>
-        <p style="max-width:62ch;margin-top:10px">My education started at Escuela Técnica Henry Ford, where I graduated as an Electromechanical Technician. That is where I first got into programming through robotics, which led me to choose Computer Engineering.</p>
-        <p style="max-width:62ch">I went through a quality internship at Ford Argentina, more than two years teaching computer science and, since 2026, the Systems area at Molinos, where I learned SAP, the full Foreign Trade cycle and how change is managed in a large team. Each stage added something different: industrial rigor, the ability to explain technical topics and a view of business processes.</p>
-        <p style="max-width:62ch">In parallel I built Lukychill, a gaming community that taught me to analyze metrics and sustain a personal project over time.</p>`,
+        <p class="story-lead">I didn't get into systems in a straight line. Every stage gave me a different tool, and today I use all of them at work.</p>
+        <ol class="story">
+          <li><span class="story-when">2015 – 2022</span><b>The foundation: Escuela Técnica Henry Ford</b><p>I graduated as an Electromechanical Technician. That's where I first got into programming through robotics, which is what led me to Computer Engineering.</p></li>
+          <li><span class="story-when">2022</span><b>First job: Ford Argentina</b><p>I did a Quality internship at the PUMA engine plant. I designed 3D-printed fixtures for the line and organized quality data. I learned that a small problem affects the whole process and that the fix has to be found with a method.</p></li>
+          <li><span class="story-when">2020 – now</span><b>Something of my own: Lukychill</b><p>What started as a Rocket League channel grew into a community of more than 550,000 followers. Doing everything myself, from camera and editing to metrics and brands, taught me consistency and how to keep a project going over time, even when something didn't work.</p></li>
+          <li><span class="story-when">2023 – 2026</span><b>Learning to explain: computer science teacher</b><p>I taught at a high school: Office, flowcharts, logic gates and hardware. In front of a class I learned to translate complex concepts into plain language, something I use every time I talk to a business user.</p></li>
+          <li class="is-now"><span class="story-when">2026 – now</span><b>Technology Analyst at Molinos</b><p>I joined the Systems area, on a team of three analysts and our manager. I handle SAP S/4HANA incidents and took part in integrating acquired companies. I learned SAP, how change is managed in a large company and what it means that a system I work on is used by the whole business. This is where industrial method, the consistency from social media and the clarity from teaching come together.</p></li>
+        </ol>
+        <div class="proj-links"><button class="btn" data-open="path">See the full experience →</button></div>`,
       skillsHead: ["Skills", "What I work with"],
       casesLbl: "Cases", folders: "folders", crumbRoot: "Lucas › Cases › ",
       objects: "Migrated objects", shots: "Screenshots", incidents: "Incidents resolved", howIncident: "How I work an incident",
@@ -237,14 +249,38 @@
     const body = $("[data-case-body]", w); body.innerHTML = caseBody(c); body.parentElement.scrollTop = 0;
   }
 
-  const pathHTML = () => `<div class="track"><p class="track-hint">${L.trackHint}</p>${C.jobs.map((j, i) => `<details class="job"${i === 0 ? " open" : ""}>
-      <summary><div class="when">${esc(j.when[0])}<br>${j.now ? `<span class="now">● ${esc(j.when[1])}</span>` : esc(j.when[1])}</div>
-      <div class="job-head"><h3 class="h3">${esc(j.role)}</h3><div class="org">${esc(j.org)}${j.place ? ` <span class="muted">· ${esc(j.place)}</span>` : ""}</div><p>${esc(j.text)}</p></div>${CHEV}</summary>
-      <div class="job-body">
-        <div><div class="eyebrow">${L.resp}</div><ul class="job-list">${j.bullets.map((b) => `<li>${esc(b)}</li>`).join("")}</ul></div>
-        <div><div class="eyebrow">${L.toolsLbl}</div><div class="chips" style="margin-top:8px">${j.tools.map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</div></div>
-        ${j.actions && j.actions.length ? `<div class="proj-links">${j.actions.map((x) => x.switchTo ? `<button class="btn" data-switch="${x.switchTo}">${esc(x.label)} →</button>` : `<button class="btn" data-open="${x.open}"${x.arg ? ` data-arg="${x.arg}"` : ""}>${esc(x.label)} →</button>`).join("")}</div>` : ""}
-      </div></details>`).join("")}</div>`;
+  const actBtns = (acts) => acts && acts.length ? `<div class="proj-links">${acts.map((x) => x.switchTo ? `<button class="btn" data-switch="${x.switchTo}">${esc(x.label)} →</button>` : `<button class="btn" data-open="${x.open}"${x.arg ? ` data-arg="${x.arg}"` : ""}>${esc(x.label)} →</button>`).join("")}</div>` : "";
+  function pathHTML() {
+    const J = C.journey; let n = 0;
+    const when = (j) => j.when[1] ? `${esc(j.when[0])} – ${esc(j.when[1])}` : esc(j.when[0]);
+    const items = C.jobs.map((j) => {
+      if (j.milestone) return `<li class="jr-mile"><span class="jr-dot" aria-hidden="true"></span>
+        <div class="jr-when">${when(j)}</div>
+        <div class="jr-mile-body"><b>${esc(j.role)}</b> <span class="muted">· ${esc(j.org)}</span><p>${esc(j.text)}</p>${j.open ? `<button class="jr-link" data-open="${j.open}">${esc(L.apps[j.open])} →</button>` : ""}</div></li>`;
+      n++;
+      return `<li class="jr-ch${j.now ? " is-now" : ""}" data-jr="${j.key}"><span class="jr-dot" aria-hidden="true"></span>
+        <div class="jr-when">${j.now ? `<span class="now">● ${esc(J.now)}</span><br>` : ""}${when(j)}</div>
+        <article class="jr-card">
+          <div class="jr-kicker">${esc(J.chapter)} ${String(n).padStart(2, "0")} · ${esc(j.chapter)}</div>
+          <h3 class="h3">${esc(j.role)}</h3>
+          <div class="org">${esc(j.org)}${j.place ? ` <span class="muted">· ${esc(j.place)}</span>` : ""}</div>
+          <p class="jr-story">${esc(j.text)}</p>
+          <div class="jr-take"><span class="eyebrow">${esc(J.take)}</span><p>${esc(j.take)}</p></div>
+          <details class="jr-more"><summary>${esc(J.more)} ${CHEV}</summary>
+            <div class="jr-more-body"><ul class="job-list">${j.bullets.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>
+            <div class="chips">${j.tools.map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</div></div>
+          </details>
+          ${actBtns(j.actions)}
+        </article></li>`;
+    }).join("");
+    const steps = C.jobs.filter((j) => !j.milestone);
+    return `<div class="journey">
+      <header class="jr-head"><div class="eyebrow">${esc(L.apps.path)}</div><h2>${esc(J.title)}</h2><p>${esc(J.lead)}</p>
+        <nav class="jr-steps" aria-label="${esc(L.apps.path)}">${steps.map((j, i) => `${i ? '<span class="jr-arrow" aria-hidden="true">→</span>' : ""}<button class="jr-step${j.now ? " is-now" : ""}" data-jump="${j.key}">${esc(j.step)}</button>`).join("")}</nav></header>
+      <ol class="jr-line">${items}
+        <li class="jr-next"><span class="jr-dot" aria-hidden="true"></span><div class="jr-when"></div><div><b>${esc(J.next.title)}</b><p>${esc(J.next.text)}</p></div></li>
+      </ol></div>`;
+  }
 
   function eduHTML() {
     const { done, total, gpa, since } = C.study, R = 2 * Math.PI * 56;
@@ -470,7 +506,7 @@
     lucas: [
       { id: "about", ico: "about", w: 780, h: 740, html: aboutHTML },
       { id: "cases", ico: "cases", w: 880, h: 600, html: casesHTML },
-      { id: "path", ico: "path", w: 720, h: 620, html: pathHTML },
+      { id: "path", ico: "path", w: 780, h: 680, html: pathHTML },
       { id: "edu", ico: "edu", w: 640, h: 560, html: eduHTML },
       { id: "term", ico: "term", w: 580, h: 360, html: termHTML },
       { sep: true },
@@ -543,6 +579,7 @@
       if (e.target.closest(".lights .x")) { e.stopPropagation(); return w.classList.toggle("max"); }
       const sw = e.target.closest("[data-switch]"); if (sw) return enter(sw.dataset.switch);
       const op = e.target.closest("[data-open]"); if (op) return openApp(op.dataset.open, op.dataset.arg);
+      const jp = e.target.closest("[data-jump]"); if (jp) { const t = w.querySelector(`[data-jr="${jp.dataset.jump}"]`); if (t) t.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }); return; }
       const cb = e.target.closest("button[data-case]"); if (cb) return showCase(w, cb.dataset.case);
       const nb = e.target.closest("button[data-note]");
       if (nb) { w.querySelectorAll("[data-note]").forEach((b) => b.classList.toggle("on", b === nb)); w.dataset.curNote = nb.dataset.note; $("[data-note-body]", w).innerHTML = ABOUT[nb.dataset.note](); }
