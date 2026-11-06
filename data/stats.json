@@ -1,10 +1,10 @@
 {
-  "updated": "2026-11-06T10:43:08.210Z",
+  "updated": "2026-11-06T17:54:11.236Z",
   "platforms": {
     "kick": null,
     "youtube": {
       "followers": 108000,
-      "views": 9004195,
+      "views": 9004500,
       "videos": 680,
       "source": "api"
     },
@@ -13,7 +13,7 @@
       "source": "api"
     },
     "instagram": {
-      "followers": 17671,
+      "followers": 17670,
       "videos": 10,
       "source": "api"
     },
