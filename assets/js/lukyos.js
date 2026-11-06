@@ -237,14 +237,38 @@
     const body = $("[data-case-body]", w); body.innerHTML = caseBody(c); body.parentElement.scrollTop = 0;
   }
 
-  const pathHTML = () => `<div class="track"><p class="track-hint">${L.trackHint}</p>${C.jobs.map((j, i) => `<details class="job"${i === 0 ? " open" : ""}>
-      <summary><div class="when">${esc(j.when[0])}<br>${j.now ? `<span class="now">● ${esc(j.when[1])}</span>` : esc(j.when[1])}</div>
-      <div class="job-head"><h3 class="h3">${esc(j.role)}</h3><div class="org">${esc(j.org)}${j.place ? ` <span class="muted">· ${esc(j.place)}</span>` : ""}</div><p>${esc(j.text)}</p></div>${CHEV}</summary>
-      <div class="job-body">
-        <div><div class="eyebrow">${L.resp}</div><ul class="job-list">${j.bullets.map((b) => `<li>${esc(b)}</li>`).join("")}</ul></div>
-        <div><div class="eyebrow">${L.toolsLbl}</div><div class="chips" style="margin-top:8px">${j.tools.map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</div></div>
-        ${j.actions && j.actions.length ? `<div class="proj-links">${j.actions.map((x) => x.switchTo ? `<button class="btn" data-switch="${x.switchTo}">${esc(x.label)} →</button>` : `<button class="btn" data-open="${x.open}"${x.arg ? ` data-arg="${x.arg}"` : ""}>${esc(x.label)} →</button>`).join("")}</div>` : ""}
-      </div></details>`).join("")}</div>`;
+  const actBtns = (acts) => acts && acts.length ? `<div class="proj-links">${acts.map((x) => x.switchTo ? `<button class="btn" data-switch="${x.switchTo}">${esc(x.label)} →</button>` : `<button class="btn" data-open="${x.open}"${x.arg ? ` data-arg="${x.arg}"` : ""}>${esc(x.label)} →</button>`).join("")}</div>` : "";
+  function pathHTML() {
+    const J = C.journey; let n = 0;
+    const when = (j) => j.when[1] ? `${esc(j.when[0])} – ${esc(j.when[1])}` : esc(j.when[0]);
+    const items = C.jobs.map((j) => {
+      if (j.milestone) return `<li class="jr-mile"><span class="jr-dot" aria-hidden="true"></span>
+        <div class="jr-when">${when(j)}</div>
+        <div class="jr-mile-body"><b>${esc(j.role)}</b> <span class="muted">· ${esc(j.org)}</span><p>${esc(j.text)}</p>${j.open ? `<button class="jr-link" data-open="${j.open}">${esc(L.apps[j.open])} →</button>` : ""}</div></li>`;
+      n++;
+      return `<li class="jr-ch${j.now ? " is-now" : ""}" data-jr="${j.key}"><span class="jr-dot" aria-hidden="true"></span>
+        <div class="jr-when">${j.now ? `<span class="now">● ${esc(J.now)}</span><br>` : ""}${when(j)}</div>
+        <article class="jr-card">
+          <div class="jr-kicker">${esc(J.chapter)} ${String(n).padStart(2, "0")} · ${esc(j.chapter)}</div>
+          <h3 class="h3">${esc(j.role)}</h3>
+          <div class="org">${esc(j.org)}${j.place ? ` <span class="muted">· ${esc(j.place)}</span>` : ""}</div>
+          <p class="jr-story">${esc(j.text)}</p>
+          <div class="jr-take"><span class="eyebrow">${esc(J.take)}</span><p>${esc(j.take)}</p></div>
+          <details class="jr-more"><summary>${esc(J.more)} ${CHEV}</summary>
+            <div class="jr-more-body"><ul class="job-list">${j.bullets.map((b) => `<li>${esc(b)}</li>`).join("")}</ul>
+            <div class="chips">${j.tools.map((t) => `<span class="chip">${esc(t)}</span>`).join("")}</div></div>
+          </details>
+          ${actBtns(j.actions)}
+        </article></li>`;
+    }).join("");
+    const steps = C.jobs.filter((j) => !j.milestone);
+    return `<div class="journey">
+      <header class="jr-head"><div class="eyebrow">${esc(L.apps.path)}</div><h2>${esc(J.title)}</h2><p>${esc(J.lead)}</p>
+        <nav class="jr-steps" aria-label="${esc(L.apps.path)}">${steps.map((j, i) => `${i ? '<span class="jr-arrow" aria-hidden="true">→</span>' : ""}<button class="jr-step${j.now ? " is-now" : ""}" data-jump="${j.key}">${esc(j.step)}</button>`).join("")}</nav></header>
+      <ol class="jr-line">${items}
+        <li class="jr-next"><span class="jr-dot" aria-hidden="true"></span><div class="jr-when"></div><div><b>${esc(J.next.title)}</b><p>${esc(J.next.text)}</p></div></li>
+      </ol></div>`;
+  }
 
   function eduHTML() {
     const { done, total, gpa, since } = C.study, R = 2 * Math.PI * 56;
@@ -470,7 +494,7 @@
     lucas: [
       { id: "about", ico: "about", w: 780, h: 740, html: aboutHTML },
       { id: "cases", ico: "cases", w: 880, h: 600, html: casesHTML },
-      { id: "path", ico: "path", w: 720, h: 620, html: pathHTML },
+      { id: "path", ico: "path", w: 780, h: 680, html: pathHTML },
       { id: "edu", ico: "edu", w: 640, h: 560, html: eduHTML },
       { id: "term", ico: "term", w: 580, h: 360, html: termHTML },
       { sep: true },
@@ -543,6 +567,7 @@
       if (e.target.closest(".lights .x")) { e.stopPropagation(); return w.classList.toggle("max"); }
       const sw = e.target.closest("[data-switch]"); if (sw) return enter(sw.dataset.switch);
       const op = e.target.closest("[data-open]"); if (op) return openApp(op.dataset.open, op.dataset.arg);
+      const jp = e.target.closest("[data-jump]"); if (jp) { const t = w.querySelector(`[data-jr="${jp.dataset.jump}"]`); if (t) t.scrollIntoView({ behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth", block: "start" }); return; }
       const cb = e.target.closest("button[data-case]"); if (cb) return showCase(w, cb.dataset.case);
       const nb = e.target.closest("button[data-note]");
       if (nb) { w.querySelectorAll("[data-note]").forEach((b) => b.classList.toggle("on", b === nb)); w.dataset.curNote = nb.dataset.note; $("[data-note-body]", w).innerHTML = ABOUT[nb.dataset.note](); }
