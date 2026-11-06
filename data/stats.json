@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-06T17:54:11.236Z",
+  "updated": "2026-11-06T23:01:00.099Z",
   "platforms": {
     "kick": null,
     "youtube": {
@@ -9,11 +9,11 @@
       "source": "api"
     },
     "twitch": {
-      "followers": 47729,
+      "followers": 47730,
       "source": "api"
     },
     "instagram": {
-      "followers": 17670,
+      "followers": 17669,
       "videos": 10,
       "source": "api"
     },
@@ -38,7 +38,7 @@
       "id": "pHvwMOV5pMM",
       "title": "@ A ESE AMIGO QUE LE GANARIAS EN ESTE MAPA - #fyp#parati#rocketleague#rl#rlclip#rlclips#lukychill#fy",
       "published": "2026-10-16T14:41:38Z",
-      "views": 102,
+      "views": 103,
       "likes": 2
     },
     {
@@ -52,7 +52,7 @@
       "id": "ssIpY9o_Ez0",
       "title": "Que mapa le podes recomendar a ese amigo que le ganas siempre ?? - Uno de mis videos mas virales - #",
       "published": "2026-10-16T14:27:06Z",
-      "views": 10712,
+      "views": 10715,
       "likes": 276
     },
     {
@@ -164,11 +164,11 @@
         "genderUserSpecified": 0
       },
       "country": {
-        "AR": 253932,
-        "ES": 198343,
-        "MX": 86555,
-        "CL": 46138,
-        "CO": 32969,
+        "AR": 254059,
+        "ES": 198529,
+        "MX": 86632,
+        "CL": 46170,
+        "CO": 33013,
         "UY": 14884
       },
       "period": "12m"
