@@ -769,3 +769,14 @@ details.incident dd{margin:0}
   .jr-dot{left:0}.jr-mile .jr-dot{left:2px}
   .jr-when{text-align:left}
 }
+
+/* Sobre mí → Recorrido */
+.story-lead{max-width:62ch;margin-top:10px;color:var(--muted)}
+.story{list-style:none;margin:18px 0 6px;padding:0 0 0 22px;border-left:2px solid var(--line);display:grid;gap:16px}
+.story li{position:relative}
+.story li::before{content:"";position:absolute;left:-29px;top:4px;width:10px;height:10px;border-radius:50%;background:var(--surface);border:2px solid var(--accent)}
+.story li.is-now::before{background:var(--accent);box-shadow:0 0 0 4px var(--accent-soft)}
+.story-when{display:block;font-family:var(--f-mono);font-size:11px;color:var(--muted);margin-bottom:2px}
+.story li.is-now .story-when{color:var(--ok)}
+.story b{font-weight:600}
+.story p{margin:4px 0 0;max-width:62ch}
