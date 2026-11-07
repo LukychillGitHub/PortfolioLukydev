@@ -1,19 +1,19 @@
 {
-  "updated": "2026-11-07T16:20:48.930Z",
+  "updated": "2026-11-07T20:49:46.584Z",
   "platforms": {
     "kick": null,
     "youtube": {
       "followers": 108000,
-      "views": 9004826,
+      "views": 9005213,
       "videos": 680,
       "source": "api"
     },
     "twitch": {
-      "followers": 47729,
+      "followers": 47728,
       "source": "api"
     },
     "instagram": {
-      "followers": 17674,
+      "followers": 17689,
       "videos": 10,
       "source": "api"
     },
@@ -52,7 +52,7 @@
       "id": "ssIpY9o_Ez0",
       "title": "Que mapa le podes recomendar a ese amigo que le ganas siempre ?? - Uno de mis videos mas virales - #",
       "published": "2026-10-16T14:27:06Z",
-      "views": 10729,
+      "views": 10735,
       "likes": 276
     },
     {
@@ -164,11 +164,11 @@
         "genderUserSpecified": 0
       },
       "country": {
-        "AR": 253997,
-        "ES": 198483,
-        "MX": 86583,
-        "CL": 46170,
-        "CO": 33013,
+        "AR": 254113,
+        "ES": 198638,
+        "MX": 86693,
+        "CL": 46194,
+        "CO": 33064,
         "UY": 14884
       },
       "period": "12m"
