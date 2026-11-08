@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T19:33:12.221Z",
+  "updated": "2026-11-08T23:39:06.638Z",
   "platforms": {
     "kick": null,
     "youtube": {
@@ -13,7 +13,7 @@
       "source": "api"
     },
     "instagram": {
-      "followers": 17686,
+      "followers": 17685,
       "videos": 10,
       "source": "api"
     },
@@ -38,7 +38,7 @@
       "id": "pHvwMOV5pMM",
       "title": "@ A ESE AMIGO QUE LE GANARIAS EN ESTE MAPA - #fyp#parati#rocketleague#rl#rlclip#rlclips#lukychill#fy",
       "published": "2026-10-16T14:41:38Z",
-      "views": 104,
+      "views": 107,
       "likes": 2
     },
     {
@@ -52,7 +52,7 @@
       "id": "ssIpY9o_Ez0",
       "title": "Que mapa le podes recomendar a ese amigo que le ganas siempre ?? - Uno de mis videos mas virales - #",
       "published": "2026-10-16T14:27:06Z",
-      "views": 10743,
+      "views": 10744,
       "likes": 276
     },
     {
@@ -73,7 +73,7 @@
       "id": "lNx0--hAFdI",
       "title": "POR FIN se puede tener el AUTO 100% NEGRO en Rocket League 😱 (Season 24)",
       "published": "2026-09-25T16:52:55Z",
-      "views": 513,
+      "views": 514,
       "likes": 5
     },
     {
@@ -88,22 +88,21 @@
     "instagram": {
       "age": {
         "13-17": 3199,
-        "18-24": 5805,
-        "25-34": 6312,
-        "35-44": 1362,
-        "45-54": 636,
+        "18-24": 5810,
+        "25-34": 6314,
+        "35-44": 1368,
+        "45-54": 638,
         "55-64": 134,
         "65+": 167
       },
       "gender": {
-        "F": 638,
-        "M": 12589,
-        "U": 4388
+        "F": 639,
+        "M": 12598,
+        "U": 4393
       },
       "country": {
         "DE": 8,
         "PR": 83,
-        "TW": 2,
         "BE": 3,
         "PT": 29,
         "JP": 3,
@@ -112,14 +111,14 @@
         "DO": 77,
         "FR": 14,
         "HU": 7,
-        "BO": 80,
-        "BR": 88,
+        "BO": 79,
+        "BR": 89,
         "MA": 5,
         "DZ": 6,
         "ID": 3,
         "GB": 4,
-        "CA": 17,
-        "EC": 268,
+        "CA": 18,
+        "EC": 269,
         "US": 414,
         "EG": 3,
         "SV": 108,
@@ -128,19 +127,20 @@
         "CH": 9,
         "IQ": 4,
         "CL": 1238,
+        "CN": 2,
         "IT": 43,
-        "MX": 3776,
-        "CO": 652,
+        "MX": 3778,
+        "KW": 2,
+        "CO": 654,
         "GT": 142,
-        "ES": 1700,
+        "ES": 1705,
         "CR": 170,
         "VE": 344,
         "PA": 66,
-        "AR": 6858,
-        "GY": 2,
-        "CU": 104,
+        "AR": 6862,
+        "CU": 103,
         "AU": 8,
-        "PE": 390,
+        "PE": 391,
         "TN": 4,
         "NI": 64,
         "PL": 5,
@@ -164,11 +164,11 @@
         "genderUserSpecified": 0
       },
       "country": {
-        "AR": 254050,
-        "ES": 198509,
-        "MX": 86636,
-        "CL": 46170,
-        "CO": 33060,
+        "AR": 254215,
+        "ES": 198706,
+        "MX": 86721,
+        "CL": 46218,
+        "CO": 33118,
         "UY": 14882
       },
       "period": "12m"
