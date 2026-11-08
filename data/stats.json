@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-08T07:13:11.582Z",
+  "updated": "2026-11-08T15:02:17.840Z",
   "platforms": {
     "kick": null,
     "youtube": {
@@ -13,7 +13,7 @@
       "source": "api"
     },
     "instagram": {
-      "followers": 17693,
+      "followers": 17685,
       "videos": 10,
       "source": "api"
     },
@@ -45,14 +45,14 @@
       "id": "f5i0ZCwx6x4",
       "title": "APRENDE EL AIRDRIBBLING EN ESTE MAPA DE #rocketleague - #lukychill#fyp#parati#rocket#league#fypage#v",
       "published": "2026-10-16T14:31:14Z",
-      "views": 238,
+      "views": 239,
       "likes": 4
     },
     {
       "id": "ssIpY9o_Ez0",
       "title": "Que mapa le podes recomendar a ese amigo que le ganas siempre ?? - Uno de mis videos mas virales - #",
       "published": "2026-10-16T14:27:06Z",
-      "views": 10738,
+      "views": 10742,
       "likes": 276
     },
     {
@@ -164,12 +164,12 @@
         "genderUserSpecified": 0
       },
       "country": {
-        "AR": 254058,
-        "ES": 198528,
-        "MX": 86641,
-        "CL": 46175,
-        "CO": 33064,
-        "UY": 14884
+        "AR": 254050,
+        "ES": 198509,
+        "MX": 86636,
+        "CL": 46170,
+        "CO": 33060,
+        "UY": 14882
       },
       "period": "12m"
     }
