@@ -1,19 +1,19 @@
 {
-  "updated": "2026-11-09T16:08:07.429Z",
+  "updated": "2026-11-10T00:39:52.259Z",
   "platforms": {
     "kick": null,
     "youtube": {
       "followers": 108000,
-      "views": 9006457,
+      "views": 9006745,
       "videos": 680,
       "source": "api"
     },
     "twitch": {
-      "followers": 47727,
+      "followers": 47726,
       "source": "api"
     },
     "instagram": {
-      "followers": 17687,
+      "followers": 17680,
       "videos": 10,
       "source": "api"
     },
@@ -31,56 +31,56 @@
       "id": "GRNoFIbKBYY",
       "title": "MAPA PARA TU AMIGO BAJITO EN #rocketleague - #lukychill#fyp#parati#rocket#league#fypage#viral#virale",
       "published": "2026-10-16T14:43:49Z",
-      "views": 134,
+      "views": 135,
       "likes": 5
     },
     {
       "id": "pHvwMOV5pMM",
       "title": "@ A ESE AMIGO QUE LE GANARIAS EN ESTE MAPA - #fyp#parati#rocketleague#rl#rlclip#rlclips#lukychill#fy",
       "published": "2026-10-16T14:41:38Z",
-      "views": 109,
+      "views": 111,
       "likes": 2
     },
     {
       "id": "f5i0ZCwx6x4",
       "title": "APRENDE EL AIRDRIBBLING EN ESTE MAPA DE #rocketleague - #lukychill#fyp#parati#rocket#league#fypage#v",
       "published": "2026-10-16T14:31:14Z",
-      "views": 240,
+      "views": 243,
       "likes": 5
     },
     {
       "id": "ssIpY9o_Ez0",
       "title": "Que mapa le podes recomendar a ese amigo que le ganas siempre ?? - Uno de mis videos mas virales - #",
       "published": "2026-10-16T14:27:06Z",
-      "views": 10748,
+      "views": 10750,
       "likes": 276
     },
     {
       "id": "PPFwE7TeLYk",
       "title": "#Minecraft en #RocketLeague ? como es esto posible ?! UN POQUITITO DE HUMORCITO - #lukychill #fyp #p",
       "published": "2026-10-16T14:25:48Z",
-      "views": 52,
+      "views": 53,
       "likes": 1
     },
     {
       "id": "HTGe1DuyEpI",
       "title": "Como que #fallguys en #rocketleague !? - #lukychill#rl#rocket#league#fyp#parati#foryoupage#viral#vir",
       "published": "2026-10-16T14:21:30Z",
-      "views": 45,
+      "views": 47,
       "likes": 0
     },
     {
       "id": "lNx0--hAFdI",
       "title": "POR FIN se puede tener el AUTO 100% NEGRO en Rocket League 😱 (Season 24)",
       "published": "2026-09-25T16:52:55Z",
-      "views": 517,
+      "views": 521,
       "likes": 6
     },
     {
       "id": "LN6q5wO-IVQ",
       "title": "MAPA PARA TU AMIGO BAJITO EN #rocketleague - #lukychill#fyp#parati#rocket#league#fypage#viral#virale",
       "published": "2026-09-22T18:58:31Z",
-      "views": 120,
+      "views": 121,
       "likes": 3
     }
   ],
@@ -164,11 +164,11 @@
         "genderUserSpecified": 0
       },
       "country": {
-        "AR": 253904,
-        "ES": 198231,
-        "MX": 86558,
-        "CL": 46097,
-        "CO": 33034,
+        "AR": 253870,
+        "ES": 198224,
+        "MX": 86501,
+        "CL": 46079,
+        "CO": 33033,
         "UY": 14882
       },
       "period": "12m"
