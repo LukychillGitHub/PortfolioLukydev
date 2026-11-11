@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10T22:19:15.868Z",
+  "updated": "2026-11-11T02:43:49.838Z",
   "platforms": {
     "kick": null,
     "youtube": {
@@ -9,7 +9,7 @@
       "source": "api"
     },
     "twitch": {
-      "followers": 47726,
+      "followers": 47727,
       "source": "api"
     },
     "instagram": {
@@ -31,7 +31,7 @@
       "id": "GRNoFIbKBYY",
       "title": "MAPA PARA TU AMIGO BAJITO EN #rocketleague - #lukychill#fyp#parati#rocket#league#fypage#viral#virale",
       "published": "2026-10-16T14:43:49Z",
-      "views": 135,
+      "views": 136,
       "likes": 5
     },
     {
@@ -87,60 +87,60 @@
   "audience": {
     "instagram": {
       "age": {
-        "13-17": 3198,
-        "18-24": 5809,
-        "25-34": 6308,
-        "35-44": 1369,
-        "45-54": 637,
+        "13-17": 3204,
+        "18-24": 5810,
+        "25-34": 6310,
+        "35-44": 1367,
+        "45-54": 638,
         "55-64": 134,
-        "65+": 167
+        "65+": 168
       },
       "gender": {
         "F": 639,
-        "M": 12596,
-        "U": 4387
+        "M": 12599,
+        "U": 4393
       },
       "country": {
+        "NO": 2,
         "DE": 8,
-        "PR": 83,
+        "PR": 84,
         "BE": 3,
         "PT": 29,
         "JO": 2,
         "JP": 3,
         "HN": 104,
-        "PY": 222,
+        "PY": 223,
         "DO": 78,
         "FR": 14,
         "HU": 7,
         "BO": 79,
-        "BR": 88,
+        "BR": 89,
         "MA": 5,
         "DZ": 6,
         "ID": 3,
         "GB": 4,
+        "OM": 2,
         "CA": 18,
         "EC": 269,
-        "US": 415,
+        "US": 417,
         "SV": 108,
-        "UY": 433,
+        "UY": 434,
         "IN": 7,
         "CH": 9,
         "IQ": 4,
         "CL": 1238,
         "IT": 43,
-        "MX": 3775,
-        "KW": 2,
-        "CO": 654,
+        "MX": 3777,
+        "CO": 652,
         "GT": 142,
         "ES": 1704,
         "CR": 170,
-        "VE": 344,
+        "VE": 345,
         "PA": 66,
         "AR": 6860,
         "CU": 103,
-        "AT": 2,
         "AU": 8,
-        "PE": 391,
+        "PE": 392,
         "TN": 4,
         "NI": 64,
         "PL": 5,
@@ -164,11 +164,11 @@
         "genderUserSpecified": 0
       },
       "country": {
-        "AR": 254006,
-        "ES": 198462,
-        "MX": 86584,
-        "CL": 46134,
-        "CO": 33096,
+        "AR": 253852,
+        "ES": 198251,
+        "MX": 86446,
+        "CL": 46061,
+        "CO": 33031,
         "UY": 14882
       },
       "period": "12m"
