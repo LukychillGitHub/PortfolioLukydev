@@ -1,19 +1,19 @@
 {
-  "updated": "2026-11-13T16:10:52.476Z",
+  "updated": "2026-11-13T22:32:07.045Z",
   "platforms": {
     "kick": null,
     "youtube": {
       "followers": 108000,
-      "views": 9008819,
-      "videos": 680,
+      "views": 9009094,
+      "videos": 681,
       "source": "api"
     },
     "twitch": {
-      "followers": 47724,
+      "followers": 47723,
       "source": "api"
     },
     "instagram": {
-      "followers": 17691,
+      "followers": 17704,
       "videos": 10,
       "source": "api"
     },
@@ -27,6 +27,13 @@
     "twitch": false
   },
   "youtubeLatest": [
+    {
+      "id": "yIq3l9uvmJI",
+      "title": "RECORD 10 MERCS 🏆 #gg - #rocketleague - #fyp#foryou#foryoupage#parati#viral#record#lukychill#rl#rock",
+      "published": "2026-11-13T19:40:33Z",
+      "views": 11,
+      "likes": 0
+    },
     {
       "id": "GRNoFIbKBYY",
       "title": "MAPA PARA TU AMIGO BAJITO EN #rocketleague - #lukychill#fyp#parati#rocket#league#fypage#viral#virale",
@@ -52,7 +59,7 @@
       "id": "ssIpY9o_Ez0",
       "title": "Que mapa le podes recomendar a ese amigo que le ganas siempre ?? - Uno de mis videos mas virales - #",
       "published": "2026-10-16T14:27:06Z",
-      "views": 10764,
+      "views": 10765,
       "likes": 277
     },
     {
@@ -73,15 +80,8 @@
       "id": "lNx0--hAFdI",
       "title": "POR FIN se puede tener el AUTO 100% NEGRO en Rocket League 😱 (Season 24)",
       "published": "2026-09-25T16:52:55Z",
-      "views": 526,
+      "views": 527,
       "likes": 5
-    },
-    {
-      "id": "LN6q5wO-IVQ",
-      "title": "MAPA PARA TU AMIGO BAJITO EN #rocketleague - #lukychill#fyp#parati#rocket#league#fypage#viral#virale",
-      "published": "2026-09-22T18:58:31Z",
-      "views": 121,
-      "likes": 3
     }
   ],
   "audience": {
