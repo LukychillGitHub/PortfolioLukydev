@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13T00:11:15.948Z",
+  "updated": "2026-11-13T07:50:29.183Z",
   "platforms": {
     "kick": null,
     "youtube": {
@@ -9,11 +9,11 @@
       "source": "api"
     },
     "twitch": {
-      "followers": 47726,
+      "followers": 47725,
       "source": "api"
     },
     "instagram": {
-      "followers": 17691,
+      "followers": 17690,
       "videos": 10,
       "source": "api"
     },
@@ -38,7 +38,7 @@
       "id": "pHvwMOV5pMM",
       "title": "@ A ESE AMIGO QUE LE GANARIAS EN ESTE MAPA - #fyp#parati#rocketleague#rl#rlclip#rlclips#lukychill#fy",
       "published": "2026-10-16T14:41:38Z",
-      "views": 119,
+      "views": 120,
       "likes": 2
     },
     {
@@ -52,7 +52,7 @@
       "id": "ssIpY9o_Ez0",
       "title": "Que mapa le podes recomendar a ese amigo que le ganas siempre ?? - Uno de mis videos mas virales - #",
       "published": "2026-10-16T14:27:06Z",
-      "views": 10758,
+      "views": 10763,
       "likes": 277
     },
     {
@@ -87,25 +87,24 @@
   "audience": {
     "instagram": {
       "age": {
-        "13-17": 3199,
-        "18-24": 5812,
-        "25-34": 6309,
-        "35-44": 1368,
-        "45-54": 638,
-        "55-64": 134,
+        "13-17": 3198,
+        "18-24": 5816,
+        "25-34": 6302,
+        "35-44": 1371,
+        "45-54": 639,
+        "55-64": 133,
         "65+": 167
       },
       "gender": {
-        "F": 638,
-        "M": 12599,
-        "U": 4390
+        "F": 635,
+        "M": 12605,
+        "U": 4386
       },
       "country": {
         "DE": 8,
         "PR": 84,
         "BE": 3,
-        "PT": 29,
-        "JO": 2,
+        "PT": 28,
         "JP": 3,
         "HN": 104,
         "PY": 223,
@@ -118,27 +117,28 @@
         "DZ": 6,
         "ID": 3,
         "GB": 4,
+        "OM": 2,
         "CA": 18,
         "EC": 269,
-        "US": 416,
-        "SV": 108,
+        "US": 420,
+        "SV": 106,
         "UY": 434,
         "IN": 7,
         "CH": 9,
         "IQ": 4,
-        "CL": 1238,
+        "CL": 1237,
+        "CN": 2,
         "IT": 43,
-        "MX": 3773,
-        "KW": 2,
-        "CO": 653,
+        "MX": 3772,
+        "CO": 652,
         "GT": 141,
-        "ES": 1705,
+        "ES": 1706,
         "CR": 170,
         "VE": 344,
         "PA": 66,
-        "AR": 6863,
+        "AR": 6862,
         "GY": 2,
-        "CU": 102,
+        "CU": 103,
         "AU": 8,
         "PE": 391,
         "TN": 4,
