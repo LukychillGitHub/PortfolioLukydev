@@ -30,14 +30,14 @@ window.LUKY = {
         ["Problema", "Cada empresa trae datos con otra estructura y otros criterios de carga, y cada migración es más exigente: Etchart fue la primera, con la herramienta por aprender, y Complejo Alimenticio San Salvador implicó un volumen de datos mucho mayor."],
         ["Diagnóstico", "Los errores que devuelve Migration Cockpit suelen venir de un período contable sin abrir, decimales mal formateados o datos mal cargados en el origen. En la última migración, los lotes estaban cargados de forma incorrecta."],
         ["Solución", "Limpieza y normalización de los datos, corrección de cada error junto al área dueña del dato (datos maestros, IT Logística por EWM, desarrollo) y nuevas pruebas en calidad antes de pasar a producción."],
-        ["Resultado", "Tres empresas integradas y toda la evidencia de cada carga ordenada en SharePoint para futuras auditorías. Hoy soy el responsable de las cargas con Migration Cockpit."]
+        ["Resultado", "Tres empresas integradas y toda la evidencia de cada carga ordenada en SharePoint para futuras auditorías."]
       ],
       chips: ["SAP S/4HANA", "Migration Cockpit", "LTMC / LTMOM", "Datos maestros", "Calidad → Producción", "Documentación auditable"]
     },
     {
       id: "comex", side: "Incidentes Comex", tag: "Molinos · Comercio Exterior",
       title: "Encontrar la falla de lógica que frena un proceso de Comex",
-      lead: "Dedico el resto de mi tiempo a Comercio Exterior, desde la orden de compra hasta la facturación. Algunos incidentes se resuelven en el momento; otros requieren entrar al código ABAP para encontrar dónde se rompe la lógica del proceso. Además lidero la reunión semanal de incidentes con la consultora externa que da soporte al sistema de Comex.",
+      lead: "Dedico el resto de mi tiempo a Comercio Exterior, desde la orden de compra hasta la facturación. Algunos incidentes se resuelven en el momento; otros requieren entrar al código ABAP para encontrar dónde se rompe la lógica del proceso.",
       flowTitle: "Dónde aparecieron los incidentes",
       flow: [["Orden de compra", "Inicio del circuito"], ["Despacho y legajo", "Autorizaciones"], ["Factura de importación", "Creada también por API", [1, 3]], ["Contabilización", "Impacto en cuentas de mayor", [2]], ["Portal de proveedores", "Estado de facturación", [4]]],
       incidents: [
@@ -113,36 +113,34 @@ window.LUKY = {
 
   journey: {
     title: "De la línea de producción a SAP",
-    lead: "Cada etapa me dejó algo distinto. La técnica y Ford me dieron método para resolver problemas, las redes me enseñaron constancia y la docencia me enseñó a explicar lo complejo de forma simple. Hoy junto todo eso como analista en Molinos.",
-    chapter: "Capítulo", take: "Lo que me llevé", more: "Responsabilidades y herramientas", now: "Hoy",
+    lead: "No llegué a sistemas por un camino recto. Cada etapa me dejó algo que hoy uso todos los días en Molinos.",
+    chapter: "Capítulo", take: "Lo que me llevé", more: "Ver detalle", now: "Hoy",
     next: { title: "Lo que sigue", text: "Crecer dentro del ecosistema SAP y como ingeniero: conocer otros módulos, profundizar en el análisis de sistemas y seguir automatizando, mientras termino Ingeniería en Informática." }
   },
 
   jobs: [
     {
       milestone: true, when: ["2015", "2022"], role: "Técnico Electromecánico", org: "Escuela Técnica Henry Ford",
-      text: "Siete años de taller, electricidad y mecánica. Ahí aprendí a desarmar un problema hasta entender cómo funciona."
+      text: "Siete años de taller, electricidad y mecánica. Ahí tuve el primer contacto con la programación, a través de la robótica, y por eso elegí Ingeniería en Informática."
     },
     {
       key: "ford", step: "Ford", chapter: "El primer paso en la industria",
       when: ["Mar 2022", "Nov 2022"], role: "Pasante en Calidad interna", org: "Ford Argentina", place: "Motores PUMA",
-      text: "Mi primera experiencia laboral fue en la planta de motores PUMA de Ford, en el equipo de Calidad interna. Trabajar con estándares automotrices me mostró cómo un problema chico en la línea impacta en todo el proceso. Diseñé dispositivos con impresión 3D para resolver necesidades concretas de producción y ordené los datos de calidad para que se pudieran seguir.",
-      take: "Resolver problemas reales con método, y entender que los datos ordenados valen tanto como la solución.",
+      text: "Mi primera experiencia laboral: una pasantía en el equipo de Calidad interna de la planta de motores PUMA, en un entorno con estándares de calidad automotriz.",
+      take: "Que un problema chico en la línea impacta en todo el proceso, y que los datos ordenados valen tanto como la solución.",
       bullets: [
         "Diseño y fabricación de dispositivos con impresión 3D para optimizar procesos de la línea de producción.",
         "Identificación y resolución de problemas técnicos junto al equipo de calidad.",
-        "Gestión y actualización de planillas de Excel para mejorar la trazabilidad de los datos.",
-        "Trabajo en un entorno industrial de alta exigencia con estándares de calidad automotriz."
+        "Gestión y actualización de planillas de Excel para mejorar la trazabilidad de los datos."
       ],
       tools: ["Impresión 3D", "Excel", "Mejora continua", "Calidad automotriz"]
     },
     {
       key: "luky", step: "Lukychill", chapter: "Construir algo propio",
       when: ["Mar 2020", "Actualidad"], role: "Creador de contenido", org: "Lukychill", place: "Marca personal",
-      text: "Lukychill empezó en 2020 como un canal de Rocket League y creció hasta una comunidad de más de 550.000 seguidores entre TikTok, YouTube, Twitch e Instagram. Me encargo de todo: la idea, el guion, la cámara, la edición, los streams y el vínculo con las marcas. Sostenerlo durante años me obligó a medir, probar formatos nuevos y seguir cuando algo no funcionaba.",
-      take: "Constancia, lectura de métricas y comunicar de forma que la gente entienda y se quede.",
+      text: "Lukychill empezó en 2020 como un canal de Rocket League y hoy es una comunidad de más de 550.000 seguidores entre TikTok, YouTube, Twitch e Instagram. Lo llevo de punta a punta, solo.",
+      take: "Constancia para sostener un proyecto durante años, leer métricas para decidir y comunicar de forma que la gente entienda y se quede.",
       bullets: [
-        "Comunidad de más de 550.000 seguidores, con videos de hasta 5,9 millones de reproducciones y más de 10 millones de likes en TikTok.",
         "Producción completa: idea, guion, manejo de cámara, edición y transmisiones en vivo.",
         "Análisis de métricas de alcance y engagement para ajustar formatos y sostener el crecimiento orgánico.",
         "Colaboraciones con marcas del sector gamer."
@@ -153,34 +151,30 @@ window.LUKY = {
     {
       key: "docente", step: "Docencia", chapter: "Aprender a explicar",
       when: ["Ago 2023", "Ene 2026"], role: "Docente de Informática", org: "Colegio Secundario Carlos Maschwitz",
-      text: "Di clases de informática en nivel secundario: Office, diagramas de flujo, compuertas lógicas y hardware. Frente a un aula aprendí a traducir conceptos técnicos a un lenguaje simple, a ordenar una explicación paso a paso y a adaptarla a quien la escucha.",
-      take: "Explicar lo complejo de forma simple. Hoy lo uso cada vez que hablo con un usuario de negocio.",
+      text: "Di clases de informática en un colegio secundario, a cargo de la planificación y el seguimiento de cada curso.",
+      take: "Traducir conceptos técnicos a un lenguaje simple y adaptarlos a quien escucha. Hoy lo uso cada vez que hablo con un usuario de negocio.",
       bullets: [
         "Clases de Office (Word, Excel y PowerPoint) orientadas a casos prácticos.",
-        "Enseñanza de diagramas de flujo, compuertas lógicas y fundamentos del funcionamiento de la computadora.",
-        "Planificación de clases y seguimiento de las entregas de los estudiantes."
+        "Enseñanza de diagramas de flujo, compuertas lógicas y fundamentos del funcionamiento de la computadora."
       ],
       tools: ["Excel", "Word", "PowerPoint", "Lógica digital", "Diagramas de flujo", "Comunicación"]
     },
     {
       milestone: true, when: ["2024", ""], role: "Ingeniería en Informática", org: "Universidad del Salvador",
-      text: "Empiezo la carrera de grado mientras sigo trabajando. Llevo 22 de 49 materias con promedio 9,23.",
+      text: "Empiezo la carrera de grado mientras trabajo.",
       open: "edu"
     },
     {
       key: "molinos", step: "Molinos", chapter: "Analista de Tecnología",
       when: ["Feb 2026", "Actualidad"], now: true, role: "Analista de Tecnología", org: "Molinos Río de la Plata", place: "Sistemas · Staff FI",
-      text: "Entré al área de Sistemas de Molinos Río de la Plata, en el equipo de Staff especializado en el módulo FI de SAP S/4HANA, junto a otros dos analistas y nuestro jefe. Tengo a cargo la resolución de incidentes y la integración a SAP de empresas adquiridas por la compañía, y trabajo con usuarios de negocio, datos maestros, logística, desarrollo y consultoras externas.",
-      take: "Acá se juntan todas las etapas: el método de Ford, la constancia de las redes y la claridad de la docencia, aplicados a sistemas que usa toda la compañía.",
+      text: "Entré al área de Sistemas, al equipo de Staff especializado en el módulo FI de SAP S/4HANA: tres analistas y nuestro jefe. Trabajo con usuarios de negocio, datos maestros, logística, desarrollo y consultoras externas.",
+      take: "Cómo se gestiona un cambio en una compañía grande y qué significa que un sistema en el que trabajo lo use toda la empresa.",
       bullets: [
-        "Análisis y resolución de incidentes en SAP S/4HANA sobre procesos contables (FI) y circuitos de compras, materiales y facturación: reproduzco el caso, reviso datos y documentos y aíslo la causa raíz.",
-        "Debugging de código ABAP (programas, módulos de funciones y clases) para detectar fallas de lógica, como la imputación de impuestos compuestos o la conversión de unidades de medida en facturas que llegan por API.",
-        "Integración a SAP de Bodegas Etchart, NotCo y Complejo Alimenticio San Salvador con SAP Migration Cockpit: clientes, proveedores, materiales, stocks, lotes y versiones de fabricación.",
-        "Ciclo completo de cada migración: plantillas, limpieza y validación de datos, pruebas en calidad, carga productiva y documentación para auditoría.",
+        "Análisis y resolución de incidentes en procesos contables (FI) y de Comercio Exterior hasta la causa raíz, con debugging ABAP cuando la falla está en la lógica.",
+        "Responsable de las cargas con SAP Migration Cockpit en la integración de las empresas que adquiere la compañía.",
         "Especificaciones funcionales, órdenes de transporte y altas de Business Partners.",
         "Seguimiento semanal de incidentes con la consultora externa, un desafío que asumí por iniciativa propia."
       ],
-      tools: ["SAP S/4HANA", "Módulo FI", "Migration Cockpit", "LTMC / LTMOM", "Debugging ABAP", "Datos maestros", "Órdenes de transporte", "Service Manager"],
       actions: [{ label: "Ver caso de migraciones", open: "cases", arg: "migraciones" }, { label: "Ver incidentes resueltos", open: "cases", arg: "comex" }]
     }
   ],

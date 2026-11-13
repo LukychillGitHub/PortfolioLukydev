@@ -20,14 +20,14 @@ window.LUKY_EN = {
         ["Problem", "Each company brings data with a different structure and different loading criteria, and each migration is more demanding: Etchart was the first, while I was still learning the tool, and Complejo Alimenticio San Salvador meant a much larger data volume."],
         ["Diagnosis", "Migration Cockpit errors usually come from a closed posting period, badly formatted decimals or data entered incorrectly at the source. In the latest migration, batches had been loaded the wrong way."],
         ["Solution", "Cleansing and normalizing the data, fixing each error with the team that owns it (master data, IT Logistics for EWM, development) and new QA test loads before moving to production."],
-        ["Result", "Three companies integrated and all evidence of every load organized in SharePoint for future audits. Today I own the Migration Cockpit loads."]
+        ["Result", "Three companies integrated and all evidence of every load organized in SharePoint for future audits."]
       ],
       chips: ["SAP S/4HANA", "Migration Cockpit", "LTMC / LTMOM", "Master data", "QA → Production", "Audit-ready documentation"]
     },
     {
       id: "comex", side: "Foreign Trade incidents", tag: "Molinos · Foreign Trade",
       title: "Finding the logic failure that blocks a Foreign Trade process",
-      lead: "I spend the rest of my time on Foreign Trade, from the purchase order to invoicing. Some incidents are fixed on the spot; others require going into the ABAP code to find where the process logic breaks. I also lead the weekly incident meeting with the external consulting firm that supports the Foreign Trade system.",
+      lead: "I spend the rest of my time on Foreign Trade, from the purchase order to invoicing. Some incidents are fixed on the spot; others require going into the ABAP code to find where the process logic breaks.",
       flowTitle: "Where the incidents appeared",
       flow: [["Purchase order", "Start of the cycle"], ["Customs file", "Authorizations"], ["Import invoice", "Also created via API", [1, 3]], ["Posting", "Impact on G/L accounts", [2]], ["Supplier portal", "Invoicing status", [4]]],
       incidents: [
@@ -103,36 +103,34 @@ window.LUKY_EN = {
 
   journey: {
     title: "From the production line to SAP",
-    lead: "Every stage left me something different. Technical school and Ford gave me a method for solving problems, social media taught me consistency, and teaching taught me to explain complex things simply. Today I bring all of that together as an analyst at Molinos.",
-    chapter: "Chapter", take: "What I took away", more: "Responsibilities and tools", now: "Now",
+    lead: "I didn't get into systems in a straight line. Every stage left me something I use every day at Molinos.",
+    chapter: "Chapter", take: "What I took away", more: "See details", now: "Now",
     next: { title: "What's next", text: "Grow within the SAP ecosystem and as an engineer: learn other modules, go deeper into systems analysis and keep automating, while I finish my Computer Engineering degree." }
   },
 
   jobs: [
     {
       milestone: true, when: ["2015", "2022"], role: "Electromechanical Technician", org: "Escuela Técnica Henry Ford",
-      text: "Seven years of workshop, electrical and mechanical work. That's where I learned to take a problem apart until I understand how it works."
+      text: "Seven years of workshop, electrical and mechanical work. That's where I first got into programming, through robotics, which is why I chose Computer Engineering."
     },
     {
       key: "ford", step: "Ford", chapter: "First step into industry",
       when: ["Mar 2022", "Nov 2022"], role: "Quality Intern", org: "Ford Argentina", place: "PUMA engines",
-      text: "My first job was at Ford's PUMA engine plant, on the internal Quality team. Working to automotive standards showed me how a small problem on the line affects the whole process. I designed 3D-printed fixtures to solve specific production needs and organized quality data so it could be traced.",
-      take: "Solving real problems with a method, and knowing that well-organized data is worth as much as the fix.",
+      text: "My first job: an internship on the internal Quality team at the PUMA engine plant, working to automotive quality standards.",
+      take: "A small problem on the line affects the whole process, and well-organized data is worth as much as the fix.",
       bullets: [
         "Designed and built 3D-printed fixtures to optimize production line processes.",
         "Identified and solved technical problems with the quality team.",
-        "Managed and updated Excel sheets to improve data traceability.",
-        "Worked in a demanding industrial environment with automotive quality standards."
+        "Managed and updated Excel sheets to improve data traceability."
       ],
       tools: ["3D printing", "Excel", "Continuous improvement", "Automotive quality"]
     },
     {
       key: "luky", step: "Lukychill", chapter: "Building something of my own",
       when: ["Mar 2020", "Present"], role: "Content Creator", org: "Lukychill", place: "Personal brand",
-      text: "Lukychill started in 2020 as a Rocket League channel and grew into a community of more than 550,000 followers across TikTok, YouTube, Twitch and Instagram. I handle everything: concept, script, camera, editing, streams and brand relationships. Keeping it going for years forced me to measure, test new formats and keep at it when something didn't work.",
-      take: "Consistency, reading metrics, and communicating so people understand and stay.",
+      text: "Lukychill started in 2020 as a Rocket League channel and is now a community of 550,000+ followers across TikTok, YouTube, Twitch and Instagram. I run it end to end, on my own.",
+      take: "Consistency to keep a project going for years, reading metrics to make decisions, and communicating so people understand and stay.",
       bullets: [
-        "Community of 550,000+ followers, with videos reaching up to 5.9 million views and 10M+ likes on TikTok.",
         "End-to-end production: concept, script, on-camera work, editing and live streaming.",
         "Reach and engagement analysis to refine formats and sustain organic growth.",
         "Collaborations with gaming brands."
@@ -143,34 +141,30 @@ window.LUKY_EN = {
     {
       key: "docente", step: "Teaching", chapter: "Learning to explain",
       when: ["Aug 2023", "Jan 2026"], role: "Computer Science Teacher", org: "Colegio Secundario Carlos Maschwitz",
-      text: "I taught computer science in high school: Office, flowcharts, logic gates and hardware. In front of a class I learned to translate technical concepts into plain language, to build an explanation step by step and to adapt it to whoever is listening.",
-      take: "Explaining complex things simply. I use it every time I talk to a business user.",
+      text: "I taught computer science at a high school, in charge of planning and follow-up for each class.",
+      take: "Translating technical concepts into plain language and adapting them to whoever is listening. I use it every time I talk to a business user.",
       bullets: [
         "Office classes (Word, Excel and PowerPoint) built around practical cases.",
-        "Taught flowcharts, logic gates and how a computer works.",
-        "Lesson planning and follow-up on student assignments."
+        "Taught flowcharts, logic gates and how a computer works."
       ],
       tools: ["Excel", "Word", "PowerPoint", "Digital logic", "Flowcharts", "Communication"]
     },
     {
       milestone: true, when: ["2024", ""], role: "B.S. in Computer Engineering", org: "Universidad del Salvador",
-      text: "I start my degree while working. 22 of 49 courses completed, GPA 9.23/10.",
+      text: "I start my degree while working.",
       open: "edu"
     },
     {
       key: "molinos", step: "Molinos", chapter: "Technology Analyst",
       when: ["Feb 2026", "Present"], now: true, role: "Technology Analyst", org: "Molinos Río de la Plata", place: "Systems · FI Staff",
-      text: "I joined the Systems area at Molinos Río de la Plata, on the Staff team specialized in the SAP S/4HANA FI module, alongside two other analysts and our manager. I'm responsible for incident resolution and for integrating companies acquired by Molinos into SAP, working with business users, master data, logistics, development and external consultants.",
-      take: "This is where every stage comes together: Ford's method, the consistency from social media and the clarity from teaching, applied to systems the whole company relies on.",
+      text: "I joined the Systems area, on the Staff team specialized in the SAP S/4HANA FI module: three analysts and our manager. I work with business users, master data, logistics, development and external consultants.",
+      take: "How change is managed in a large company, and what it means that a system I work on is used by the whole business.",
       bullets: [
-        "Analyze and resolve SAP S/4HANA incidents in accounting (FI) and purchasing, materials and invoicing flows: reproduce the case, review data and documents and isolate the root cause.",
-        "Debug ABAP code (programs, function modules and classes) to find logic failures, such as compound tax postings or unit-of-measure conversion in invoices received through an API.",
-        "Integrated Bodegas Etchart, NotCo and Complejo Alimenticio San Salvador into SAP with SAP Migration Cockpit: customers, vendors, materials, stock, batches and production versions.",
-        "Full cycle of every migration: templates, data cleansing and validation, QA tests, production load and audit documentation.",
+        "Analyze and resolve incidents in accounting (FI) and Foreign Trade processes down to the root cause, debugging ABAP when the failure is in the logic.",
+        "Own the SAP Migration Cockpit loads for integrating the companies Molinos acquires.",
         "Functional specifications, transport requests and Business Partner creation.",
         "Weekly incident follow-up with the external consulting firm, a challenge I took on by my own initiative."
       ],
-      tools: ["SAP S/4HANA", "FI module", "Migration Cockpit", "LTMC / LTMOM", "ABAP debugging", "Master data", "Transport requests", "Service Manager"],
       actions: [{ label: "See migrations case", open: "cases", arg: "migraciones" }, { label: "See resolved incidents", open: "cases", arg: "comex" }]
     }
   ],
