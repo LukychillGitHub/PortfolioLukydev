@@ -37,7 +37,7 @@ window.LUKY = {
     {
       id: "comex", side: "Incidentes Comex", tag: "Molinos · Comercio Exterior",
       title: "Encontrar la falla de lógica que frena un proceso de Comex",
-      lead: "Dedico el resto de mi tiempo a Comercio Exterior, desde la orden de compra hasta la facturación. Algunos incidentes se resuelven en el momento; otros requieren entrar al código ABAP para encontrar dónde se rompe la lógica del proceso.",
+      lead: "Además de las migraciones, trabajo en los incidentes de Comercio Exterior, desde la orden de compra hasta la facturación. Algunos incidentes se resuelven en el momento; otros requieren entrar al código ABAP para encontrar dónde se rompe la lógica del proceso.",
       flowTitle: "Dónde aparecieron los incidentes",
       flow: [["Orden de compra", "Inicio del circuito"], ["Despacho y legajo", "Autorizaciones"], ["Factura de importación", "Creada también por API", [1, 3]], ["Contabilización", "Impacto en cuentas de mayor", [2]], ["Portal de proveedores", "Estado de facturación", [4]]],
       incidents: [
@@ -84,30 +84,6 @@ window.LUKY = {
       gallery: [["assets/img/projects/passport-pasaporte.webp", "Pasaporte: cada actividad sellada con fotos, estrellas y reseña"], ["assets/img/projects/passport-ruleta.webp", "Ruleta que elige el próximo plan"], ["assets/img/projects/passport-tops.webp", "Tops: rankings compartidos por categoría"], ["assets/img/projects/passport-cuenta.webp", "Perfil de cada miembro"]],
       chips: ["React Native", "Expo", "TypeScript", "Supabase", "GitHub Actions"],
       links: [["Ver la app", "https://lukychillgithub.github.io/PassportPlanner/"], ["Código", "https://github.com/LukychillGitHub/PassportPlanner"]]
-    },
-    {
-      id: "costaflow", side: "CostaFlow", tag: "Proyecto propio",
-      title: "Poner en marcha una plataforma full-stack que no arrancaba",
-      lead: "CostaFlow conecta negocios turísticos de la Costa Atlántica con hoteles y recepcionistas. La app compilaba, pero fallaba en tiempo de ejecución.",
-      steps: [
-        ["Problema", "Errores al cargar páginas protegidas y datos de prueba que no se insertaban."],
-        ["Diagnóstico", "Tres causas distintas: llamadas a cookies() sin await, rutas del middleware que no coincidían con las del proyecto y nombres de columnas mal escritos en el seed."],
-        ["Solución", "Corregir cada causa por separado y verificar el flujo completo de login y carga de datos."],
-        ["Resultado", "Plataforma funcionando de punta a punta sobre Next.js 14 y Supabase."]
-      ],
-      chips: ["Next.js 14", "TypeScript", "Tailwind", "Supabase"]
-    },
-    {
-      id: "archivo", side: "Archivo", tag: "Primeros proyectos",
-      title: "Donde empecé a programar",
-      lead: "Proyectos chicos para practicar lógica, DOM y diseño de interfaces.",
-      archive: [
-        ["Web para profesora de Matemática", "Agenda de clases + bot de WhatsApp", "https://paginaweb-matematica-production.up.railway.app"],
-        ["Fizzbuzz Minijuego", "Lógica + animaciones", "https://lukychillgithub.github.io/FizzbuzzGame/"],
-        ["SillyUI", "UX absurda para el 1 de abril", "https://lukychillgithub.github.io/SillyUI/"],
-        ["Pomodoro App", "Temporizador de foco", "https://lukychillgithub.github.io/Pomodoro/"],
-        ["Barra de progreso", "Componente animado", "https://lukychillgithub.github.io/ProgressBar/"]
-      ]
     }
   ],
 
@@ -115,7 +91,7 @@ window.LUKY = {
     title: "De la línea de producción a SAP",
     lead: "No llegué a sistemas por un camino recto. Cada etapa me dejó algo que hoy uso todos los días en Molinos.",
     chapter: "Capítulo", take: "Lo que me llevé", more: "Ver detalle", now: "Hoy",
-    next: { title: "Lo que sigue", text: "Crecer dentro del ecosistema SAP y como ingeniero: conocer otros módulos, profundizar en el análisis de sistemas y seguir automatizando, mientras termino Ingeniería en Informática." }
+    next: { title: "Lo que sigue", text: "Llegar a Consultor Funcional SAP: conocer otros módulos, profundizar en el análisis de sistemas y seguir automatizando, mientras termino Ingeniería en Informática." }
   },
 
   jobs: [
@@ -173,7 +149,7 @@ window.LUKY = {
         "Análisis y resolución de incidentes en procesos contables (FI) y de Comercio Exterior hasta la causa raíz, con debugging ABAP cuando la falla está en la lógica.",
         "Responsable de las cargas con SAP Migration Cockpit en la integración de las empresas que adquiere la compañía.",
         "Especificaciones funcionales, órdenes de transporte y altas de Business Partners.",
-        "Seguimiento semanal de incidentes con la consultora externa, un desafío que asumí por iniciativa propia."
+        "Lidero la reunión semanal de incidentes con la consultora externa, un desafío que asumí por iniciativa propia."
       ],
       actions: [{ label: "Ver caso de migraciones", open: "cases", arg: "migraciones" }, { label: "Ver incidentes resueltos", open: "cases", arg: "comex" }]
     }
@@ -183,8 +159,7 @@ window.LUKY = {
     ["SAP y negocio", ["SAP S/4HANA", "Módulo FI", "Migration Cockpit", "LTMC / LTMOM", "Datos maestros", "Debugging ABAP", "Comercio Exterior", "Análisis funcional", "Órdenes de transporte"]],
     ["Transacciones SAP", ["SE16N", "SE38", "SE37", "SE24", "ME23N", "FB03", "MM03", "BMBC", "PA30", "SLG1"]],
     ["Desarrollo", ["Python", "TypeScript", "JavaScript", "React Native", "Next.js", "Node.js", "Supabase", "PostgreSQL", "MySQL", "APIs REST", "OAuth 2.0"]],
-    ["Infraestructura", ["Linux", "systemd", "nginx", "HTTPS", "GitHub Actions", "Git"]],
-    ["Personas", ["Iniciativa", "Documentación", "Docencia", "Comunicación con negocio"]]
+    ["Infraestructura", ["Linux", "systemd", "nginx", "HTTPS", "GitHub Actions", "Git"]]
   ],
 
   /* ---------------- Lukychill (redes) ---------------- */

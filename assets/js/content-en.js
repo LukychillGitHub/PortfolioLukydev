@@ -27,7 +27,7 @@ window.LUKY_EN = {
     {
       id: "comex", side: "Foreign Trade incidents", tag: "Molinos · Foreign Trade",
       title: "Finding the logic failure that blocks a Foreign Trade process",
-      lead: "I spend the rest of my time on Foreign Trade, from the purchase order to invoicing. Some incidents are fixed on the spot; others require going into the ABAP code to find where the process logic breaks.",
+      lead: "Alongside migrations, I handle Foreign Trade incidents, from the purchase order to invoicing. Some incidents are fixed on the spot; others require going into the ABAP code to find where the process logic breaks.",
       flowTitle: "Where the incidents appeared",
       flow: [["Purchase order", "Start of the cycle"], ["Customs file", "Authorizations"], ["Import invoice", "Also created via API", [1, 3]], ["Posting", "Impact on G/L accounts", [2]], ["Supplier portal", "Invoicing status", [4]]],
       incidents: [
@@ -74,30 +74,6 @@ window.LUKY_EN = {
       gallery: [["assets/img/projects/passport-pasaporte.webp", "Passport: each activity stamped with photos, stars and a review"], ["assets/img/projects/passport-ruleta.webp", "Wheel that picks the next plan"], ["assets/img/projects/passport-tops.webp", "Tops: shared rankings by category"], ["assets/img/projects/passport-cuenta.webp", "Each member's profile"]],
       chips: ["React Native", "Expo", "TypeScript", "Supabase", "GitHub Actions"],
       links: [["Open the app", "https://lukychillgithub.github.io/PassportPlanner/"], ["Code", "https://github.com/LukychillGitHub/PassportPlanner"]]
-    },
-    {
-      id: "costaflow", side: "CostaFlow", tag: "Personal project",
-      title: "Getting a full-stack platform that would not start to run",
-      lead: "CostaFlow connects tourism businesses on the Argentine Atlantic Coast with hotels and receptionists. The app compiled, but failed at runtime.",
-      steps: [
-        ["Problem", "Errors when loading protected pages and test data that would not insert."],
-        ["Diagnosis", "Three separate causes: cookies() calls without await, middleware routes that did not match the project's routes and misspelled column names in the seed."],
-        ["Solution", "Fix each cause separately and verify the full login and data loading flow."],
-        ["Result", "The platform works end to end on Next.js 14 and Supabase."]
-      ],
-      chips: ["Next.js 14", "TypeScript", "Tailwind", "Supabase"]
-    },
-    {
-      id: "archivo", side: "Archive", tag: "First projects",
-      title: "Where I started programming",
-      lead: "Small projects to practice logic, the DOM and interface design.",
-      archive: [
-        ["Website for a Math tutor", "Class scheduling + WhatsApp bot", "https://paginaweb-matematica-production.up.railway.app"],
-        ["Fizzbuzz Minigame", "Logic + animations", "https://lukychillgithub.github.io/FizzbuzzGame/"],
-        ["SillyUI", "Absurd UX for April Fools", "https://lukychillgithub.github.io/SillyUI/"],
-        ["Pomodoro App", "Focus timer", "https://lukychillgithub.github.io/Pomodoro/"],
-        ["Progress bar", "Animated component", "https://lukychillgithub.github.io/ProgressBar/"]
-      ]
     }
   ],
 
@@ -105,7 +81,7 @@ window.LUKY_EN = {
     title: "From the production line to SAP",
     lead: "I didn't get into systems in a straight line. Every stage left me something I use every day at Molinos.",
     chapter: "Chapter", take: "What I took away", more: "See details", now: "Now",
-    next: { title: "What's next", text: "Grow within the SAP ecosystem and as an engineer: learn other modules, go deeper into systems analysis and keep automating, while I finish my Computer Engineering degree." }
+    next: { title: "What's next", text: "Become an SAP Functional Consultant: learn other modules, go deeper into systems analysis and keep automating, while I finish my Computer Engineering degree." }
   },
 
   jobs: [
@@ -163,7 +139,7 @@ window.LUKY_EN = {
         "Analyze and resolve incidents in accounting (FI) and Foreign Trade processes down to the root cause, debugging ABAP when the failure is in the logic.",
         "Own the SAP Migration Cockpit loads for integrating the companies Molinos acquires.",
         "Functional specifications, transport requests and Business Partner creation.",
-        "Weekly incident follow-up with the external consulting firm, a challenge I took on by my own initiative."
+        "Lead the weekly incident meeting with the external consulting firm, a challenge I took on by my own initiative."
       ],
       actions: [{ label: "See migrations case", open: "cases", arg: "migraciones" }, { label: "See resolved incidents", open: "cases", arg: "comex" }]
     }
@@ -173,8 +149,7 @@ window.LUKY_EN = {
     ["SAP & business", ["SAP S/4HANA", "FI module", "Migration Cockpit", "LTMC / LTMOM", "Master data", "ABAP debugging", "Foreign Trade", "Functional analysis", "Transport requests"]],
     ["SAP transactions", ["SE16N", "SE38", "SE37", "SE24", "ME23N", "FB03", "MM03", "BMBC", "PA30", "SLG1"]],
     ["Development", ["Python", "TypeScript", "JavaScript", "React Native", "Next.js", "Node.js", "Supabase", "PostgreSQL", "MySQL", "REST APIs", "OAuth 2.0"]],
-    ["Infrastructure", ["Linux", "systemd", "nginx", "HTTPS", "GitHub Actions", "Git"]],
-    ["People", ["Initiative", "Documentation", "Teaching", "Business communication"]]
+    ["Infrastructure", ["Linux", "systemd", "nginx", "HTTPS", "GitHub Actions", "Git"]]
   ],
 
 

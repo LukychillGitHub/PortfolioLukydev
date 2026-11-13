@@ -36,16 +36,17 @@
       apps: { about: "Sobre mí", cases: "Casos", path: "Trayectoria", edu: "Formación", term: "Terminal", cv: "Currículum", mail: "Contacto", stats: "Stats", rank: "Rango", clips: "Videos", aud: "Audiencia", story: "Historia", kmail: "Contacto marcas" },
       titles: { about: "Notas — Sobre mí", cases: "Casos", path: "Trayectoria", edu: "Formación", term: "lucas — zsh", cv: "Currículum", mail: "Nuevo mensaje", stats: "Stats — en vivo", rank: "Rocket League — Rango", clips: "Videos", aud: "Audiencia", story: "Historia del canal", kmail: "Nuevo mensaje" },
       deskCases: "Casos", deskPath: "Trayectoria", deskClips: "Videos", deskStory: "Historia",
-      helloLucas: `<div class="eyebrow">Analista de Tecnología · SAP S/4HANA</div><h1>Lucas<br>Fernández</h1><p>Análisis y resolución de incidentes, integraciones a SAP y debugging ABAP. Los proyectos están en <b>Casos</b>, en el dock.</p>`,
+      helloLucas: `<div class="eyebrow">Analista de Tecnología · SAP S/4HANA</div><h1>Lucas<br>Fernández</h1><p>Incidentes, integraciones y debugging ABAP en SAP S/4HANA, con el objetivo de llegar a Consultor Funcional SAP. Los casos están en <b>Casos</b>, en el dock.</p>`,
       helloLuky: `<div class="eyebrow">@lukychill · Rocket League</div><h1>Luky<br>chill</h1><p>Grand Champion III de pico, más de 10M de likes en TikTok y lo que viene: vlog con alma gamer.</p>`,
-      notifLucas: ["Nuevo caso", "Bot de videos: un link de TikTok, tres redes publicadas."],
+      notifLucas: ["Caso destacado", "Migraciones SAP: tres empresas integradas a S/4HANA."],
       notifLuky: ["Historia del canal", "De los tipos de jugadores al récord de las 10 mercs. Tocá para verla."],
       now: "ahora",
       aboutTabs: [["Perfil", "Quién soy y cómo trabajo"], ["Competencias", "SAP, desarrollo e infraestructura"]],
       aboutYo: (gpa) => `<div class="eyebrow">Perfil profesional</div><h2>Lucas Román Fernández</h2>
         <p class="about-role">Analista de Tecnología · SAP S/4HANA · Estudiante de Ingeniería en Informática</p>
         <p>Trabajo en el área de Sistemas de Molinos Río de la Plata, en el equipo que da soporte al módulo FI de SAP S/4HANA. Me ocupo de dos cosas: encontrar por qué falla un proceso cuando algo se rompe, y hacer que los datos de las empresas que compra la compañía entren a SAP sin frenar la operación.</p>
-        <p>Trabajo con orden y documento cada caso para que ningún tema quede abierto. Me animo a tomar desafíos nuevos y a sumarme a lo que el equipo necesite. Mis proyectos personales nacen de lo mismo: resolver problemas del día a día y automatizar lo repetitivo.</p>`,
+        <p>Trabajo con orden y documento cada caso para que ningún tema quede abierto. Me animo a tomar desafíos nuevos y a sumarme a lo que el equipo necesite. Mis proyectos personales nacen de lo mismo: resolver problemas del día a día y automatizar lo repetitivo.</p>
+        <p><b>Lo que busco:</b> crecer hacia un rol de Consultor Funcional SAP.</p>`,
       aboutBtns: ["Ver casos", "Currículum", "Contacto"],
       kpis: [["3", "Empresas integradas a SAP"], ["gpa", "Promedio académico"], ["2", "Proyectos propios en producción"]],
       skillsHead: ["Competencias", "Con qué trabajo"],
@@ -81,7 +82,7 @@
         ytSub: "Vistas de los últimos 12 meses", igSub: "Seguidores", pending: "Pendiente de conexión", emptyYT: "Se completa cuando se conecte YouTube Analytics.", emptyIG: "Se completa cuando se conecte el permiso de estadísticas de Instagram." },
       H: { eyebrow: "Desde 2020", title: "Historia del canal", hint: "Tocá cada etapa para ver qué se hizo y sus videos.", peak: "su video más visto" },
       spot: { ph: "Buscar apps, casos…", empty: "Sin resultados", app: "App", case: "Caso", user: "Usuario", toLuky: "Cambiar a Lukychill", toLucas: "Cambiar a Lucas Fernández", lang: "Switch to English", langKind: "Idioma" },
-      docTitle: { lucas: "Lucas Fernández · LukyOS", luky: "Lukychill · LukyOS", login: "Lucas Fernández · LukyOS" }
+      docTitle: { lucas: "Lucas Fernández · Analista SAP S/4HANA", luky: "Lukychill · LukyOS", login: "Lucas Fernández · Analista SAP S/4HANA" }
     },
     en: {
       bootHint: "LukyOS · starting", skipBoot: "Skip intro",
@@ -93,16 +94,17 @@
       apps: { about: "About me", cases: "Cases", path: "Experience", edu: "Education", term: "Terminal", cv: "Résumé", mail: "Contact", stats: "Stats", rank: "Rank", clips: "Videos", aud: "Audience", story: "Story", kmail: "Brand contact" },
       titles: { about: "Notes — About me", cases: "Cases", path: "Experience", edu: "Education", term: "lucas — zsh", cv: "Résumé", mail: "New message", stats: "Stats — live", rank: "Rocket League — Rank", clips: "Videos", aud: "Audience", story: "Channel story", kmail: "New message" },
       deskCases: "Cases", deskPath: "Experience", deskClips: "Videos", deskStory: "Story",
-      helloLucas: `<div class="eyebrow">Technology Analyst · SAP S/4HANA</div><h1>Lucas<br>Fernández</h1><p>Incident analysis and resolution, SAP integrations and ABAP debugging. Projects live in <b>Cases</b>, in the dock.</p>`,
+      helloLucas: `<div class="eyebrow">Technology Analyst · SAP S/4HANA</div><h1>Lucas<br>Fernández</h1><p>Incidents, integrations and ABAP debugging in SAP S/4HANA, working toward an SAP Functional Consultant role. The cases are in <b>Cases</b>, in the dock.</p>`,
       helloLuky: `<div class="eyebrow">@lukychill · Rocket League</div><h1>Luky<br>chill</h1><p>Grand Champion III peak, 10M+ likes on TikTok and what's next: a vlog with a gamer soul.</p>`,
-      notifLucas: ["New case", "Video bot: one TikTok link, three networks published."],
+      notifLucas: ["Featured case", "SAP migrations: three companies brought into S/4HANA."],
       notifLuky: ["Channel story", "From player types to the 10 stacked Mercs record. Tap to see it."],
       now: "now",
       aboutTabs: [["Profile", "Who I am and how I work"], ["Skills", "SAP, development and infrastructure"]],
       aboutYo: (gpa) => `<div class="eyebrow">Professional profile</div><h2>Lucas Román Fernández</h2>
         <p class="about-role">Technology Analyst · SAP S/4HANA · Computer Engineering student</p>
         <p>I work in the Systems area at Molinos Río de la Plata, on the team that supports the SAP S/4HANA FI module. I focus on two things: finding out why a process fails when something breaks, and getting the data of the companies Molinos acquires into SAP without stopping operations.</p>
-        <p>I work in an organized way and document every case so nothing is left open. I like taking on new challenges and helping wherever the team needs it. My personal projects come from the same place: solving everyday problems and automating what is repetitive.</p>`,
+        <p>I work in an organized way and document every case so nothing is left open. I like taking on new challenges and helping wherever the team needs it. My personal projects come from the same place: solving everyday problems and automating what is repetitive.</p>
+        <p><b>What I'm looking for:</b> to grow into an SAP Functional Consultant role.</p>`,
       aboutBtns: ["See cases", "Résumé", "Contact"],
       kpis: [["3", "Companies integrated into SAP"], ["gpa", "GPA (out of 10)"], ["2", "Personal projects in production"]],
       skillsHead: ["Skills", "What I work with"],
@@ -138,7 +140,7 @@
         ytSub: "Views in the last 12 months", igSub: "Followers", pending: "Not connected yet", emptyYT: "Fills in once YouTube Analytics is connected.", emptyIG: "Fills in once Instagram insights permission is connected." },
       H: { eyebrow: "Since 2020", title: "Channel story", hint: "Tap each stage to see what was done and its videos.", peak: "most watched video" },
       spot: { ph: "Search apps, cases…", empty: "No results", app: "App", case: "Case", user: "User", toLuky: "Switch to Lukychill", toLucas: "Switch to Lucas Fernández", lang: "Cambiar a español", langKind: "Language" },
-      docTitle: { lucas: "Lucas Fernández · LukyOS", luky: "Lukychill · LukyOS", login: "Lucas Fernández · LukyOS" }
+      docTitle: { lucas: "Lucas Fernández · SAP S/4HANA Analyst", luky: "Lukychill · LukyOS", login: "Lucas Fernández · SAP S/4HANA Analyst" }
     }
   };
   let L = T[LANG];
@@ -502,7 +504,7 @@
   };
   const DESK = {
     lucas: { logo: "&lt;Lucas Fernández/&gt;", icons: () => [["cases", L.deskCases, "folderL"], ["path", L.deskPath, "folderL"], ["cv", "CV.pdf", "cv"]], hello: () => L.helloLucas, first: "about",
-      notif: () => ({ ico: "cases", title: L.notifLucas[0], text: L.notifLucas[1], open: ["cases", "bot"] }) },
+      notif: () => ({ ico: "cases", title: L.notifLucas[0], text: L.notifLucas[1], open: ["cases", "migraciones"] }) },
     luky: { logo: "&lt;Lukychill/&gt;", icons: () => [["clips", L.deskClips, "folderK"], ["story", L.deskStory, "folderK"]], hello: () => L.helloLuky, first: "stats",
       notif: () => ({ ico: "story", title: L.notifLuky[0], text: L.notifLuky[1], open: ["story"] }) }
   };
