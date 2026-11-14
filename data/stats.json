@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-13T22:32:07.045Z",
+  "updated": "2026-11-14T03:05:37.729Z",
   "platforms": {
     "kick": null,
     "youtube": {
@@ -9,11 +9,11 @@
       "source": "api"
     },
     "twitch": {
-      "followers": 47723,
+      "followers": 47722,
       "source": "api"
     },
     "instagram": {
-      "followers": 17704,
+      "followers": 17718,
       "videos": 10,
       "source": "api"
     },
@@ -31,7 +31,7 @@
       "id": "yIq3l9uvmJI",
       "title": "RECORD 10 MERCS 🏆 #gg - #rocketleague - #fyp#foryou#foryoupage#parati#viral#record#lukychill#rl#rock",
       "published": "2026-11-13T19:40:33Z",
-      "views": 11,
+      "views": 18,
       "likes": 0
     },
     {
@@ -59,7 +59,7 @@
       "id": "ssIpY9o_Ez0",
       "title": "Que mapa le podes recomendar a ese amigo que le ganas siempre ?? - Uno de mis videos mas virales - #",
       "published": "2026-10-16T14:27:06Z",
-      "views": 10765,
+      "views": 10766,
       "likes": 277
     },
     {
@@ -87,24 +87,26 @@
   "audience": {
     "instagram": {
       "age": {
-        "13-17": 3198,
-        "18-24": 5816,
-        "25-34": 6302,
-        "35-44": 1371,
+        "13-17": 3193,
+        "18-24": 5822,
+        "25-34": 6309,
+        "35-44": 1372,
         "45-54": 639,
         "55-64": 133,
         "65+": 167
       },
       "gender": {
-        "F": 635,
-        "M": 12605,
-        "U": 4386
+        "F": 637,
+        "M": 12615,
+        "U": 4383
       },
       "country": {
+        "NO": 2,
         "DE": 8,
+        "BD": 2,
         "PR": 84,
         "BE": 3,
-        "PT": 28,
+        "PT": 29,
         "JP": 3,
         "HN": 104,
         "PY": 223,
@@ -117,30 +119,28 @@
         "DZ": 6,
         "ID": 3,
         "GB": 4,
-        "OM": 2,
         "CA": 18,
         "EC": 269,
         "US": 420,
         "SV": 106,
-        "UY": 434,
+        "UY": 435,
         "IN": 7,
         "CH": 9,
         "IQ": 4,
-        "CL": 1237,
-        "CN": 2,
+        "CL": 1234,
         "IT": 43,
-        "MX": 3772,
-        "CO": 652,
+        "MX": 3771,
+        "CO": 654,
         "GT": 141,
-        "ES": 1706,
+        "ES": 1707,
         "CR": 170,
         "VE": 344,
         "PA": 66,
-        "AR": 6862,
-        "GY": 2,
+        "AR": 6867,
         "CU": 103,
+        "AT": 2,
         "AU": 8,
-        "PE": 391,
+        "PE": 394,
         "TN": 4,
         "NI": 63,
         "PL": 5,
