@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-16T09:29:48.752Z",
+  "updated": "2026-11-16T20:20:26.813Z",
   "platforms": {
     "kick": null,
     "youtube": {
       "followers": 108000,
       "views": 9011044,
-      "videos": 683,
+      "videos": 684,
       "source": "api"
     },
     "twitch": {
@@ -13,7 +13,7 @@
       "source": "api"
     },
     "instagram": {
-      "followers": 17766,
+      "followers": 17790,
       "videos": 10,
       "source": "api"
     },
@@ -28,17 +28,24 @@
   },
   "youtubeLatest": [
     {
+      "id": "eRwyFAT_dJk",
+      "title": "¿Todavía no te sale el Kuxir Pinch y tus amigos se ríen? 👀 Te lo explico en 3 simples pasos 🚀 #rocke",
+      "published": "2026-11-16T10:36:37Z",
+      "views": 540,
+      "likes": 16
+    },
+    {
       "id": "9Qf8Dha5m9k",
       "title": "¿2026 y todavía no sabés hacer un flip reset? 👀 Te lo explico en 3 simples pasos 🚀 #rocketleague #fl",
       "published": "2026-11-15T23:34:45Z",
-      "views": 759,
-      "likes": 22
+      "views": 1087,
+      "likes": 31
     },
     {
       "id": "dsUDhVFyc0I",
       "title": "TUTORIAL DE AIR DRIBBLING YA DISPONIBLE EN YOUTUBE! #LukyChill - PASO A PASO PARA #AIRDRIBBLING - #R",
       "published": "2026-11-15T23:12:03Z",
-      "views": 33,
+      "views": 49,
       "likes": 4
     },
     {
@@ -59,7 +66,7 @@
       "id": "pHvwMOV5pMM",
       "title": "@ A ESE AMIGO QUE LE GANARIAS EN ESTE MAPA - #fyp#parati#rocketleague#rl#rlclip#rlclips#lukychill#fy",
       "published": "2026-10-16T14:41:38Z",
-      "views": 131,
+      "views": 132,
       "likes": 3
     },
     {
@@ -75,13 +82,6 @@
       "published": "2026-10-16T14:27:06Z",
       "views": 10792,
       "likes": 278
-    },
-    {
-      "id": "PPFwE7TeLYk",
-      "title": "#Minecraft en #RocketLeague ? como es esto posible ?! UN POQUITITO DE HUMORCITO - #lukychill #fyp #p",
-      "published": "2026-10-16T14:25:48Z",
-      "views": 61,
-      "likes": 2
     }
   ],
   "audience": {
