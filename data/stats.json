@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-15T21:41:38.094Z",
+  "updated": "2026-11-16T01:54:15.770Z",
   "platforms": {
     "kick": null,
     "youtube": {
       "followers": 108000,
       "views": 9010531,
-      "videos": 681,
+      "videos": 683,
       "source": "api"
     },
     "twitch": {
@@ -13,7 +13,7 @@
       "source": "api"
     },
     "instagram": {
-      "followers": 17755,
+      "followers": 17761,
       "videos": 10,
       "source": "api"
     },
@@ -28,10 +28,24 @@
   },
   "youtubeLatest": [
     {
+      "id": "9Qf8Dha5m9k",
+      "title": "¿2026 y todavía no sabés hacer un flip reset? 👀 Te lo explico en 3 simples pasos 🚀 #rocketleague #fl",
+      "published": "2026-11-15T23:34:45Z",
+      "views": 270,
+      "likes": 7
+    },
+    {
+      "id": "dsUDhVFyc0I",
+      "title": "TUTORIAL DE AIR DRIBBLING YA DISPONIBLE EN YOUTUBE! #LukyChill - PASO A PASO PARA #AIRDRIBBLING - #R",
+      "published": "2026-11-15T23:12:03Z",
+      "views": 16,
+      "likes": 2
+    },
+    {
       "id": "yIq3l9uvmJI",
       "title": "RECORD 10 MERCS 🏆 #gg - #rocketleague - #fyp#foryou#foryoupage#parati#viral#record#lukychill#rl#rock",
       "published": "2026-11-13T19:40:33Z",
-      "views": 31,
+      "views": 33,
       "likes": 0
     },
     {
@@ -66,43 +80,28 @@
       "id": "PPFwE7TeLYk",
       "title": "#Minecraft en #RocketLeague ? como es esto posible ?! UN POQUITITO DE HUMORCITO - #lukychill #fyp #p",
       "published": "2026-10-16T14:25:48Z",
-      "views": 53,
+      "views": 54,
       "likes": 1
-    },
-    {
-      "id": "HTGe1DuyEpI",
-      "title": "Como que #fallguys en #rocketleague !? - #lukychill#rl#rocket#league#fyp#parati#foryoupage#viral#vir",
-      "published": "2026-10-16T14:21:30Z",
-      "views": 48,
-      "likes": 0
-    },
-    {
-      "id": "lNx0--hAFdI",
-      "title": "POR FIN se puede tener el AUTO 100% NEGRO en Rocket League 😱 (Season 24)",
-      "published": "2026-09-25T16:52:55Z",
-      "views": 536,
-      "likes": 5
     }
   ],
   "audience": {
     "instagram": {
       "age": {
-        "13-17": 3198,
-        "18-24": 5834,
-        "25-34": 6312,
-        "35-44": 1373,
-        "45-54": 641,
-        "55-64": 133,
-        "65+": 166
+        "13-17": 3207,
+        "18-24": 5842,
+        "25-34": 6320,
+        "35-44": 1376,
+        "45-54": 642,
+        "55-64": 134,
+        "65+": 167
       },
       "gender": {
-        "F": 637,
-        "M": 12630,
-        "U": 4390
+        "F": 638,
+        "M": 12649,
+        "U": 4401
       },
       "country": {
         "DE": 8,
-        "BD": 2,
         "PR": 84,
         "BE": 3,
         "PT": 29,
@@ -113,34 +112,35 @@
         "FR": 14,
         "HU": 7,
         "BO": 79,
-        "SA": 2,
         "BR": 89,
         "MA": 5,
         "DZ": 6,
         "ID": 3,
         "GB": 4,
+        "OM": 2,
         "CA": 18,
-        "EC": 268,
-        "US": 419,
-        "SV": 106,
-        "UY": 436,
+        "EC": 269,
+        "US": 417,
+        "SV": 107,
+        "UY": 437,
         "IN": 7,
-        "CH": 9,
+        "CH": 10,
         "IQ": 4,
         "CL": 1241,
-        "GR": 2,
-        "IT": 43,
-        "MX": 3780,
-        "CO": 656,
+        "CN": 2,
+        "IT": 44,
+        "MX": 3781,
+        "CO": 657,
         "GT": 141,
-        "ES": 1707,
-        "CR": 171,
-        "VE": 344,
+        "ES": 1711,
+        "CR": 172,
+        "VE": 346,
         "PA": 66,
-        "AR": 6871,
+        "AR": 6889,
         "CU": 103,
+        "CW": 2,
         "AU": 8,
-        "PE": 394,
+        "PE": 395,
         "TN": 4,
         "NI": 63,
         "PL": 5,
