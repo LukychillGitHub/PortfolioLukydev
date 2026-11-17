@@ -1,19 +1,19 @@
 {
-  "updated": "2026-11-17T13:10:15.955Z",
+  "updated": "2026-11-17T22:13:03.771Z",
   "platforms": {
     "kick": null,
     "youtube": {
       "followers": 108000,
-      "views": 9013505,
-      "videos": 685,
+      "views": 9013964,
+      "videos": 686,
       "source": "api"
     },
     "twitch": {
-      "followers": 47720,
+      "followers": 47719,
       "source": "api"
     },
     "instagram": {
-      "followers": 17804,
+      "followers": 17818,
       "videos": 10,
       "source": "api"
     },
@@ -28,38 +28,45 @@
   },
   "youtubeLatest": [
     {
+      "id": "0SvBhhwWl70",
+      "title": "¿No llegás a las pelotas que te quedan atrás? Aprendé el HALF FLIP en 3 pasos 🔄🚀 - #rocketleague #ha",
+      "published": "2026-11-17T16:06:00Z",
+      "views": 3,
+      "likes": 0
+    },
+    {
       "id": "jCpAPh0Z6QI",
       "title": "¿No llegás a las pelotas que te quedan atrás? Aprendé el HALF FLIP en 3 pasos 🔄🚀 - #rocketleague #ha",
       "published": "2026-11-17T09:23:59Z",
-      "views": 13,
-      "likes": 1
+      "views": 1296,
+      "likes": 39
     },
     {
       "id": "eRwyFAT_dJk",
       "title": "¿Todavía no te sale el Kuxir Pinch y tus amigos se ríen? 👀 Te lo explico en 3 simples pasos 🚀 #rocke",
       "published": "2026-11-16T10:36:37Z",
-      "views": 670,
-      "likes": 19
+      "views": 1285,
+      "likes": 44
     },
     {
       "id": "9Qf8Dha5m9k",
       "title": "¿2026 y todavía no sabés hacer un flip reset? 👀 Te lo explico en 3 simples pasos 🚀 #rocketleague #fl",
       "published": "2026-11-15T23:34:45Z",
-      "views": 1222,
-      "likes": 38
+      "views": 1308,
+      "likes": 42
     },
     {
       "id": "dsUDhVFyc0I",
       "title": "TUTORIAL DE AIR DRIBBLING YA DISPONIBLE EN YOUTUBE! #LukyChill - PASO A PASO PARA #AIRDRIBBLING - #R",
       "published": "2026-11-15T23:12:03Z",
-      "views": 99,
+      "views": 103,
       "likes": 5
     },
     {
       "id": "yIq3l9uvmJI",
       "title": "RECORD 10 MERCS 🏆 #gg - #rocketleague - #fyp#foryou#foryoupage#parati#viral#record#lukychill#rl#rock",
       "published": "2026-11-13T19:40:33Z",
-      "views": 39,
+      "views": 40,
       "likes": 2
     },
     {
@@ -75,13 +82,6 @@
       "published": "2026-10-16T14:41:38Z",
       "views": 133,
       "likes": 3
-    },
-    {
-      "id": "f5i0ZCwx6x4",
-      "title": "APRENDE EL AIRDRIBBLING EN ESTE MAPA DE #rocketleague - #lukychill#fyp#parati#rocket#league#fypage#v",
-      "published": "2026-10-16T14:31:14Z",
-      "views": 267,
-      "likes": 7
     }
   ],
   "audience": {
