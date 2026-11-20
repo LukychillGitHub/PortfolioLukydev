@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-20T11:24:14.026Z",
+  "updated": "2026-11-20T20:00:23.818Z",
   "platforms": {
     "kick": null,
     "youtube": {
       "followers": 108000,
       "views": 9031201,
-      "videos": 688,
+      "videos": 689,
       "source": "api"
     },
     "twitch": {
@@ -13,7 +13,7 @@
       "source": "api"
     },
     "instagram": {
-      "followers": 17902,
+      "followers": 17934,
       "videos": 10,
       "source": "api"
     },
@@ -28,60 +28,60 @@
   },
   "youtubeLatest": [
     {
+      "id": "s9uMBq6UBkc",
+      "title": "¿Te ponés nervioso cuando la pelota está en el aire? Aprendé a VOLAR en 3 pasos 🚀 - #rocketleague #a",
+      "published": "2026-11-20T17:15:10Z",
+      "views": 592,
+      "likes": 27
+    },
+    {
       "id": "YWqdJwGwG80",
       "title": "¿La pelota se te va por la pared y no sabés qué hacer? AIR DRIBBLE en 3 pasos 🚀 - #rocketleague #air",
       "published": "2026-11-19T17:17:23Z",
-      "views": 1182,
-      "likes": 33
+      "views": 1257,
+      "likes": 37
     },
     {
       "id": "tcAXNXvfX10",
       "title": "¿Todavía no te salen las jugadas aéreas? Aprendé el CEILING SHOT en 3 pasos 🚀🔥- #rocketleague #ceili",
       "published": "2026-11-18T11:51:00Z",
-      "views": 6635,
-      "likes": 246
+      "views": 6786,
+      "likes": 258
     },
     {
       "id": "0SvBhhwWl70",
       "title": "¿No llegás a las pelotas que te quedan atrás? Aprendé el HALF FLIP en 3 pasos 🔄🚀 - #rocketleague #ha",
       "published": "2026-11-17T16:06:00Z",
-      "views": 42,
-      "likes": 3
+      "views": 45,
+      "likes": 5
     },
     {
       "id": "jCpAPh0Z6QI",
       "title": "¿No llegás a las pelotas que te quedan atrás? Aprendé el HALF FLIP en 3 pasos 🔄🚀 - #rocketleague #ha",
       "published": "2026-11-17T09:23:59Z",
-      "views": 7513,
-      "likes": 137
+      "views": 7667,
+      "likes": 144
     },
     {
       "id": "eRwyFAT_dJk",
       "title": "¿Todavía no te sale el Kuxir Pinch y tus amigos se ríen? 👀 Te lo explico en 3 simples pasos 🚀 #rocke",
       "published": "2026-11-16T10:36:37Z",
-      "views": 2270,
-      "likes": 90
+      "views": 2287,
+      "likes": 92
     },
     {
       "id": "9Qf8Dha5m9k",
       "title": "¿2026 y todavía no sabés hacer un flip reset? 👀 Te lo explico en 3 simples pasos 🚀 #rocketleague #fl",
       "published": "2026-11-15T23:34:45Z",
-      "views": 1600,
-      "likes": 56
+      "views": 1602,
+      "likes": 57
     },
     {
       "id": "dsUDhVFyc0I",
       "title": "TUTORIAL DE AIR DRIBBLING YA DISPONIBLE EN YOUTUBE! #LukyChill - PASO A PASO PARA #AIRDRIBBLING - #R",
       "published": "2026-11-15T23:12:03Z",
-      "views": 139,
-      "likes": 8
-    },
-    {
-      "id": "yIq3l9uvmJI",
-      "title": "RECORD 10 MERCS 🏆 #gg - #rocketleague - #fyp#foryou#foryoupage#parati#viral#record#lukychill#rl#rock",
-      "published": "2026-11-13T19:40:33Z",
-      "views": 50,
-      "likes": 3
+      "views": 140,
+      "likes": 9
     }
   ],
   "audience": {
