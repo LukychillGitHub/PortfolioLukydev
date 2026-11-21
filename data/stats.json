@@ -1,10 +1,10 @@
 {
-  "updated": "2026-11-21T01:24:21.868Z",
+  "updated": "2026-11-21T09:38:45.506Z",
   "platforms": {
     "kick": null,
     "youtube": {
       "followers": 108000,
-      "views": 9033061,
+      "views": 9033971,
       "videos": 689,
       "source": "api"
     },
@@ -13,7 +13,7 @@
       "source": "api"
     },
     "instagram": {
-      "followers": 17959,
+      "followers": 17969,
       "videos": 10,
       "source": "api"
     },
@@ -31,120 +31,120 @@
       "id": "s9uMBq6UBkc",
       "title": "¿Te ponés nervioso cuando la pelota está en el aire? Aprendé a VOLAR en 3 pasos 🚀 - #rocketleague #a",
       "published": "2026-11-20T17:15:10Z",
-      "views": 1332,
-      "likes": 43
+      "views": 1917,
+      "likes": 56
     },
     {
       "id": "YWqdJwGwG80",
       "title": "¿La pelota se te va por la pared y no sabés qué hacer? AIR DRIBBLE en 3 pasos 🚀 - #rocketleague #air",
       "published": "2026-11-19T17:17:23Z",
-      "views": 1303,
-      "likes": 38
+      "views": 1323,
+      "likes": 40
     },
     {
       "id": "tcAXNXvfX10",
       "title": "¿Todavía no te salen las jugadas aéreas? Aprendé el CEILING SHOT en 3 pasos 🚀🔥- #rocketleague #ceili",
       "published": "2026-11-18T11:51:00Z",
-      "views": 6942,
-      "likes": 267
+      "views": 7153,
+      "likes": 275
     },
     {
       "id": "0SvBhhwWl70",
       "title": "¿No llegás a las pelotas que te quedan atrás? Aprendé el HALF FLIP en 3 pasos 🔄🚀 - #rocketleague #ha",
       "published": "2026-11-17T16:06:00Z",
-      "views": 49,
+      "views": 51,
       "likes": 5
     },
     {
       "id": "jCpAPh0Z6QI",
       "title": "¿No llegás a las pelotas que te quedan atrás? Aprendé el HALF FLIP en 3 pasos 🔄🚀 - #rocketleague #ha",
       "published": "2026-11-17T09:23:59Z",
-      "views": 7775,
-      "likes": 148
+      "views": 8007,
+      "likes": 153
     },
     {
       "id": "eRwyFAT_dJk",
       "title": "¿Todavía no te sale el Kuxir Pinch y tus amigos se ríen? 👀 Te lo explico en 3 simples pasos 🚀 #rocke",
       "published": "2026-11-16T10:36:37Z",
-      "views": 2302,
+      "views": 2328,
       "likes": 92
     },
     {
       "id": "9Qf8Dha5m9k",
       "title": "¿2026 y todavía no sabés hacer un flip reset? 👀 Te lo explico en 3 simples pasos 🚀 #rocketleague #fl",
       "published": "2026-11-15T23:34:45Z",
-      "views": 1603,
+      "views": 1608,
       "likes": 57
     },
     {
       "id": "dsUDhVFyc0I",
       "title": "TUTORIAL DE AIR DRIBBLING YA DISPONIBLE EN YOUTUBE! #LukyChill - PASO A PASO PARA #AIRDRIBBLING - #R",
       "published": "2026-11-15T23:12:03Z",
-      "views": 142,
+      "views": 148,
       "likes": 9
     }
   ],
   "audience": {
     "instagram": {
       "age": {
-        "13-17": 3213,
-        "18-24": 5889,
-        "25-34": 6363,
-        "35-44": 1391,
-        "45-54": 643,
-        "55-64": 137,
+        "13-17": 3220,
+        "18-24": 5905,
+        "25-34": 6378,
+        "35-44": 1393,
+        "45-54": 642,
+        "55-64": 138,
         "65+": 166
       },
       "gender": {
-        "F": 642,
-        "M": 12751,
-        "U": 4409
+        "F": 645,
+        "M": 12779,
+        "U": 4418
       },
       "country": {
         "DE": 8,
-        "BD": 2,
         "PR": 84,
         "BE": 3,
         "PT": 29,
+        "JO": 2,
         "JP": 3,
-        "HN": 105,
-        "PY": 223,
+        "HN": 104,
+        "PY": 224,
         "DO": 78,
         "FR": 14,
         "HU": 7,
         "BO": 79,
-        "BR": 90,
+        "BR": 92,
         "MA": 5,
-        "DZ": 7,
+        "DZ": 6,
         "ID": 3,
-        "GB": 4,
-        "CA": 18,
-        "EC": 268,
-        "US": 422,
+        "GB": 5,
+        "CA": 19,
+        "EC": 270,
+        "US": 420,
         "SV": 107,
-        "UY": 439,
+        "UY": 438,
         "IN": 7,
         "CH": 10,
         "IQ": 4,
-        "CL": 1249,
-        "CN": 2,
+        "IR": 2,
+        "CL": 1259,
+        "GR": 2,
         "IT": 44,
-        "MX": 3802,
-        "CO": 658,
+        "MX": 3808,
+        "CO": 661,
         "GT": 143,
-        "ES": 1729,
-        "CR": 174,
+        "ES": 1732,
+        "CR": 177,
         "VE": 349,
-        "PA": 65,
-        "AR": 6937,
+        "PA": 66,
+        "AR": 6949,
         "CU": 103,
         "AU": 8,
-        "PE": 399,
+        "PE": 400,
         "TN": 4,
         "NI": 63,
         "PL": 5,
         "RO": 3,
-        "NL": 2,
         "TR": 5
       }
     },
