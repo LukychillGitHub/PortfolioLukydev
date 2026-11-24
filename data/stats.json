@@ -1,19 +1,19 @@
 {
-  "updated": "2026-11-24T05:56:04.999Z",
+  "updated": "2026-11-24T17:31:42.175Z",
   "platforms": {
     "kick": null,
     "youtube": {
       "followers": 108000,
-      "views": 9067162,
-      "videos": 692,
+      "views": 9071045,
+      "videos": 693,
       "source": "api"
     },
     "twitch": {
-      "followers": 47717,
+      "followers": 47716,
       "source": "api"
     },
     "instagram": {
-      "followers": 18439,
+      "followers": 18457,
       "videos": 10,
       "source": "api"
     },
@@ -28,60 +28,60 @@
   },
   "youtubeLatest": [
     {
+      "id": "I2KpTNcZpOM",
+      "title": "¿Se puede llegar a 360 KPH con solo 3 Musty Flicks? 🚀 Retá a tu streamer favorito 👇 - #rocketleague",
+      "published": "2026-11-24T15:55:43Z",
+      "views": 396,
+      "likes": 9
+    },
+    {
       "id": "yN9_IglOcOs",
       "title": "¿Se puede llegar a 300 KPH con solo 3 Kuxir Pinchs? 🚀 Etiquetá al streamer que debería probarlo 👇 -",
       "published": "2026-11-23T16:20:59Z",
-      "views": 1441,
-      "likes": 36
+      "views": 1704,
+      "likes": 50
     },
     {
       "id": "rE3Xew4ey0A",
       "title": "¿Se puede llegar a 350 KPH con solo 3 pinchs? 🚀 Retá a un streamer en los comentarios 👇 #rocketleagu",
       "published": "2026-11-22T17:13:50Z",
-      "views": 2660,
-      "likes": 72
+      "views": 2739,
+      "likes": 82
     },
     {
       "id": "Cns9aIJBZ0o",
       "title": "¿Te movés lento por la cancha? Aprendé el WAVEDASH en 3 pasos 🚀 - #rocketleague #wavedash #rocketlea",
       "published": "2026-11-21T14:50:08Z",
-      "views": 19305,
-      "likes": 771
+      "views": 20373,
+      "likes": 804
     },
     {
       "id": "s9uMBq6UBkc",
       "title": "¿Te ponés nervioso cuando la pelota está en el aire? Aprendé a VOLAR en 3 pasos 🚀 - #rocketleague #a",
       "published": "2026-11-20T17:15:10Z",
-      "views": 5609,
-      "likes": 263
+      "views": 5737,
+      "likes": 275
     },
     {
       "id": "YWqdJwGwG80",
       "title": "¿La pelota se te va por la pared y no sabés qué hacer? AIR DRIBBLE en 3 pasos 🚀 - #rocketleague #air",
       "published": "2026-11-19T17:17:23Z",
-      "views": 1752,
-      "likes": 70
+      "views": 1770,
+      "likes": 72
     },
     {
       "id": "tcAXNXvfX10",
       "title": "¿Todavía no te salen las jugadas aéreas? Aprendé el CEILING SHOT en 3 pasos 🚀🔥- #rocketleague #ceili",
       "published": "2026-11-18T11:51:00Z",
-      "views": 8913,
-      "likes": 362
+      "views": 8926,
+      "likes": 364
     },
     {
       "id": "0SvBhhwWl70",
       "title": "¿No llegás a las pelotas que te quedan atrás? Aprendé el HALF FLIP en 3 pasos 🔄🚀 - #rocketleague #ha",
       "published": "2026-11-17T16:06:00Z",
-      "views": 234,
+      "views": 238,
       "likes": 15
-    },
-    {
-      "id": "jCpAPh0Z6QI",
-      "title": "¿No llegás a las pelotas que te quedan atrás? Aprendé el HALF FLIP en 3 pasos 🔄🚀 - #rocketleague #ha",
-      "published": "2026-11-17T09:23:59Z",
-      "views": 8234,
-      "likes": 160
     }
   ],
   "audience": {
