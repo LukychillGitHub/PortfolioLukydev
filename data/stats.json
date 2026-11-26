@@ -1,11 +1,11 @@
 {
-  "updated": "2026-11-26T15:00:47.017Z",
+  "updated": "2026-11-26T23:45:26.169Z",
   "platforms": {
     "kick": null,
     "youtube": {
       "followers": 108000,
-      "views": 9089167,
-      "videos": 694,
+      "views": 9091894,
+      "videos": 695,
       "source": "api"
     },
     "twitch": {
@@ -13,7 +13,7 @@
       "source": "api"
     },
     "instagram": {
-      "followers": 18540,
+      "followers": 18569,
       "videos": 10,
       "source": "api"
     },
@@ -28,123 +28,123 @@
   },
   "youtubeLatest": [
     {
+      "id": "ajPpwx0PMh4",
+      "title": "¿Te piden defender y no tenés turbo? Aprendé el WALL DASH en 3 pasos 🧱⚡ #rocketleague #walldash #roc",
+      "published": "2026-11-26T15:05:06Z",
+      "views": 1196,
+      "likes": 40
+    },
+    {
       "id": "iHNMApjfaik",
       "title": "¿Te sale mal el wavedash? Estos son los 3 errores que lo arruinan 🚀 #rocketleague #wavedash #rocketl",
       "published": "2026-11-25T15:58:40Z",
-      "views": 1371,
-      "likes": 58
+      "views": 1526,
+      "likes": 71
     },
     {
       "id": "I2KpTNcZpOM",
       "title": "¿Se puede llegar a 360 KPH con solo 3 Musty Flicks? 🚀 Retá a tu streamer favorito 👇 - #rocketleague",
       "published": "2026-11-24T15:55:43Z",
-      "views": 1052,
+      "views": 1073,
       "likes": 20
     },
     {
       "id": "yN9_IglOcOs",
       "title": "¿Se puede llegar a 300 KPH con solo 3 Kuxir Pinchs? 🚀 Etiquetá al streamer que debería probarlo 👇 -",
       "published": "2026-11-23T16:20:59Z",
-      "views": 3631,
-      "likes": 128
+      "views": 3676,
+      "likes": 132
     },
     {
       "id": "rE3Xew4ey0A",
       "title": "¿Se puede llegar a 350 KPH con solo 3 pinchs? 🚀 Retá a un streamer en los comentarios 👇 #rocketleagu",
       "published": "2026-11-22T17:13:50Z",
-      "views": 3082,
-      "likes": 100
+      "views": 3113,
+      "likes": 102
     },
     {
       "id": "Cns9aIJBZ0o",
       "title": "¿Te movés lento por la cancha? Aprendé el WAVEDASH en 3 pasos 🚀 - #rocketleague #wavedash #rocketlea",
       "published": "2026-11-21T14:50:08Z",
-      "views": 33727,
-      "likes": 1275
+      "views": 36380,
+      "likes": 1369
     },
     {
       "id": "s9uMBq6UBkc",
       "title": "¿Te ponés nervioso cuando la pelota está en el aire? Aprendé a VOLAR en 3 pasos 🚀 - #rocketleague #a",
       "published": "2026-11-20T17:15:10Z",
-      "views": 6301,
-      "likes": 299
+      "views": 6354,
+      "likes": 300
     },
     {
       "id": "YWqdJwGwG80",
       "title": "¿La pelota se te va por la pared y no sabés qué hacer? AIR DRIBBLE en 3 pasos 🚀 - #rocketleague #air",
       "published": "2026-11-19T17:17:23Z",
-      "views": 1856,
+      "views": 1860,
       "likes": 73
-    },
-    {
-      "id": "tcAXNXvfX10",
-      "title": "¿Todavía no te salen las jugadas aéreas? Aprendé el CEILING SHOT en 3 pasos 🚀🔥- #rocketleague #ceili",
-      "published": "2026-11-18T11:51:00Z",
-      "views": 9127,
-      "likes": 378
     }
   ],
   "audience": {
     "instagram": {
       "age": {
-        "13-17": 3324,
-        "18-24": 6112,
-        "25-34": 6593,
-        "35-44": 1441,
-        "45-54": 653,
+        "13-17": 3339,
+        "18-24": 6119,
+        "25-34": 6602,
+        "35-44": 1447,
+        "45-54": 654,
         "55-64": 144,
         "65+": 167
       },
       "gender": {
-        "F": 654,
-        "M": 13256,
-        "U": 4524
+        "F": 657,
+        "M": 13287,
+        "U": 4528
       },
       "country": {
         "DE": 8,
-        "PR": 88,
+        "PR": 89,
         "BE": 4,
         "PT": 31,
         "JP": 3,
         "HN": 109,
-        "PY": 225,
+        "PY": 226,
         "DO": 82,
         "FR": 13,
         "HU": 7,
         "BO": 81,
-        "BR": 95,
+        "BR": 96,
         "MA": 7,
         "DZ": 7,
         "ID": 4,
-        "GB": 6,
+        "GB": 7,
+        "OM": 2,
         "CA": 19,
-        "EC": 280,
-        "US": 438,
+        "EC": 283,
+        "US": 439,
         "AD": 3,
-        "SV": 111,
+        "SV": 112,
         "UY": 447,
         "IN": 7,
         "CH": 10,
         "IQ": 4,
-        "IR": 2,
-        "CL": 1318,
-        "GR": 2,
+        "CL": 1321,
         "IT": 44,
-        "MX": 3988,
+        "MX": 3999,
         "CO": 689,
-        "GT": 148,
-        "ES": 1792,
-        "CR": 185,
+        "GT": 149,
+        "ES": 1795,
+        "CR": 186,
         "VE": 355,
         "PA": 71,
-        "AR": 7107,
+        "AR": 7118,
         "CU": 106,
         "AU": 9,
         "PE": 406,
         "TN": 4,
-        "NI": 64,
+        "NI": 63,
         "PL": 5,
         "RO": 3,
+        "NL": 2,
         "TR": 6
       }
     },
