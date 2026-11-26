@@ -1,19 +1,19 @@
 {
-  "updated": "2026-11-26T04:57:16.818Z",
+  "updated": "2026-11-26T15:00:47.017Z",
   "platforms": {
     "kick": null,
     "youtube": {
       "followers": 108000,
-      "views": 9083539,
+      "views": 9089167,
       "videos": 694,
       "source": "api"
     },
     "twitch": {
-      "followers": 47714,
+      "followers": 47713,
       "source": "api"
     },
     "instagram": {
-      "followers": 18531,
+      "followers": 18540,
       "videos": 10,
       "source": "api"
     },
@@ -31,74 +31,74 @@
       "id": "iHNMApjfaik",
       "title": "¿Te sale mal el wavedash? Estos son los 3 errores que lo arruinan 🚀 #rocketleague #wavedash #rocketl",
       "published": "2026-11-25T15:58:40Z",
-      "views": 1305,
-      "likes": 54
+      "views": 1371,
+      "likes": 58
     },
     {
       "id": "I2KpTNcZpOM",
       "title": "¿Se puede llegar a 360 KPH con solo 3 Musty Flicks? 🚀 Retá a tu streamer favorito 👇 - #rocketleague",
       "published": "2026-11-24T15:55:43Z",
-      "views": 1046,
+      "views": 1052,
       "likes": 20
     },
     {
       "id": "yN9_IglOcOs",
       "title": "¿Se puede llegar a 300 KPH con solo 3 Kuxir Pinchs? 🚀 Etiquetá al streamer que debería probarlo 👇 -",
       "published": "2026-11-23T16:20:59Z",
-      "views": 3580,
-      "likes": 123
+      "views": 3631,
+      "likes": 128
     },
     {
       "id": "rE3Xew4ey0A",
       "title": "¿Se puede llegar a 350 KPH con solo 3 pinchs? 🚀 Retá a un streamer en los comentarios 👇 #rocketleagu",
       "published": "2026-11-22T17:13:50Z",
-      "views": 3074,
-      "likes": 98
+      "views": 3082,
+      "likes": 100
     },
     {
       "id": "Cns9aIJBZ0o",
       "title": "¿Te movés lento por la cancha? Aprendé el WAVEDASH en 3 pasos 🚀 - #rocketleague #wavedash #rocketlea",
       "published": "2026-11-21T14:50:08Z",
-      "views": 33043,
-      "likes": 1233
+      "views": 33727,
+      "likes": 1275
     },
     {
       "id": "s9uMBq6UBkc",
       "title": "¿Te ponés nervioso cuando la pelota está en el aire? Aprendé a VOLAR en 3 pasos 🚀 - #rocketleague #a",
       "published": "2026-11-20T17:15:10Z",
-      "views": 6288,
+      "views": 6301,
       "likes": 299
     },
     {
       "id": "YWqdJwGwG80",
       "title": "¿La pelota se te va por la pared y no sabés qué hacer? AIR DRIBBLE en 3 pasos 🚀 - #rocketleague #air",
       "published": "2026-11-19T17:17:23Z",
-      "views": 1851,
+      "views": 1856,
       "likes": 73
     },
     {
       "id": "tcAXNXvfX10",
       "title": "¿Todavía no te salen las jugadas aéreas? Aprendé el CEILING SHOT en 3 pasos 🚀🔥- #rocketleague #ceili",
       "published": "2026-11-18T11:51:00Z",
-      "views": 9108,
-      "likes": 373
+      "views": 9127,
+      "likes": 378
     }
   ],
   "audience": {
     "instagram": {
       "age": {
-        "13-17": 3312,
-        "18-24": 6087,
-        "25-34": 6579,
-        "35-44": 1440,
-        "45-54": 652,
-        "55-64": 142,
+        "13-17": 3324,
+        "18-24": 6112,
+        "25-34": 6593,
+        "35-44": 1441,
+        "45-54": 653,
+        "55-64": 144,
         "65+": 167
       },
       "gender": {
-        "F": 655,
-        "M": 13212,
-        "U": 4512
+        "F": 654,
+        "M": 13256,
+        "U": 4524
       },
       "country": {
         "DE": 8,
@@ -117,30 +117,30 @@
         "DZ": 7,
         "ID": 4,
         "GB": 6,
-        "IE": 2,
         "CA": 19,
-        "EC": 279,
-        "US": 436,
+        "EC": 280,
+        "US": 438,
         "AD": 3,
         "SV": 111,
         "UY": 447,
         "IN": 7,
         "CH": 10,
         "IQ": 4,
-        "CL": 1314,
+        "IR": 2,
+        "CL": 1318,
+        "GR": 2,
         "IT": 44,
-        "MX": 3967,
-        "KW": 2,
-        "CO": 683,
-        "GT": 147,
-        "ES": 1784,
+        "MX": 3988,
+        "CO": 689,
+        "GT": 148,
+        "ES": 1792,
         "CR": 185,
-        "VE": 354,
-        "PA": 70,
-        "AR": 7096,
+        "VE": 355,
+        "PA": 71,
+        "AR": 7107,
         "CU": 106,
         "AU": 9,
-        "PE": 407,
+        "PE": 406,
         "TN": 4,
         "NI": 64,
         "PL": 5,
