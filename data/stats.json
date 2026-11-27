@@ -1,19 +1,19 @@
 {
-  "updated": "2026-11-26T23:45:26.169Z",
+  "updated": "2026-11-27T08:11:50.019Z",
   "platforms": {
     "kick": null,
     "youtube": {
       "followers": 108000,
-      "views": 9091894,
-      "videos": 695,
+      "views": 9096680,
+      "videos": 698,
       "source": "api"
     },
     "twitch": {
-      "followers": 47713,
+      "followers": 47712,
       "source": "api"
     },
     "instagram": {
-      "followers": 18569,
+      "followers": 18599,
       "videos": 10,
       "source": "api"
     },
@@ -28,60 +28,60 @@
   },
   "youtubeLatest": [
     {
+      "id": "SaaafahEpiE",
+      "title": "Gemini creó Rocket League… y los autos EXPLOTAN con solo tocarse 💥😂 La pelota no cae, rebota por tod",
+      "published": "2026-11-27T08:08:50Z",
+      "views": 0,
+      "likes": 0
+    },
+    {
+      "id": "gfr4ihnNJMY",
+      "title": "Le pedí a ChatGPT, Gemini y Claude que me creen Rocket League desde CERO 🤖⚽ Mismo prompt, una sola c",
+      "published": "2026-11-27T06:06:35Z",
+      "views": 207,
+      "likes": 4
+    },
+    {
+      "id": "-Oc-rIt0EBg",
+      "title": "ChatGPT vs Gemini vs Claude: Crean ROCKET LEAGUE desde CERO",
+      "published": "2026-11-27T04:23:19Z",
+      "views": 38,
+      "likes": 7
+    },
+    {
       "id": "ajPpwx0PMh4",
       "title": "¿Te piden defender y no tenés turbo? Aprendé el WALL DASH en 3 pasos 🧱⚡ #rocketleague #walldash #roc",
       "published": "2026-11-26T15:05:06Z",
-      "views": 1196,
-      "likes": 40
+      "views": 1490,
+      "likes": 51
     },
     {
       "id": "iHNMApjfaik",
       "title": "¿Te sale mal el wavedash? Estos son los 3 errores que lo arruinan 🚀 #rocketleague #wavedash #rocketl",
       "published": "2026-11-25T15:58:40Z",
-      "views": 1526,
-      "likes": 71
+      "views": 1671,
+      "likes": 81
     },
     {
       "id": "I2KpTNcZpOM",
       "title": "¿Se puede llegar a 360 KPH con solo 3 Musty Flicks? 🚀 Retá a tu streamer favorito 👇 - #rocketleague",
       "published": "2026-11-24T15:55:43Z",
-      "views": 1073,
+      "views": 1085,
       "likes": 20
     },
     {
       "id": "yN9_IglOcOs",
       "title": "¿Se puede llegar a 300 KPH con solo 3 Kuxir Pinchs? 🚀 Etiquetá al streamer que debería probarlo 👇 -",
       "published": "2026-11-23T16:20:59Z",
-      "views": 3676,
-      "likes": 132
+      "views": 3724,
+      "likes": 135
     },
     {
       "id": "rE3Xew4ey0A",
       "title": "¿Se puede llegar a 350 KPH con solo 3 pinchs? 🚀 Retá a un streamer en los comentarios 👇 #rocketleagu",
       "published": "2026-11-22T17:13:50Z",
-      "views": 3113,
-      "likes": 102
-    },
-    {
-      "id": "Cns9aIJBZ0o",
-      "title": "¿Te movés lento por la cancha? Aprendé el WAVEDASH en 3 pasos 🚀 - #rocketleague #wavedash #rocketlea",
-      "published": "2026-11-21T14:50:08Z",
-      "views": 36380,
-      "likes": 1369
-    },
-    {
-      "id": "s9uMBq6UBkc",
-      "title": "¿Te ponés nervioso cuando la pelota está en el aire? Aprendé a VOLAR en 3 pasos 🚀 - #rocketleague #a",
-      "published": "2026-11-20T17:15:10Z",
-      "views": 6354,
-      "likes": 300
-    },
-    {
-      "id": "YWqdJwGwG80",
-      "title": "¿La pelota se te va por la pared y no sabés qué hacer? AIR DRIBBLE en 3 pasos 🚀 - #rocketleague #air",
-      "published": "2026-11-19T17:17:23Z",
-      "views": 1860,
-      "likes": 73
+      "views": 3117,
+      "likes": 103
     }
   ],
   "audience": {
